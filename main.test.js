@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest';
 
+/* # Complexity: O(N) */
 import { binarySearch } from './algorithms/binarySearch';
 test('Binary Search', () => {
 	expect(binarySearch([], 5)).toBe(-1);
@@ -9,6 +10,7 @@ test('Binary Search', () => {
 	expect(binarySearch([1, 3, 5, 7, 9], 2)).toBe(-1);
 });
 
+/* # Complexity: O(√N) */
 import { twinCrystalBalls } from './algorithms/twinCrystalBalls';
 test('Twin Crystal Balls', () => {
 	expect(twinCrystalBalls([])).toBe(-1);
@@ -30,6 +32,7 @@ test('Twin Crystal Balls', () => {
 	expect(twinCrystalBalls([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1])).toBe(21);
 });
 
+/* # Complexity: O(N²) */
 import { bubbleSort } from './algorithms/bubbleSort';
 test('Bubble Sort', () => {
 	expect(bubbleSort([])).to.be.empty;
@@ -37,6 +40,7 @@ test('Bubble Sort', () => {
 	expect(bubbleSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 });
 
+/* # Complexity: O(1) */
 import { Queue } from './algorithms/queue';
 test('Queue' , () => {
 	const myQueue = new Queue();
@@ -66,6 +70,38 @@ test('Queue' , () => {
 	expect(myQueue.dequeue()).toBe('Fred');
 	expect(myQueue.length).toBe(0);
 	expect(myQueue.isEmpty).toBe(true);
+});
+
+/* # Complexity: O(1) */
+import { Stack } from './algorithms/stack';
+test('Stack' , () => {
+	const myStack = new Stack();
+	expect(myStack.length).toBe(0);
+	expect(myStack.isEmpty).toBe(true);
+	expect(myStack.peek()).toBe(undefined);
+	expect(myStack.pop()).toBe(undefined);
+	myStack.push('Alice');
+	expect(myStack.length).toBe(1);
+	expect(myStack.isEmpty).toBe(false);
+	expect(myStack.peek()).toBe('Alice');
+	myStack.push('Bob');
+	myStack.push('Charlie');
+	expect(myStack.length).toBe(3);
+	expect(myStack.isEmpty).toBe(false);
+	expect(myStack.peek()).toBe('Charlie');
+	expect(myStack.pop()).toBe('Charlie');
+	expect(myStack.length).toBe(2);
+	expect(myStack.isEmpty).toBe(false);
+	expect(myStack.peek()).toBe('Bob');
+	expect(myStack.pop()).toBe('Bob');
+	expect(myStack.length).toBe(1);
+	myStack.push('Fred');
+	expect(myStack.length).toBe(2);
+	expect(myStack.pop()).toBe('Fred');
+	expect(myStack.length).toBe(1);
+	expect(myStack.pop()).toBe('Alice');
+	expect(myStack.length).toBe(0);
+	expect(myStack.isEmpty).toBe(true);
 });
 
 // import { cumSum } from './sum';
