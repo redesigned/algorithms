@@ -2,30 +2,30 @@
 export default class Stack {
     constructor() {
         this.elements = {};
-        this.head = this.tail = 0;
+        this.bottom = this.top = 0;
     }
 
     push(element) {
-        this.elements[this.tail] = element;
-        this.tail++;
+        this.elements[this.top] = element;
+        this.top++;
     }
 
     pop() {
         if (this.isEmpty) {
             return undefined;
         }
-        const item = this.elements[this.tail - 1];
-        delete this.elements[this.tail - 1];
-        this.tail--;
+        const item = this.elements[this.top - 1];
+        delete this.elements[this.top - 1];
+        this.top--;
         return item;
     }
 
     peek() {
-        return this.elements[this.tail - 1];
+        return this.elements[this.top - 1];
     }
 
     get length() {
-        return this.tail - this.head;
+        return this.top - this.bottom;
     }
 
     get isEmpty() {

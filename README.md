@@ -1,7 +1,7 @@
-# algorithms
+# Algorithms in Javascript
 
 ## Requirements
-Node, see `.tool-versions` and use `asdf` or other system to install and manage.
+Node, see `.tool-versions` and use `asdf` or other system such as `NVM` or `docker container` to install and manage.
 
 ## Setup
 ```zsh
@@ -31,5 +31,5 @@ pnpm run test
 
 * **Stack** `./algorithms/stack.js`
 	
-	- Methods: _Enqueue(item) Dequeue(), Peek(); Properties: length, isEmpty_
+	- Methods: _Push(item) Pop(), Peek(); Properties: length, isEmpty_
 
