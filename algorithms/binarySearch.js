@@ -1,3 +1,4 @@
+/* # Complexity: O(N) */
 export function binarySearch(arr, target, start = 0, end = arr.length - 1) {
 	const middleIndex = Math.floor((start+end)/2);
 	const middleValue = arr[middleIndex];
