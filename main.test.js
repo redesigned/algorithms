@@ -1,22 +1,6 @@
 import { expect, test } from 'vitest';
 
-/* # Complexity: O(N) */
-import { binarySearch } from './algorithms/binarySearch';
-test('Binary Search', () => {
-	expect(binarySearch([], 5)).toBe(-1);
-	expect(binarySearch([1, 3, 5, 7, 9], 1)).toBe(0);
-	expect(binarySearch([1, 3, 5, 7, 9], 5)).toBe(2);
-	expect(binarySearch([3, 5, 7, 9], 9)).toBe(3);
-	expect(binarySearch([1, 3, 5, 7, 9], 2)).toBe(-1);
-});
-
-/* # Complexity: O(N²) */
-import { bubbleSort } from './algorithms/bubbleSort';
-test('Bubble Sort', () => {
-	expect(bubbleSort([])).to.be.empty;
-	expect(bubbleSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
-	expect(bubbleSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
-});
+/* ## DATA STRUCTURES ## */
 
 /* # Complexity: O(1) */
 import { Queue } from './algorithms/queue';
@@ -81,6 +65,30 @@ test('Stack' , () => {
 	expect(myStack.length).toBe(0);
 	expect(myStack.isEmpty).toBe(true);
 });
+
+/* ## SEARCHES ## */
+
+/* # Complexity: O(N) */
+import { binarySearch } from './algorithms/binarySearch';
+test('Binary Search', () => {
+	expect(binarySearch([], 5)).toBe(-1);
+	expect(binarySearch([1, 3, 5, 7, 9], 1)).toBe(0);
+	expect(binarySearch([1, 3, 5, 7, 9], 5)).toBe(2);
+	expect(binarySearch([3, 5, 7, 9], 9)).toBe(3);
+	expect(binarySearch([1, 3, 5, 7, 9], 2)).toBe(-1);
+});
+
+/* ## SORTS ## */
+
+/* # Complexity: O(N²) */
+import { bubbleSort } from './algorithms/bubbleSort';
+test('Bubble Sort', () => {
+	expect(bubbleSort([])).to.be.empty;
+	expect(bubbleSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(bubbleSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+});
+
+/* ## PROBLEMS ## */
 
 /* # Complexity: O(√N) */
 import { twinCrystalBalls } from './algorithms/twinCrystalBalls';

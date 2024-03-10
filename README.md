@@ -13,14 +13,8 @@ pnpm install
 pnpm run test
 ```
 ## Algorithms Implimented
-* **Binary Search** `./algorithms/binarySearch.js`
-	
-	- Params: _Array, Target, *Start *End_
 
-* **Bubble Sort** `./algorithms/bubbleSort.js`
-	
-	- Params: _Array_
-
+### Data Structures
 
 * **Queue** `./algorithms/queue.js`
 	
@@ -29,6 +23,20 @@ pnpm run test
 * **Stack** `./algorithms/stack.js`
 	
 	- Methods: _Push(item) Pop(), Peek(); Properties: length, isEmpty_
+
+### Searches
+
+* **Binary Search** `./algorithms/binarySearch.js`
+	
+	- Params: _Array, Target, *Start *End_
+
+### Sorts
+
+* **Bubble Sort** `./algorithms/bubbleSort.js`
+	
+	- Params: _Array_
+
+### Problems
 
 * **Twin Crystal Balls** `./algorithms/twinCrystalBalls.js`
 	
