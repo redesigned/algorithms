@@ -21,9 +21,6 @@ pnpm run test
 	
 	- Params: _Array_
 
-* **Twin Crystal Balls** `./algorithms/twinCrystalBalls.js`
-	
-	- Params: _Array_
 
 * **Queue** `./algorithms/queue.js`
 	
@@ -33,3 +30,10 @@ pnpm run test
 	
 	- Methods: _Push(item) Pop(), Peek(); Properties: length, isEmpty_
 
+* **Twin Crystal Balls** `./algorithms/twinCrystalBalls.js`
+	
+	- Params: _Array_
+
+* **Sieve of Eratosthenes** `./algorithms/sieveOfEratosthenes.js`
+	
+	- Params: _Number_
