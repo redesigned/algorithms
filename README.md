@@ -1,7 +1,10 @@
 # Algorithms in Javascript
 
 ## Requirements
-Node, see `.tool-versions` and use `asdf` or other system such as `NVM` or `docker container` to install and manage.
+* Node, see `.tool-versions` and use `asdf` or other system such as `NVM` or `docker container` to install and manage.
+* pnpm for package management
+* vitest for testing
+* jsdoc and jsdoc-tsd for typescript driven type checking using jsdoc in pure vanilla javascript without transpilation from typescript
 
 ## Setup
 ```zsh
@@ -12,6 +15,12 @@ pnpm install
 ```zsh
 pnpm run test
 ```
+
+## Generate TypeScript Type Definitions File
+```zsh
+pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
+```
+
 ## Algorithms Implimented
 
 ### Data Structures

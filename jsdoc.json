@@ -1,0 +1,14 @@
+{
+	"source": {
+		"include": [
+			"algorithms/*.js"
+		],
+		"exclude": [
+			"*.test.js",
+			"node_modules"
+		]
+	},
+	"opts": {
+		"template": "node_modules/@otris/jsdoc-tsd"
+	}
+}

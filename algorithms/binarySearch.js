@@ -1,4 +1,16 @@
-/* # Complexity: O(N) */
+// @ts-check
+"use strict";
+
+/**
+ * Binary Search
+ * Performs binary search on a sorted array to find the index of a target value.
+ * @param {number[]} arr - The sorted array to search.
+ * @param {number} target - The value to search for.
+ * @param {number} [start=0] - The starting index for the search (default is 0).
+ * @param {number} [end=arr.length - 1] - The ending index for the search (default is arr.length - 1).
+ * @returns {number} - The index of the target value, or -1 if not found.
+ * @complexity O(log N)
+ */
 export function binarySearch(arr, target, start = 0, end = arr.length - 1) {
 	const middleIndex = Math.floor((start+end)/2);
 	const middleValue = arr[middleIndex];

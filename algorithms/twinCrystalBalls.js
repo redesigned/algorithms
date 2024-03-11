@@ -1,4 +1,13 @@
-/* # Complexity: O(√N) */
+// @ts-check
+"use strict";
+
+/**
+ * Twin Crystal Balls
+ * Finds the index of the first true value in the array using a jump search approach.
+ * @param {boolean[]} arr - The array to search.
+ * @returns {number} - The index of the first true value, or -1 if not found.
+ * @complexity O(√N) - The time complexity of the jump search algorithm.
+ */
 export function twinCrystalBalls(arr) {
 	const length = arr.length - 1;
 	const jump = Math.floor(Math.sqrt(length)) || 1;
