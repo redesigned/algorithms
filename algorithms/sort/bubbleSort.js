@@ -6,7 +6,7 @@
  * Sorts an array using the Bubble Sort algorithm.
  * @param {number[]} myArray - The array to be sorted.
  * @returns {number[]} - The sorted array.
- * @complexity O(N²) - Quadratic time complexity due to nested loops.
+ * @complexity O(n²) - Quadratic time complexity due to nested loops.
  */
 export function bubbleSort(myArray) {
 	const arr = [...myArray];

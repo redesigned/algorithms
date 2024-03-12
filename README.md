@@ -25,36 +25,40 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Data Structures
 
-* **Queue** `./algorithms/datastructures/queue.js`
+* **Queue: O(1)** `./algorithms/datastructures/queue.js`
 	
 	- Methods: _Enqueue(item) Dequeue(), Peek(); Properties: length, isEmpty_
 
-* **Stack** `./algorithms/datastructures/stack.js`
+* **Stack: O(1)** `./algorithms/datastructures/stack.js`
 	
 	- Methods: _Push(item) Pop(), Peek(); Properties: length, isEmpty_
 
 ### Searches
 
-* **Linear Search** `./algorithms/search/linearSearch.js`
+* **Linear Search: O(n)** `./algorithms/search/linearSearch.js`
 	
 	- Params: _Array, Target_
 
-* **Binary Search** `./algorithms/search/binarySearch.js`
+* **Jump Search: O(√n)** `./algorithms/search/jumpSearch.js`
+	
+	- Params: _Array, Target_
+
+* **Binary Search: O(log(n))** `./algorithms/search/binarySearch.js`
 	
 	- Params: _Array, Target, *Start *End_
 
 ### Sorts
 
-* **Bubble Sort** `./algorithms/sort/ubbleSort.js`
+* **Bubble Sort: O(n²)** `./algorithms/sort/ubbleSort.js`
 	
 	- Params: _Array_
 
 ### Problems
 
-* **Twin Crystal Balls** `./algorithms/problems/twinCrystalBalls.js`
+* **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`
 	
 	- Params: _Array_
 
-* **Sieve of Eratosthenes** `./algorithms/problems/sieveOfEratosthenes.js`
+* **Sieve of Eratosthenes: O(n log(log(n)))** `./algorithms/problems/sieveOfEratosthenes.js`
 	
 	- Params: _Number_

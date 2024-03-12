@@ -111,6 +111,14 @@ declare function twinCrystalBalls(arr: boolean[]): number;
 declare function binarySearch(arr: number[], target: number, start?: number, end?: number): number;
 
 /**
+ * Jump Search Performs ump search on a sorted array to find the index of a target value
+ * @param arr - The array to search.
+ * @param target - The value to search for.
+ * @returns - The index of the first true value, or -1 if not found.
+ */
+declare function jumpSearch(arr: any[], target: any): number;
+
+/**
  * Linear Search Performs linear search on a n array to find the index of a target value.
  * @param arr - The array to search.
  * @param target - The value to search for.
