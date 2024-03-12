@@ -111,6 +111,16 @@ declare function twinCrystalBalls(arr: boolean[]): number;
 declare function binarySearch(arr: number[], target: number, start?: number, end?: number): number;
 
 /**
+ * Interpolation Search Performs interpolation search on a sorted array to find the index of a target value
+ * @param arr - The sorted array to search.
+ * @param target - The value to search for.
+ * @param start - The starting index for the search (default is 0).
+ * @param end - The ending index for the search (default is arr.length - 1).
+ * @returns - The index of the target value, or -1 if not found.
+ */
+declare function interpolationSearch(arr: number[], target: number, start?: number, end?: number): number;
+
+/**
  * Jump Search Performs ump search on a sorted array to find the index of a target value
  * @param arr - The array to search.
  * @param target - The value to search for.
