@@ -6,7 +6,7 @@
  * Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
  * @param {number} maxNum - The maximum number up to which to find prime numbers.
  * @returns {number[]} - An array containing prime numbers up to 'maxNum'.
- * @complexity O(N log log N) - The time complexity of the Sieve of Eratosthenes.
+ * @complexity O(n log(log(n))) - The time complexity of the Sieve of Eratosthenes.
  */
 export function sieveOfEratosthenes(maxNum) {
 	const sieve = new Array(maxNum + 1).fill(true);

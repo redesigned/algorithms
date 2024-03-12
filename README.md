@@ -25,32 +25,36 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Data Structures
 
-* **Queue** `./algorithms/queue.js`
+* **Queue** `./algorithms/datastructures/queue.js`
 	
 	- Methods: _Enqueue(item) Dequeue(), Peek(); Properties: length, isEmpty_
 
-* **Stack** `./algorithms/stack.js`
+* **Stack** `./algorithms/datastructures/stack.js`
 	
 	- Methods: _Push(item) Pop(), Peek(); Properties: length, isEmpty_
 
 ### Searches
 
-* **Binary Search** `./algorithms/binarySearch.js`
+* **Linear Search** `./algorithms/search/linearSearch.js`
+	
+	- Params: _Array, Target_
+
+* **Binary Search** `./algorithms/search/binarySearch.js`
 	
 	- Params: _Array, Target, *Start *End_
 
 ### Sorts
 
-* **Bubble Sort** `./algorithms/bubbleSort.js`
+* **Bubble Sort** `./algorithms/sort/ubbleSort.js`
 	
 	- Params: _Array_
 
 ### Problems
 
-* **Twin Crystal Balls** `./algorithms/twinCrystalBalls.js`
+* **Twin Crystal Balls** `./algorithms/problems/twinCrystalBalls.js`
 	
 	- Params: _Array_
 
-* **Sieve of Eratosthenes** `./algorithms/sieveOfEratosthenes.js`
+* **Sieve of Eratosthenes** `./algorithms/problems/sieveOfEratosthenes.js`
 	
 	- Params: _Number_

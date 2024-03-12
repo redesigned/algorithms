@@ -1,21 +1,4 @@
 /**
- * Binary Search Performs binary search on a sorted array to find the index of a target value.
- * @param arr - The sorted array to search.
- * @param target - The value to search for.
- * @param start - The starting index for the search (default is 0).
- * @param end - The ending index for the search (default is arr.length - 1).
- * @returns - The index of the target value, or -1 if not found.
- */
-declare function binarySearch(arr: number[], target: number, start?: number, end?: number): number;
-
-/**
- * Bubble Sort Sorts an array using the Bubble Sort algorithm.
- * @param myArray - The array to be sorted.
- * @returns - The sorted array.
- */
-declare function bubbleSort(myArray: number[]): number[];
-
-/**
  * Queue
  * Represents a queue data structure.
  */
@@ -58,13 +41,6 @@ declare class Queue {
 
 declare module 'Queue' {
 }
-
-/**
- * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
- * @param maxNum - The maximum number up to which to find prime numbers.
- * @returns - An array containing prime numbers up to 'maxNum'.
- */
-declare function sieveOfEratosthenes(maxNum: number): number[];
 
 /**
  * Stack
@@ -111,9 +87,41 @@ declare module 'Stack' {
 }
 
 /**
+ * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
+ * @param maxNum - The maximum number up to which to find prime numbers.
+ * @returns - An array containing prime numbers up to 'maxNum'.
+ */
+declare function sieveOfEratosthenes(maxNum: number): number[];
+
+/**
  * Twin Crystal Balls Finds the index of the first true value in the array using a jump search approach.
  * @param arr - The array to search.
  * @returns - The index of the first true value, or -1 if not found.
  */
 declare function twinCrystalBalls(arr: boolean[]): number;
+
+/**
+ * Binary Search Performs binary search on a sorted array to find the index of a target value
+ * @param arr - The sorted array to search.
+ * @param target - The value to search for.
+ * @param start - The starting index for the search (default is 0).
+ * @param end - The ending index for the search (default is arr.length - 1).
+ * @returns - The index of the target value, or -1 if not found.
+ */
+declare function binarySearch(arr: number[], target: number, start?: number, end?: number): number;
+
+/**
+ * Linear Search Performs linear search on a n array to find the index of a target value.
+ * @param arr - The array to search.
+ * @param target - The value to search for.
+ * @returns - The index of the target value, or -1 if not found.
+ */
+declare function linearSearch(arr: any[], target: any): number;
+
+/**
+ * Bubble Sort Sorts an array using the Bubble Sort algorithm.
+ * @param myArray - The array to be sorted.
+ * @returns - The sorted array.
+ */
+declare function bubbleSort(myArray: number[]): number[];
 

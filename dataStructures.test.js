@@ -2,9 +2,8 @@ import { expect, test } from 'vitest';
 
 /* ## DATA STRUCTURES ## */
 
-/* # Complexity: O(1) */
-import Queue from './algorithms/queue';
-test('Queue' , () => {
+import Queue from './algorithms/datastructures/queue';
+test('Queue: O(1)' , () => {
 	const myQueue = new Queue();
 	expect(myQueue.length).toBe(0);
 	expect(myQueue.isEmpty).toBe(true);
@@ -34,9 +33,8 @@ test('Queue' , () => {
 	expect(myQueue.isEmpty).toBe(true);
 });
 
-/* # Complexity: O(1) */
-import Stack from './algorithms/stack';
-test('Stack' , () => {
+import Stack from './algorithms/datastructures/stack';
+test('Stack: O(1)' , () => {
 	const myStack = new Stack();
 	expect(myStack.length).toBe(0);
 	expect(myStack.isEmpty).toBe(true);
