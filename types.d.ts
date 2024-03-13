@@ -143,3 +143,9 @@ declare function linearSearch(arr: any[], target: any): number;
  */
 declare function bubbleSort(myArray: number[]): number[];
 
+/**
+ * Quick Sort Algorithm Sorts an array using the Quick Sort algorithm.
+ * @param arr - The input array to be sorted.
+ */
+declare function quickSort(arr: any[]): any[];
+

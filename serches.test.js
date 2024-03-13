@@ -37,7 +37,7 @@ test('Binary Search: O(log(n))', () => {
 });
 
 import { interpolationSearch } from './algorithms/search/interpolationSearch';
-test('Interpolation Search: O(log(log(n))', () => {
+test('Interpolation Search: O(log(log(n)))', () => {
 	expect(interpolationSearch([], 5)).toBe(-1);
 	expect(interpolationSearch([1, 3, 5, 7, 9], 1)).toBe(0);
 	expect(interpolationSearch([1, 3, 5, 7, 9], 5)).toBe(2);

@@ -9,7 +9,7 @@
  * @param {number} [start=0] - The starting index for the search (default is 0).
  * @param {number} [end=arr.length - 1] - The ending index for the search (default is arr.length - 1).
  * @returns {number} - The index of the target value, or -1 if not found.
- * @complexity O(log(log(n))
+ * @complexity O(log(log(n)))
  */
 export function interpolationSearch(arr, target, start = 0, end = arr.length - 1) {
 	const indexDelta = end - start;

@@ -47,9 +47,17 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, Target, *Start *End_
 
+* **Interpolation Search: O(log(log(n)))** `./algorithms/search/binarySearch.js`
+	
+	- Params: _Array, Target, *Start *End_
+
 ### Sorts
 
-* **Bubble Sort: O(n²)** `./algorithms/sort/ubbleSort.js`
+* **Bubble Sort: O(n²)** `./algorithms/sort/bubbleSort.js`
+	
+	- Params: _Array_
+
+* **Quick Sort: O(n log(n)) to O(n²)** `./algorithms/sort/quickSort.js`
 	
 	- Params: _Array_
 
