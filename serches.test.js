@@ -11,6 +11,15 @@ test('Linear Search: O(n)', () => {
 	expect(linearSearch([1, 9, 3, 4, 7, 0], 0)).toBe(5);
 });
 
+import { javascriptSearch } from './algorithms/search/javascriptSearch';
+test('Linear Search: O(n)', () => {
+	expect(javascriptSearch([], 5)).toBe(-1);
+	expect(javascriptSearch([1, 9, 3, 4, 7, 0], 5)).toBe(-1);
+	expect(javascriptSearch([1, 9, 3, 4, 7, 0], 7)).toBe(4);
+	expect(javascriptSearch([1, 9, 3, 4, 7, 0], 1)).toBe(0);
+	expect(javascriptSearch([1, 9, 3, 4, 7, 0], 0)).toBe(5);
+});
+
 import { jumpSearch } from './algorithms/search/jumpSearch';
 test('Jump Search: O(√n)', () => {
 	expect(jumpSearch([], 5)).toBe(-1);

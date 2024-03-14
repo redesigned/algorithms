@@ -3,7 +3,7 @@
 
 /**
  * Jump Search
- * Performs ump search on a sorted array to find the index of a target value
+ * Performs Jump search on a sorted array to find the index of a target value
  * @param {Array} arr - The array to search.
  * @param {*} target - The value to search for.
  * @returns {number} - The index of the first true value, or -1 if not found.
