@@ -69,6 +69,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, Size_
 
+* **Intro Sort: O(n log(n))** `./algorithms/sort/introSort.js`
+	
+	- Params: _Array_
+
 * **Javascript Built In Sort: O(n log(n)) to O(n²)** `./algorithms/sort/javascriptSort.js`
 	
 	- Params: _Array_

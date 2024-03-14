@@ -160,6 +160,12 @@ declare function bubbleSort(myArray: number[]): number[];
 declare function bucketSort(arr: number[], size?: number): number[];
 
 /**
+ * Intro Sort Sorts an array using a combination of Quick Sort and Heap Sort or Insertion Sort
+ * @param myArray - The input array to be sorted.
+ */
+declare function introSort(myArray: any[]): any[];
+
+/**
  * Javascript Sort Sorts an array using the built in Javascript Sort algorithm, String-Based Lexicographic Sort with Timsort
  * @param myArray - The input array to be sorted.
  */
