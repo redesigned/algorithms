@@ -3,7 +3,7 @@
 
 /**
  * Quick Sort Algorithm
- * Sorts an array using the Quick Sort algorithm.
+ * Chooses a pivot, partitions the array, and recursively sorts the subarrays.
  * @param {Array} myArray - The input array to be sorted.
  * @return {Array} - The sorted array.
  * @complexity O(n log(n)) to O(n²)

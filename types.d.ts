@@ -145,20 +145,28 @@ declare function jumpSearch(arr: any[], target: any): number;
 declare function linearSearch(arr: any[], target: any): number;
 
 /**
- * Bubble Sort Sorts an array using the Bubble Sort algorithm.
+ * Bubble Sort Repeatedly compares adjacent elements and swaps them if they’re in the wrong order.
  * @param myArray - The array to be sorted.
  * @returns - The sorted array.
  */
 declare function bubbleSort(myArray: number[]): number[];
 
 /**
- * Javascript Sort Algorithm (String-Based Lexicographic Sort with Timsort) Sorts an array using the built in Javascript Sort algorithm.
+ * Bucket Sort Distributes elements into buckets and sorts each bucket individually.
+ * @param arr - The input array to be sorted.
+ * @param size - The size of each bucket (optional, default is 5).
+ * @returns - The sorted array.
+ */
+declare function bucketSort(arr: number[], size?: number): number[];
+
+/**
+ * Javascript Sort Sorts an array using the built in Javascript Sort algorithm, String-Based Lexicographic Sort with Timsort
  * @param myArray - The input array to be sorted.
  */
 declare function javascriptSort(myArray: any[]): any[];
 
 /**
- * Quick Sort Algorithm Sorts an array using the Quick Sort algorithm.
+ * Quick Sort Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays.
  * @param myArray - The input array to be sorted.
  */
 declare function quickSort(myArray: any[]): any[];

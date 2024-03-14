@@ -3,7 +3,7 @@
 
 /**
  * Bubble Sort
- * Sorts an array using the Bubble Sort algorithm.
+ * Repeatedly compares adjacent elements and swaps them if they’re in the wrong order.
  * @param {number[]} myArray - The array to be sorted.
  * @returns {number[]} - The sorted array.
  * @complexity O(n²) - Quadratic time complexity due to nested loops.

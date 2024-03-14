@@ -65,6 +65,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 
+* **Bucket Sort: O(n + k)** `./algorithms/sort/bucketSort.js`
+	
+	- Params: _Array, Size_
+
 * **Javascript Built In Sort: O(n log(n)) to O(n²)** `./algorithms/sort/javascriptSort.js`
 	
 	- Params: _Array_
