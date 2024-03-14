@@ -172,6 +172,13 @@ declare function introSort(myArray: any[]): any[];
 declare function javascriptSort(myArray: any[]): any[];
 
 /**
+ * Merge Sort Divides the array into halves until smallest units reached, and merges them back together in a sorted manner.
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function mergeSort(arr: number[]): number[];
+
+/**
  * Quick Sort Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays.
  * @param myArray - The input array to be sorted.
  */

@@ -35,18 +35,6 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Searches
 
-* **Linear Search: O(n)** `./algorithms/search/linearSearch.js`
-	
-	- Params: _Array, Target_
-
-* **Javascript Search: O(n)** `./algorithms/javascriptSearch.js`
-	
-	- Params: _Array, Target_
-
-* **Jump Search: O(√n)** `./algorithms/search/jumpSearch.js`
-	
-	- Params: _Array, Target_
-
 * **Binary Search: O(log(n))** `./algorithms/search/binarySearch.js`
 	
 	- Params: _Array, Target, *Start *End_
@@ -55,13 +43,21 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, Target, *Start *End_
 
+* **Javascript Built In Default Search: O(n)** `./algorithms/javascriptSearch.js`
+	
+	- Params: _Array, Target_
+
+* **Jump Search: O(√n)** `./algorithms/search/jumpSearch.js`
+	
+	- Params: _Array, Target_
+
+* **Linear Search: O(n)** `./algorithms/search/linearSearch.js`
+	
+	- Params: _Array, Target_
+
 ### Sorts
 
 * **Bubble Sort: O(n²)** `./algorithms/sort/bubbleSort.js`
-	
-	- Params: _Array_
-
-* **Quick Sort: O(n log(n)) to O(n²)** `./algorithms/sort/quickSort.js`
 	
 	- Params: _Array_
 
@@ -73,7 +69,15 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 
-* **Javascript Built In Sort: O(n log(n)) to O(n²)** `./algorithms/sort/javascriptSort.js`
+* **Javascript Built In Default Sort: O(n log(n)) to O(n²)** `./algorithms/sort/javascriptSort.js`
+	
+	- Params: _Array_
+
+* **Merge Sort: O(n log(n))** `./algorithms/sort/mergeSort.js`
+	
+	- Params: _Array_
+
+* **Quick Sort: O(n log(n)) to O(n²)** `./algorithms/sort/quickSort.js`
 	
 	- Params: _Array_
 
