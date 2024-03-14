@@ -121,7 +121,15 @@ declare function binarySearch(arr: number[], target: number, start?: number, end
 declare function interpolationSearch(arr: number[], target: number, start?: number, end?: number): number;
 
 /**
- * Jump Search Performs ump search on a sorted array to find the index of a target value
+ * Javascript Search Performs default indexOf search on an array to find the index of a target value
+ * @param arr - The array to search.
+ * @param target - The value to search for.
+ * @returns - The index of the first true value, or -1 if not found.
+ */
+declare function javascriptSearch(arr: any[], target: any): number;
+
+/**
+ * Jump Search Performs Jump search on a sorted array to find the index of a target value
  * @param arr - The array to search.
  * @param target - The value to search for.
  * @returns - The index of the first true value, or -1 if not found.
@@ -144,7 +152,7 @@ declare function linearSearch(arr: any[], target: any): number;
 declare function bubbleSort(myArray: number[]): number[];
 
 /**
- * Javascript Sort Algorithm Sorts an array using the built in Javascript Sort algorithm.
+ * Javascript Sort Algorithm (String-Based Lexicographic Sort with Timsort) Sorts an array using the built in Javascript Sort algorithm.
  * @param myArray - The input array to be sorted.
  */
 declare function javascriptSort(myArray: any[]): any[];

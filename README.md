@@ -39,6 +39,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, Target_
 
+* **Javascript Search: O(n)** `./algorithms/javascriptSearch.js`
+	
+	- Params: _Array, Target_
+
 * **Jump Search: O(√n)** `./algorithms/search/jumpSearch.js`
 	
 	- Params: _Array, Target_
@@ -58,6 +62,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Params: _Array_
 
 * **Quick Sort: O(n log(n)) to O(n²)** `./algorithms/sort/quickSort.js`
+	
+	- Params: _Array_
+
+* **Javascript Built In Sort: O(n log(n)) to O(n²)** `./algorithms/sort/javascriptSort.js`
 	
 	- Params: _Array_
 
