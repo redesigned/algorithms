@@ -6,7 +6,7 @@
  * Repeatedly compares adjacent elements and swaps them if they’re in the wrong order.
  * @param {number[]} myArray - The array to be sorted.
  * @returns {number[]} - The sorted array.
- * @complexity O(n²) - Quadratic time complexity due to nested loops.
+ * @complexity O(n²)
  */
 export function bubbleSort(myArray) {
 	const arr = [...myArray];

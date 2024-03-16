@@ -160,6 +160,13 @@ declare function bubbleSort(myArray: number[]): number[];
 declare function bucketSort(arr: number[], size?: number): number[];
 
 /**
+ * Insertion Sort Builds a sorted array by repeatedly inserting unsorted elements into their correct positions.
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function insertionSort(myArray: number[]): number[];
+
+/**
  * Intro Sort Sorts an array using a combination of Quick Sort and Heap Sort or Insertion Sort
  * @param myArray - The input array to be sorted.
  */
