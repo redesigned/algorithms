@@ -23,6 +23,12 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ## Algorithms Implimented
 
+### Utilities
+
+* **Array of Numbers: O(n)** `./algorithms/util/arrayOfNumbers.js`
+	
+	- Params: _Number_
+
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`

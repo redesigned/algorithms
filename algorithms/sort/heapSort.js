@@ -27,7 +27,7 @@ function heapify(arr, n, i) {
 
 /**
  * Heap Sort
- * Sorts an array using heap sort.
+ * Builds a max heap and repeatedly extracts the maximum element.
  * @param {number[]} arr - The input array.
  * @returns {number[]} - Sorted array.
  * @complexity O(n log(n))

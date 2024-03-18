@@ -179,7 +179,7 @@ declare function bucketSort(arr: number[], size?: number): number[];
 declare function heapify(arr: number[], n: number, i: number): void;
 
 /**
- * Heap Sort Sorts an array using heap sort.
+ * Heap Sort Builds a max heap and repeatedly extracts the maximum element.
  * @param arr - The input array.
  * @returns - Sorted array.
  */
@@ -223,4 +223,11 @@ declare function quickSort(myArray: any[]): any[];
  * @returns - A new array containing the sorted elements.
  */
 declare function selectionSort(myArray: number[]): number[];
+
+/**
+ * Array of Numbers Returns an Array of a given Length filled with the numbers 1 through X
+ * @param num - The length of the Array
+ * @returns - A new array containing the numbers
+ */
+declare function arrayOfNumbers(num: number): number[];
 
