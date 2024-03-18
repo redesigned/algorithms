@@ -231,3 +231,10 @@ declare function selectionSort(myArray: number[]): number[];
  */
 declare function arrayOfNumbers(num: number): number[];
 
+/**
+ * Array Random Shuffle Returns an Array that has been randomly Shuffled
+ * @param myArray - The length of the Array
+ * @returns - A new array containing the numbers
+ */
+declare function arrayRandomShuffle(myArray: any[]): any[];
+

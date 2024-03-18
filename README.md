@@ -29,6 +29,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Number_
 
+* **Array Random Shuffle: O(n)** `./algorithms/util/arrayRandomShuffle.js`
+	
+	- Params: _Array_
+
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`
