@@ -85,6 +85,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 
+* **Selection Sort: O(n²)** `./algorithms/sort/selectionSort.js`
+	
+	- Params: _Array_
+
 ### Problems
 
 * **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`

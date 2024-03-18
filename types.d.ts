@@ -87,6 +87,16 @@ declare module 'Stack' {
 }
 
 /**
+ * Maze Solver Pathfinds through a Grid Maze
+ * @param maze - The maze to be navigated.
+ * @param wall - A wall in the maze
+ * @param start - The start point [row, column]
+ * @param end - The end point [row, column]
+ * @returns - A new array containing the path through the maze.
+ */
+declare function mazeSolver(maze?: (string[])[], wall?: string, start?: number[], end?: number[]): (number[])[];
+
+/**
  * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
  * @param maxNum - The maximum number up to which to find prime numbers.
  * @returns - An array containing prime numbers up to 'maxNum'.
@@ -190,4 +200,11 @@ declare function mergeSort(arr: number[]): number[];
  * @param myArray - The input array to be sorted.
  */
 declare function quickSort(myArray: any[]): any[];
+
+/**
+ * Selection Sort Finds the smallest element and places it at the beginning, then repeats the process for the remaining elements.
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function selectionSort(myArray: number[]): number[];
 
