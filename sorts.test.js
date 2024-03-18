@@ -24,6 +24,17 @@ test('Bucket Sort: O(n + k)', () => {
 	expect(bucketSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
+import { heapSort } from './algorithms/sort/heapSort';
+test('Heap Sort: O(n log(n))', () => {
+	expect(heapSort([])).to.be.empty;
+	expect(heapSort([9])).toStrictEqual([9]);
+	expect(heapSort([1, 3])).toStrictEqual([1, 3]);
+	expect(heapSort([3, 1])).toStrictEqual([1, 3]);
+	expect(heapSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(heapSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(heapSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+});
+
 import { insertionSort } from './algorithms/sort/insertionSort';
 test('Intro Sort: O(n log(n))', () => {
 	expect(insertionSort([])).to.be.empty;

@@ -170,6 +170,22 @@ declare function bubbleSort(myArray: number[]): number[];
 declare function bucketSort(arr: number[], size?: number): number[];
 
 /**
+ * Heapify Heapify a subtree rooted at index i.
+ * @param arr - The input array.
+ * @param n - Size of the heap.
+ * @param i - Index of the root of the subtree.
+ * @returns
+ */
+declare function heapify(arr: number[], n: number, i: number): void;
+
+/**
+ * Heap Sort Sorts an array using heap sort.
+ * @param arr - The input array.
+ * @returns - Sorted array.
+ */
+declare function heapSort(arr: number[]): number[];
+
+/**
  * Insertion Sort Builds a sorted array by repeatedly inserting unsorted elements into their correct positions.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
