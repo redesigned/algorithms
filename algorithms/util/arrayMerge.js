@@ -10,17 +10,10 @@
  * @complexity O(n)
  */
 export function arrayMerge(leftArr, rightArr) {
-	const mergedArr = [];
-	let leftIndex = 0;
-	let rightIndex = 0;
-	while (leftIndex < leftArr.length && rightIndex < rightArr.length) {
-		if (leftArr[leftIndex] < rightArr[rightIndex]) {
-			mergedArr.push(leftArr[leftIndex]);
-			leftIndex++;
-		} else {
-			mergedArr.push(rightArr[rightIndex]);
-			rightIndex++;
-		}
-	}
-	return mergedArr.concat(leftArr.slice(leftIndex), rightArr.slice(rightIndex));
+	return Array.from({ length: leftArr.length + rightArr.length }, () => {
+		return (!leftArr.length) ? rightArr.shift()
+			: (!rightArr.length) ? leftArr.shift()
+			: (leftArr[0] > rightArr[0]) ? rightArr.shift()
+			: leftArr.shift();
+	});
 }

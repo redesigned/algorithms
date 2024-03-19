@@ -29,3 +29,11 @@ test('Array Random Shuffle: O(n)', () => {
 	expect(shuffledArray2).not.toEqual(inputArray);
 	expect(shuffledArray).not.toEqual(shuffledArray2);
 });
+
+import { numberDigitCount } from './algorithms/util/numberDigitCount';
+test('Number Digit Count: O(1)', () => {
+	expect(numberDigitCount(0)).toBe(1);
+	expect(numberDigitCount(1)).toBe(1);
+	expect(numberDigitCount(12)).toBe(2);
+	expect(numberDigitCount(123456789)).toBe(9);
+});

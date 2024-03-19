@@ -268,3 +268,10 @@ declare function arrayOfNumbers(num: number): number[];
  */
 declare function arrayRandomShuffle(myArray: any[]): any[];
 
+/**
+ * Number Digit Count Calculates the number of Digits in a given Number.
+ * @param num - The number to count digits of
+ * @returns - The number of digits in the number
+ */
+declare function numberDigitCount(num: number): number;
+
