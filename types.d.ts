@@ -255,6 +255,13 @@ declare function shellSort(myArray: number[]): number[];
 declare function arrayMerge(leftArr: number[], rightArr: number[]): number[];
 
 /**
+ * Number Digit Count Calculates the number of Digits of the largest number in an array.
+ * @param arr - The number to count digits of
+ * @returns - The digit count of the largest number in the array
+ */
+declare function arrayMostDigits(arr: number[]): number;
+
+/**
  * Array of Numbers Returns an Array of a given Length filled with the numbers 1 through X
  * @param num - The length of the Array
  * @returns - A new array containing the numbers

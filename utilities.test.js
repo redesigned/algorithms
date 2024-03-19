@@ -8,6 +8,12 @@ test('Array Merge: O(n)', () => {
 	expect(arrayMerge([1, 3, 5, 7, 8, 9, 10],[2, 4, 6, 11, 12, 13])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 });
 
+import { arrayMostDigits } from './algorithms/util/arrayMostDigits';
+test('Digit count of the largest Number in an array: O(1)', () => {
+	expect(arrayMostDigits([8 , 16])).toBe(2);
+	expect(arrayMostDigits([8 , 16, 33, 64, 256, 1024, 123456789])).toBe(9);
+});
+
 import { arrayOfNumbers } from './algorithms/util/arrayOfNumbers';
 test('Array of Numbers: O(n)', () => {
 	expect(arrayOfNumbers(4)).toStrictEqual([1, 2, 3, 4]);
