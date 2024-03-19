@@ -1,5 +1,8 @@
 import { expect, test } from 'vitest';
 
+import { arrayOfNumbers } from './algorithms/util/arrayOfNumbers';
+import { arrayRandomShuffle } from './algorithms/util/arrayRandomShuffle';
+
 /* ## SORTS ## */
 
 import { bubbleSort } from './algorithms/sort/bubbleSort';
@@ -11,6 +14,7 @@ test('Bubble Sort: O(n²)', () => {
 	expect(bubbleSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(bubbleSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(bubbleSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { bucketSort } from './algorithms/sort/bucketSort';
@@ -22,6 +26,7 @@ test('Bucket Sort: O(n + k)', () => {
 	expect(bucketSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(bucketSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(bucketSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bucketSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { combSort } from './algorithms/sort/combSort';
@@ -33,6 +38,7 @@ test('Comb Sort: O(n²)', () => {
 	expect(combSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(combSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(combSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { cycleSort } from './algorithms/sort/cycleSort';
@@ -44,6 +50,7 @@ test('Cycle Sort: O(n²)', () => {
 	expect(cycleSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(cycleSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(cycleSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(cycleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { heapSort } from './algorithms/sort/heapSort';
@@ -55,6 +62,7 @@ test('Heap Sort: O(n log(n))', () => {
 	expect(heapSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(heapSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(heapSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { insertionSort } from './algorithms/sort/insertionSort';
@@ -66,6 +74,7 @@ test('Insertion Sort: O(n log(n))', () => {
 	expect(insertionSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(insertionSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(insertionSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(insertionSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { introSort } from './algorithms/sort/introSort';
@@ -77,6 +86,7 @@ test('Intro Sort: O(n log(n))', () => {
 	expect(introSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(introSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(introSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { javascriptSort } from './algorithms/sort/javascriptSort';
@@ -88,6 +98,7 @@ test('Javasscript Built In Sort: O(n²)', () => {
 	expect(javascriptSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(javascriptSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(javascriptSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { mergeSort } from './algorithms/sort/mergeSort';
@@ -99,6 +110,7 @@ test('Merge Sort: O(n log(n))', () => {
 	expect(mergeSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(mergeSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(mergeSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(mergeSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { quickSort } from './algorithms/sort/quickSort';
@@ -110,6 +122,7 @@ test('Quick Sort: O(n²)', () => {
 	expect(quickSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(quickSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(quickSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { radixSort } from './algorithms/sort/radixSort';
@@ -121,6 +134,7 @@ test('Radix Sort: O(nk)', () => {
 	expect(radixSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(radixSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(radixSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(radixSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { selectionSort } from './algorithms/sort/selectionSort';
@@ -132,6 +146,7 @@ test('Selection Sort: O(n²)', () => {
 	expect(selectionSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(selectionSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(selectionSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(selectionSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { shellSort } from './algorithms/sort/shellSort';
@@ -143,4 +158,5 @@ test('Shell Sort: O(n²)', () => {
 	expect(shellSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(shellSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(shellSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(shellSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
