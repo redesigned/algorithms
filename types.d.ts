@@ -247,6 +247,14 @@ declare function selectionSort(myArray: number[]): number[];
 declare function shellSort(myArray: number[]): number[];
 
 /**
+ * Array Merge Merges two sorted arrays into a single sorted array.
+ * @param leftArr - The left sorted array.
+ * @param rightArr - The right sorted array.
+ * @returns - The merged sorted array.
+ */
+declare function arrayMerge(leftArr: number[], rightArr: number[]): number[];
+
+/**
  * Array of Numbers Returns an Array of a given Length filled with the numbers 1 through X
  * @param num - The length of the Array
  * @returns - A new array containing the numbers

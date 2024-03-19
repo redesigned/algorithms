@@ -25,6 +25,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Utilities
 
+* **Array Merge: O(n)** `./algorithms/util/arrayMerge.js`
+	
+	- Params: _FirstArray, SecondArray_
+
 * **Array of Numbers: O(n)** `./algorithms/util/arrayOfNumbers.js`
 	
 	- Params: _Number_
