@@ -240,6 +240,13 @@ declare function quickSort(myArray: any[]): any[];
 declare function selectionSort(myArray: number[]): number[];
 
 /**
+ * Shell Sort An extension of insertion sort that compares elements separated by a fixed gap and gradually reduces the gap until it becomes 1.
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function shellSort(myArray: number[]): number[];
+
+/**
  * Array of Numbers Returns an Array of a given Length filled with the numbers 1 through X
  * @param num - The length of the Array
  * @returns - A new array containing the numbers

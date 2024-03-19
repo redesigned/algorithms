@@ -122,3 +122,14 @@ test('Selection Sort: O(n²)', () => {
 	expect(selectionSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(selectionSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
+
+import { shellSort } from './algorithms/sort/shellSort';
+test('Shell Sort: O(n²)', () => {
+	expect(shellSort([])).to.be.empty;
+	expect(shellSort([9])).toStrictEqual([9]);
+	expect(shellSort([1, 3])).toStrictEqual([1, 3]);
+	expect(shellSort([3, 1])).toStrictEqual([1, 3]);
+	expect(shellSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(shellSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(shellSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+});
