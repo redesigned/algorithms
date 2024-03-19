@@ -24,7 +24,7 @@ export function combSort(myArray, shrinkFactor = 1.3) {
 					swapped = true;
 				}
 			}
-			gap = Math.floor(gap / shrinkFactor);
+			gap = Math.max(1, Math.floor(gap / shrinkFactor));
 		} while (gap > 1 || swapped);
 	}
 	return arr;

@@ -38,7 +38,19 @@ test('Comb Sort: O(n²)', () => {
 	expect(combSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(combSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(combSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
+	expect(combSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
+});
+
+import { countingSort } from './algorithms/sort/countingSort';
+test('Counting Sort: O(n+k)', () => {
+	expect(countingSort([])).to.be.empty;
+	expect(countingSort([9])).toStrictEqual([9]);
+	expect(countingSort([1, 3])).toStrictEqual([1, 3]);
+	expect(countingSort([3, 1])).toStrictEqual([1, 3]);
+	expect(countingSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(countingSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(countingSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(countingSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { cycleSort } from './algorithms/sort/cycleSort';

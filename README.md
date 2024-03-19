@@ -95,6 +95,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, *ShrinkFactor_
 
+* **Counting Sort: O(n+k)** `./algorithms/sort/countingSort.js`
+	
+	- Params: _Array_
+
 * **Cycle Sort: O(n²)** `./algorithms/sort/cycleSort.js`
 	
 	- Params: _Array_
@@ -120,6 +124,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Params: _Array_
 
 * **Quick Sort: O(n²)** `./algorithms/sort/quickSort.js`
+	
+	- Params: _Array_
+
+* **Radix Sort: O(nk)** `./algorithms/sort/radixSort.js`
 	
 	- Params: _Array_
 

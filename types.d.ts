@@ -178,6 +178,13 @@ declare function bucketSort(arr: number[], size?: number): number[];
 declare function combSort(myArray: number[], shrinkFactor?: number): number[];
 
 /**
+ * Counting Sort Suitable for non-negative integers with a limited range.
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function countingSort(myArray: number[]): number[];
+
+/**
  * Cycle Sort Minimizes the number of writes to the array by cyclically rotating elements to their correct positions.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
