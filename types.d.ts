@@ -234,6 +234,13 @@ declare function javascriptSort(myArray: any[]): any[];
 declare function mergeSort(arr: number[]): number[];
 
 /**
+ * Pancake Sort Moves elements backward if they’re in the wrong order
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function pancakeSort(myArray: number[]): number[];
+
+/**
  * Quick Sort Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays.
  * @param myArray - The input array to be sorted.
  */
