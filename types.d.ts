@@ -178,6 +178,13 @@ declare function bucketSort(arr: number[], size?: number): number[];
 declare function combSort(myArray: number[], shrinkFactor?: number): number[];
 
 /**
+ * Cycle Sort Minimizes the number of writes to the array by cyclically rotating elements to their correct positions.
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function cycleSort(myArray: number[]): number[];
+
+/**
  * Heapify Heapify a subtree rooted at index i.
  * @param arr - The input array.
  * @param n - Size of the heap.

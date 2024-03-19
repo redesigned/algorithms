@@ -35,6 +35,17 @@ test('Comb Sort: O(n²)', () => {
 	expect(combSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
+import { cycleSort } from './algorithms/sort/cycleSort';
+test('Cycle Sort: O(n²)', () => {
+	expect(cycleSort([])).to.be.empty;
+	expect(cycleSort([9])).toStrictEqual([9]);
+	expect(cycleSort([1, 3])).toStrictEqual([1, 3]);
+	expect(cycleSort([3, 1])).toStrictEqual([1, 3]);
+	expect(cycleSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(cycleSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(cycleSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+});
+
 import { heapSort } from './algorithms/sort/heapSort';
 test('Heap Sort: O(n log(n))', () => {
 	expect(heapSort([])).to.be.empty;

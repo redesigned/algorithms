@@ -79,6 +79,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, *ShrinkFactor_
 
+* **Cycle Sort: O(n²)** `./algorithms/sort/cycleSort.js`
+	
+	- Params: _Array_
+
 * **Heap Sort: O(n log(n))** `./algorithms/sort/heapSort.js`
 	
 	- Params: _Array_
