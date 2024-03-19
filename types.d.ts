@@ -233,6 +233,13 @@ declare function mergeSort(arr: number[]): number[];
 declare function quickSort(myArray: any[]): any[];
 
 /**
+ * Radix Sort Sorts by individual digits, from least significant to most significant.
+ * @param myArray - The input array to be sorted.
+ * @returns - The sorted array.
+ */
+declare function radixSort(myArray: number[]): number[];
+
+/**
  * Selection Sort Finds the smallest element and places it at the beginning, then repeats the process for the remaining elements.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.

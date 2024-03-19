@@ -112,6 +112,17 @@ test('Quick Sort: O(n²)', () => {
 	expect(quickSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
+import { radixSort } from './algorithms/sort/radixSort';
+test('Radix Sort: O(nk)', () => {
+	expect(radixSort([])).to.be.empty;
+	expect(radixSort([9])).toStrictEqual([9]);
+	expect(radixSort([1, 3])).toStrictEqual([1, 3]);
+	expect(radixSort([3, 1])).toStrictEqual([1, 3]);
+	expect(radixSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(radixSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(radixSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+});
+
 import { selectionSort } from './algorithms/sort/selectionSort';
 test('Selection Sort: O(n²)', () => {
 	expect(selectionSort([])).to.be.empty;
