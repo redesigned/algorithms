@@ -37,6 +37,14 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 
+* **Number Digit At: O(1)** `./algorithms/util/numberDigitAt.js`
+	
+	- Params: _Number, Place_
+
+* **Number Digit Count: O(1)** `./algorithms/util/numberDigitCount.js`
+	
+	- Params: _Number_
+
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`

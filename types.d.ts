@@ -269,6 +269,14 @@ declare function arrayOfNumbers(num: number): number[];
 declare function arrayRandomShuffle(myArray: any[]): any[];
 
 /**
+ * Number Digit At Given a number it returns the digit as a specific location
+ * @param num - The number
+ * @param place - The place to get the digit at 0-x starting at 0
+ * @returns - The digit at that location starting at 0th place
+ */
+declare function numberDigitAt(num: number, place: number): number;
+
+/**
  * Number Digit Count Calculates the number of Digits in a given Number.
  * @param num - The number to count digits of
  * @returns - The number of digits in the number

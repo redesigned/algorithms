@@ -30,8 +30,15 @@ test('Array Random Shuffle: O(n)', () => {
 	expect(shuffledArray).not.toEqual(shuffledArray2);
 });
 
-import { numberDigitCount } from './algorithms/util/numberDigitCount';
+import { numberDigitAt } from './algorithms/util/numberDigitAt';
 test('Number Digit Count: O(1)', () => {
+	expect(numberDigitAt(123456789, 0)).toBe(9);
+	expect(numberDigitAt(123456789, 4)).toBe(5);
+	expect(numberDigitAt(123456789, 8)).toBe(1);
+});
+
+import { numberDigitCount } from './algorithms/util/numberDigitCount';
+test('Number Digit At: O(1)', () => {
 	expect(numberDigitCount(0)).toBe(1);
 	expect(numberDigitCount(1)).toBe(1);
 	expect(numberDigitCount(12)).toBe(2);
