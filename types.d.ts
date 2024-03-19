@@ -192,6 +192,13 @@ declare function countingSort(myArray: number[]): number[];
 declare function cycleSort(myArray: number[]): number[];
 
 /**
+ * Gnome Sort Compare adjacent elements. If they are out of order, swap them. Move the gnome one step backward
+ * @param myArray - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function gnomeSort(myArray: number[]): number[];
+
+/**
  * Heapify Heapify a subtree rooted at index i.
  * @param arr - The input array.
  * @param n - Size of the heap.

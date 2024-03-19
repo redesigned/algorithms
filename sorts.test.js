@@ -65,6 +65,18 @@ test('Cycle Sort: O(n²)', () => {
 	expect(cycleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
+import { gnomeSort } from './algorithms/sort/gnomeSort';
+test('Gonome Sort: O(n²)', () => {
+	expect(gnomeSort([])).to.be.empty;
+	expect(gnomeSort([9])).toStrictEqual([9]);
+	expect(gnomeSort([1, 3])).toStrictEqual([1, 3]);
+	expect(gnomeSort([3, 1])).toStrictEqual([1, 3]);
+	expect(gnomeSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(gnomeSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(gnomeSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(gnomeSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
+});
+
 import { heapSort } from './algorithms/sort/heapSort';
 test('Heap Sort: O(n log(n))', () => {
 	expect(heapSort([])).to.be.empty;
