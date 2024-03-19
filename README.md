@@ -75,6 +75,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array, Size_
 
+* **Comb Sort: O(n²)** `./algorithms/sort/combSort.js`
+	
+	- Params: _Array, *ShrinkFactor_
+
 * **Heap Sort: O(n log(n))** `./algorithms/sort/heapSort.js`
 	
 	- Params: _Array_
@@ -87,7 +91,7 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 
-* **Javascript Built In Default Sort: O(n log(n)) to O(n²)** `./algorithms/sort/javascriptSort.js`
+* **Javascript Built In Default Sort: O(n²)** `./algorithms/sort/javascriptSort.js`
 	
 	- Params: _Array_
 
@@ -95,7 +99,7 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 
-* **Quick Sort: O(n log(n)) to O(n²)** `./algorithms/sort/quickSort.js`
+* **Quick Sort: O(n²)** `./algorithms/sort/quickSort.js`
 	
 	- Params: _Array_
 

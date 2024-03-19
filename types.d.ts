@@ -170,6 +170,14 @@ declare function bubbleSort(myArray: number[]): number[];
 declare function bucketSort(arr: number[], size?: number): number[];
 
 /**
+ * Comb Sort Similar to bubble sort but with a larger gap between compared elements, which reduces the number of swaps.
+ * @param myArray - The input array to be sorted.
+ * @param shrinkFactor - The shrink factor (optional, default is 1.3).
+ * @returns - A new array containing the sorted elements.
+ */
+declare function combSort(myArray: number[], shrinkFactor?: number): number[];
+
+/**
  * Heapify Heapify a subtree rooted at index i.
  * @param arr - The input array.
  * @param n - Size of the heap.
@@ -232,7 +240,7 @@ declare function selectionSort(myArray: number[]): number[];
 declare function arrayOfNumbers(num: number): number[];
 
 /**
- * Array Random Shuffle Returns an Array that has been randomly Shuffled
+ * Array Random Shuffle Fisher-Yates (or Knuth) Shuffle Returns an Array that has been randomly Shuffled
  * @param myArray - The length of the Array
  * @returns - A new array containing the numbers
  */

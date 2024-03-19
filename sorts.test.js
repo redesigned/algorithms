@@ -24,6 +24,17 @@ test('Bucket Sort: O(n + k)', () => {
 	expect(bucketSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
+import { combSort } from './algorithms/sort/combSort';
+test('Comb Sort: O(n²)', () => {
+	expect(combSort([])).to.be.empty;
+	expect(combSort([9])).toStrictEqual([9]);
+	expect(combSort([1, 3])).toStrictEqual([1, 3]);
+	expect(combSort([3, 1])).toStrictEqual([1, 3]);
+	expect(combSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(combSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(combSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+});
+
 import { heapSort } from './algorithms/sort/heapSort';
 test('Heap Sort: O(n log(n))', () => {
 	expect(heapSort([])).to.be.empty;
@@ -36,7 +47,7 @@ test('Heap Sort: O(n log(n))', () => {
 });
 
 import { insertionSort } from './algorithms/sort/insertionSort';
-test('Intro Sort: O(n log(n))', () => {
+test('Insertion Sort: O(n log(n))', () => {
 	expect(insertionSort([])).to.be.empty;
 	expect(insertionSort([9])).toStrictEqual([9]);
 	expect(insertionSort([1, 3])).toStrictEqual([1, 3]);
@@ -58,7 +69,7 @@ test('Intro Sort: O(n log(n))', () => {
 });
 
 import { javascriptSort } from './algorithms/sort/javascriptSort';
-test('Javasscript Built In Sort: O(n log(n)) to O(n²)', () => {
+test('Javasscript Built In Sort: O(n²)', () => {
 	expect(javascriptSort([])).to.be.empty;
 	expect(javascriptSort([9])).toStrictEqual([9]);
 	expect(javascriptSort([1, 3])).toStrictEqual([1, 3]);
@@ -80,7 +91,7 @@ test('Merge Sort: O(n log(n))', () => {
 });
 
 import { quickSort } from './algorithms/sort/quickSort';
-test('Quick Sort: O(n log(n)) to O(n²)', () => {
+test('Quick Sort: O(n²)', () => {
 	expect(quickSort([])).to.be.empty;
 	expect(quickSort([9])).toStrictEqual([9]);
 	expect(quickSort([1, 3])).toStrictEqual([1, 3]);

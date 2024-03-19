@@ -6,7 +6,7 @@
  * Chooses a pivot, partitions the array, and recursively sorts the subarrays.
  * @param {Array} myArray - The input array to be sorted.
  * @return {Array} - The sorted array.
- * @complexity O(n log(n)) to O(n²)
+ * @complexity O(n²)
  */
 export function quickSort(myArray) {
 	const arr = [...myArray];
