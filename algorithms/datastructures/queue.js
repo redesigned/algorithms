@@ -67,6 +67,9 @@ class Queue {
 	peek() {
 		return this.elements[this.head];
 	}
+	front() {
+		return this.peek();
+	}
 
 	/**
 	 * length
