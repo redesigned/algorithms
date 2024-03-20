@@ -2,6 +2,12 @@ import { expect, test } from 'vitest';
 
 /* ## PROBLEMS ## */
 
+import { fibonacciNumbers } from './algorithms/problems/fibonacciNumbers';
+test('Fibonacci Numbers: O(log n)', () => {
+	expect(fibonacciNumbers(10)).toStrictEqual([0, 1, 1, 2, 3, 5, 8]);
+	expect(fibonacciNumbers(100)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]);
+});
+
 import { sieveOfEratosthenes } from './algorithms/problems/sieveOfEratosthenes';
 test('Sieve of Eratosthenes: O(n log(log(n)))', () => {
 	expect(sieveOfEratosthenes(10)).toStrictEqual([2, 3, 5, 7]);
