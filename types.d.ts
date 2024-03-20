@@ -87,6 +87,13 @@ declare module 'Stack' {
 }
 
 /**
+ * Fibonacci Numbers Generates the Fibonacci numbers up to a given limit.
+ * @param limit - The maximum value for the Fibonacci numbers.
+ * @returns - An array of Fibonacci numbers.
+ */
+declare function fibonacciNumbers(limit: number): number[];
+
+/**
  * Maze Solver Pathfinds through a Grid Maze
  * @param maze - The maze to be navigated.
  * @param wall - A wall in the maze
@@ -119,6 +126,14 @@ declare function twinCrystalBalls(arr: boolean[]): number;
  * @returns - The index of the target value, or -1 if not found.
  */
 declare function binarySearch(arr: number[], target: number, start?: number, end?: number): number;
+
+/**
+ * Fibonacci Search Performs a Fibonacci search on a sorted array.
+ * @param arr - The sorted array to search.
+ * @param target - The target value to find.
+ * @returns - The index of the target value, or -1 if not found.
+ */
+declare function fibonacciSearch(arr: number[], target: number): number;
 
 /**
  * Interpolation Search Performs interpolation search on a sorted array to find the index of a target value

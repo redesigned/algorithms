@@ -72,6 +72,11 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Params: _Array, Target, *Start *End_
 	- Returns: _Number_
 
+* **Fibonacci Search: O(log n)** `./algorithms/search/fibonacciSearch.js`
+	
+	- Params: _Array, Target_
+	- Returns: _Number_
+
 * **Interpolation Search: O(log(log(n)))** `./algorithms/search/binarySearch.js`
 	
 	- Params: _Array, Target, *Start *End_
@@ -170,6 +175,11 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Returns: _Array_
 
 ### Problems
+
+* **Fibonacci Numbers: O(√n)** `./algorithms/problems/fibonacciNumbers.js`
+	
+	- Params: _Number_
+	- Returns: _Array_
 
 * **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`
 	
