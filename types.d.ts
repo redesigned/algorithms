@@ -87,6 +87,13 @@ declare module 'Stack' {
 }
 
 /**
+ * Cumulative Sum Calculates the cumulative sum of an array of numbers.
+ * @param arr - The input array of numbers.
+ * @returns - The cumulative sum.
+ */
+declare function cumulativeSum(arr: number[]): number;
+
+/**
  * Fibonacci Numbers Generates the Fibonacci numbers up to a given limit.
  * @param limit - The maximum value for the Fibonacci numbers.
  * @returns - An array of Fibonacci numbers.
@@ -99,9 +106,9 @@ declare function fibonacciNumbers(limit: number): number[];
  * @param wall - A wall in the maze
  * @param start - The start point [row, column]
  * @param end - The end point [row, column]
- * @returns - A new array containing the path through the maze.
+ * @returns - A new array containing the path through the maze or -1 if no exit.
  */
-declare function mazeSolver(maze?: (string[])[], wall?: string, start?: number[], end?: number[]): (number[])[];
+declare function mazeSolver(maze?: (string[])[], wall?: string, start?: number[], end?: number[]): any;
 
 /**
  * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.

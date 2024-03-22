@@ -176,6 +176,11 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Problems
 
+* **Cumulative Sum: O(n)** `./algorithms/problems/cumulativeSum.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
 * **Fibonacci Numbers: O(√n)** `./algorithms/problems/fibonacciNumbers.js`
 	
 	- Params: _Number_
