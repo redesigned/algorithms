@@ -12,12 +12,14 @@
  * @complexity O(n²)
  */
 export function mazeSolver(maze = [[' ']], wall = '#', start = [0,0], end = [0,0]) {
-	const path = [start];
-	const branchPoints = [];
 	const visited = new Set();
-	const current = start;
-	const noExit = false;
-	const isValidCell = (row, col) => {
+	let possibilities = [];
+	let path = [start];
+	let current = start;
+	let noExit = false;
+	const isInMaze = (row, col) => {
+		console.log(row);
+		console.log(col);
         return row >= 0 && row < maze.length && col >= 0 && col < maze[0].length;
     };
     const isWall = (row, col) => {
@@ -26,11 +28,46 @@ export function mazeSolver(maze = [[' ']], wall = '#', start = [0,0], end = [0,0
     const isVisited = (row, col) => {
         return visited.has(`${row},${col}`);
     };
-	const markVisited = (row, col) => {
-        visited.add(`${row},${col}`);
+	const isEnd = (current, end) => {
+        return (current[0] === end[0] && current[1] === end[1]);
     };
-	while (current != end || !noExit){
-		// implimentation
+	const isPossibility = (row, col) => {
+        if (isInMaze(row, col) && !isWall(row, col) && !isVisited(row,col)) {
+			return true;
+		} else {
+			return false;
+		}
+    };
+	while (!isEnd(current, end) || !noExit) {
+		const row = current[0];
+		const col = current[1];
+		visited.add(`${row},${col}`);
+		console.log('Current:');
+		console.log(current);
+		console.log('Path:');
+		console.log(path);
+		console.log('Previous Possibilities:');
+		console.log(possibilities);
+		if (isPossibility(row - 1, col)) {
+			possibilities = [...possibilities, [...path, [row - 1, col]]];
+		}
+		if (isPossibility(row, col + 1)) {
+			possibilities = [...possibilities, [...path, [row, col + 1]]];
+		}
+		if (isPossibility(row + 1, col)) {
+			possibilities = [...possibilities, [...path, [row + 1, col]]];
+		}
+		if (isPossibility(row, col - 1)) {
+			possibilities = [...possibilities, [...path, [row, col - 1]]];
+		}
+		console.log('New Possibilities:');
+		console.log(possibilities);
+		if (possibilities.length < 1) {
+			noExit = true;
+		} else {
+			path = possibilities.pop();
+			current = path[possibilities.length - 1];
+		}
 	}
 	if (!noExit) {
 		return path;
