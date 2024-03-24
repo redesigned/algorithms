@@ -23,38 +23,6 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ## Algorithms Implimented
 
-### Utilities
-
-* **Array Merge: O(n)** `./algorithms/util/arrayMerge.js`
-	
-	- Params: _FirstArray, SecondArray_
-	- Returns: _Array_
-
-* **Array Most Digits: O(n)** `./algorithms/util/arrayMostDigits.js`
-	
-	- Params: _Array_
-	- Returns: _Number_
-
-* **Array of Numbers: O(n)** `./algorithms/util/arrayOfNumbers.js`
-	
-	- Params: _Number_
-	- Returns: _Array_
-
-* **Array Random Shuffle: O(n)** `./algorithms/util/arrayRandomShuffle.js`
-	
-	- Params: _Array_
-	- Returns: _Array_
-
-* **Number Digit At: O(1)** `./algorithms/util/numberDigitAt.js`
-	
-	- Params: _Number, Place_
-	- Returns: _Number_
-
-* **Number Digit Count: O(1)** `./algorithms/util/numberDigitCount.js`
-	
-	- Params: _Number_
-	- Returns: _Number_
-
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`
@@ -176,11 +144,6 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Problems
 
-* **Cumulative Sum: O(n)** `./algorithms/problems/cumulativeSum.js`
-	
-	- Params: _Array_
-	- Returns: _Number_
-
 * **Fibonacci Numbers: O(√n)** `./algorithms/problems/fibonacciNumbers.js`
 	
 	- Params: _Number_
@@ -195,3 +158,45 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Number_
 	- Returns: _Array_
+
+### Utilities
+
+* **Array Merge: O(n)** `./algorithms/util/arrayMerge.js`
+	
+	- Params: _FirstArray, SecondArray_
+	- Returns: _Array_
+
+* **Array Most Digits: O(n)** `./algorithms/util/arrayMostDigits.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
+* **Array of Numbers: O(n)** `./algorithms/util/arrayOfNumbers.js`
+	
+	- Params: _Number_
+	- Returns: _Array_
+
+* **Array Random Shuffle: O(n)** `./algorithms/util/arrayRandomShuffle.js`
+	
+	- Params: _Array_
+	- Returns: _Array_
+
+* **Cumulative Sum: O(n)** `./algorithms/problems/cumulativeSum.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
+* **Mean Average: O(n)** `./algorithms/problems/meanAverage.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
+* **Number Digit At: O(1)** `./algorithms/util/numberDigitAt.js`
+	
+	- Params: _Number, Place_
+	- Returns: _Number_
+
+* **Number Digit Count: O(1)** `./algorithms/util/numberDigitCount.js`
+	
+	- Params: _Number_
+	- Returns: _Number_

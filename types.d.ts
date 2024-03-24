@@ -87,13 +87,6 @@ declare module 'Stack' {
 }
 
 /**
- * Cumulative Sum Calculates the cumulative sum of an array of numbers.
- * @param arr - The input array of numbers.
- * @returns - The cumulative sum.
- */
-declare function cumulativeSum(arr: number[]): number;
-
-/**
  * Fibonacci Numbers Generates the Fibonacci numbers up to a given limit.
  * @param limit - The maximum value for the Fibonacci numbers.
  * @returns - An array of Fibonacci numbers.
@@ -324,6 +317,20 @@ declare function arrayOfNumbers(num: number): number[];
  * @returns - A new array containing the numbers
  */
 declare function arrayRandomShuffle(myArray: any[]): any[];
+
+/**
+ * Cumulative Sum Calculates the cumulative sum of an array of numbers.
+ * @param arr - The input array of numbers.
+ * @returns - The cumulative sum.
+ */
+declare function cumulativeSum(arr: number[]): number;
+
+/**
+ * Mean Value (Average) Calculates the mean average value for an array of numbers.
+ * @param arr - The input array of numbers.
+ * @returns - The mean average value.
+ */
+declare function meanAverage(arr: number[]): number;
 
 /**
  * Number Digit At Given a number it returns the digit as a specific location

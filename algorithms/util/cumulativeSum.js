@@ -1,3 +1,6 @@
+// @ts-check
+"use strict";
+
 /**
  * Cumulative Sum
  * Calculates the cumulative sum of an array of numbers.

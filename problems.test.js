@@ -2,16 +2,6 @@ import { expect, test } from 'vitest';
 
 /* ## PROBLEMS ## */
 
-import { cumulativeSum } from './algorithms/problems/cumulativeSum';
-test('Cumulative Sum: O(n)', () => {
-	expect(cumulativeSum([])).toBe(0);
-	expect(cumulativeSum([0])).toBe(0);
-	expect(cumulativeSum([1])).toBe(1);
-	expect(cumulativeSum([0, 0])).toBe(0);
-	expect(cumulativeSum([11, 3, 7])).toBe(21);
-	expect(cumulativeSum([5, 10, 15])).toBe(30);
-});
-
 import { fibonacciNumbers } from './algorithms/problems/fibonacciNumbers';
 test('Fibonacci Numbers: O(log n)', () => {
 	expect(fibonacciNumbers(10)).toStrictEqual([0, 1, 1, 2, 3, 5, 8]);

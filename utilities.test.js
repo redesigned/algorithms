@@ -36,6 +36,27 @@ test('Array Random Shuffle: O(n)', () => {
 	expect(shuffledArray).not.toEqual(shuffledArray2);
 });
 
+import { cumulativeSum } from './algorithms/util/cumulativeSum';
+test('Cumulative Sum: O(n)', () => {
+	expect(cumulativeSum([])).toBe(0);
+	expect(cumulativeSum([0])).toBe(0);
+	expect(cumulativeSum([1])).toBe(1);
+	expect(cumulativeSum([0, 0])).toBe(0);
+	expect(cumulativeSum([11, 3, 7])).toBe(21);
+	expect(cumulativeSum([5, 10, 15])).toBe(30);
+});
+
+import { meanAverage } from './algorithms/util/meanAverage';
+test('Mean Average: O(n)', () => {
+	expect(meanAverage([])).toBe(0);
+	expect(meanAverage([0])).toBe(0);
+	expect(meanAverage([1])).toBe(1);
+	expect(meanAverage([0, 0])).toBe(0);
+	expect(meanAverage([2, 2, 2])).toBe(2);
+	expect(meanAverage([1, 2, 3])).toBe(2);
+	expect(meanAverage([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(5);
+});
+
 import { numberDigitAt } from './algorithms/util/numberDigitAt';
 test('Number Digit Count: O(1)', () => {
 	expect(numberDigitAt(123456789, 0)).toBe(9);
