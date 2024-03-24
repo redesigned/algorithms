@@ -171,6 +171,11 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Params: _FirstArray, SecondArray_
 	- Returns: _Array_
 
+* **Array Min: O(n)** `./algorithms/util/arrayMin.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
 * **Array Most Digits: O(n)** `./algorithms/util/arrayMostDigits.js`
 	
 	- Params: _Array_

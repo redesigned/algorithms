@@ -295,6 +295,13 @@ declare function arrayMax(arr: number[]): number;
 declare function arrayMerge(leftArr: number[], rightArr: number[]): number[];
 
 /**
+ * Array Min Return the smallest value from an array of numbers or 0 if empty.
+ * @param arr - The input array of numbers.
+ * @returns - The smallest number in the array or 0 if empty.
+ */
+declare function arrayMin(arr: number[]): number;
+
+/**
  * Number Digit Count Calculates the number of Digits of the largest number in an array.
  * @param arr - The number to count digits of
  * @returns - The digit count of the largest number in the array

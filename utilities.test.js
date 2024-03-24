@@ -8,12 +8,22 @@ test('Array Max: O(n)', () => {
 	expect(arrayMax([2, 2, 2])).toBe(2);
 	expect(arrayMax([1, 42, 6, 23])).toBe(42);
 	expect(arrayMax([1048, 111, 69, 42])).toBe(1048);
+	expect(arrayMax([1048, 111, -73, 69, 42])).toBe(1048);
 });
 
 import { arrayMerge } from './algorithms/util/arrayMerge';
 test('Array Merge: O(n)', () => {
 	expect(arrayMerge([1, 3, 5],[2, 4, 6])).toStrictEqual([1, 2, 3, 4, 5, 6]);
 	expect(arrayMerge([1, 3, 5, 7, 8, 9, 10],[2, 4, 6, 11, 12, 13])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
+});
+
+import { arrayMin } from './algorithms/util/arrayMin';
+test('Array Min: O(n)', () => {
+	expect(arrayMin([])).toBe(0);
+	expect(arrayMin([2, 2, 2])).toBe(2);
+	expect(arrayMin([1, 42, 6, 23])).toBe(1);
+	expect(arrayMin([1048, 111, 69, 42])).toBe(42);
+	expect(arrayMin([1048, 111, -73, 69, 42])).toBe(-73);
 });
 
 import { arrayMostDigits } from './algorithms/util/arrayMostDigits';
