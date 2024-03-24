@@ -94,16 +94,6 @@ declare module 'Stack' {
 declare function fibonacciNumbers(limit: number): number[];
 
 /**
- * Maze Solver Pathfinds through a Grid Maze
- * @param maze - The maze to be navigated.
- * @param wall - A wall in the maze
- * @param start - The start point [row, column]
- * @param end - The end point [row, column]
- * @returns - A new array containing the path through the maze or -1 if no exit.
- */
-declare function mazeSolver(maze?: (string[])[], wall?: string, start?: number[], end?: number[]): any;
-
-/**
  * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
  * @param maxNum - The maximum number up to which to find prime numbers.
  * @returns - An array containing prime numbers up to 'maxNum'.
@@ -290,6 +280,13 @@ declare function selectionSort(myArray: number[]): number[];
 declare function shellSort(myArray: number[]): number[];
 
 /**
+ * Array Max Return the largest value from an array of numbers or 0 if empty.
+ * @param arr - The input array of numbers.
+ * @returns - The largest number in the array or 0 if empty.
+ */
+declare function arrayMax(arr: number[]): number;
+
+/**
  * Array Merge Merges two sorted arrays into a single sorted array.
  * @param leftArr - The left sorted array.
  * @param rightArr - The right sorted array.
@@ -326,7 +323,7 @@ declare function arrayRandomShuffle(myArray: any[]): any[];
 declare function cumulativeSum(arr: number[]): number;
 
 /**
- * Mean Value (Average) Calculates the mean average value for an array of numbers.
+ * Mean Value (Average) Calculates the mean average value for an array of numbers, returns 0 if empty.
  * @param arr - The input array of numbers.
  * @returns - The mean average value.
  */

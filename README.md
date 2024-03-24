@@ -161,6 +161,11 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Utilities
 
+* **Array Max: O(n)** `./algorithms/util/arrayMax.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
 * **Array Merge: O(n)** `./algorithms/util/arrayMerge.js`
 	
 	- Params: _FirstArray, SecondArray_

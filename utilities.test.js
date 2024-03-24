@@ -2,6 +2,14 @@ import { expect, test } from 'vitest';
 
 /* ## UTILITIES ## */
 
+import { arrayMax } from './algorithms/util/arrayMax';
+test('Array Max: O(n)', () => {
+	expect(arrayMax([])).toBe(0);
+	expect(arrayMax([2, 2, 2])).toBe(2);
+	expect(arrayMax([1, 42, 6, 23])).toBe(42);
+	expect(arrayMax([1048, 111, 69, 42])).toBe(1048);
+});
+
 import { arrayMerge } from './algorithms/util/arrayMerge';
 test('Array Merge: O(n)', () => {
 	expect(arrayMerge([1, 3, 5],[2, 4, 6])).toStrictEqual([1, 2, 3, 4, 5, 6]);
