@@ -351,3 +351,10 @@ declare function numberDigitAt(num: number, place: number): number;
  */
 declare function numberDigitCount(num: number): number;
 
+/**
+ * Square Root Calculates the square root of the number with given tolerance (precision) by using Newton's method.
+ * @param number - the number we want to find a square root of.
+ * @param tolerance - how many precise numbers after the floating point we want to get.
+ */
+declare function squareRoot(number: any, tolerance?: any): number;
+

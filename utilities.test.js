@@ -89,3 +89,11 @@ test('Number Digit At: O(1)', () => {
 	expect(numberDigitCount(12)).toBe(2);
 	expect(numberDigitCount(123456789)).toBe(9);
 });
+
+import { squareRoot } from './algorithms/util/squareRoot';
+test('Square Root: O(log(n))', () => {
+	expect(squareRoot(4)).toBe(2);
+	expect(squareRoot(100)).toBe(10);
+	expect(squareRoot(55, 4)).toBe(7.4162);
+	expect(squareRoot(9.86958, 5)).toBe(3.14159);
+});
