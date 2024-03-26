@@ -87,6 +87,14 @@ declare module 'Stack' {
 }
 
 /**
+ * Calculate Pi Calculates Pi up to 48 decimals places, Fakes Calculating Pi up to 10000 decemil places.
+ * @param n - The number of terms to use.
+ * @returns - The value of pi as a string.
+ * @throws - Throws an error if n exceeds 10,000.
+ */
+declare function calculatePi(n: number): string;
+
+/**
  * Fibonacci Numbers Generates the Fibonacci numbers up to a given limit.
  * @param limit - The maximum value for the Fibonacci numbers.
  * @returns - An array of Fibonacci numbers.
@@ -357,4 +365,12 @@ declare function numberDigitCount(num: number): number;
  * @param tolerance - how many precise numbers after the floating point we want to get.
  */
 declare function squareRoot(number: any, tolerance?: any): number;
+
+/**
+ * Truncate String Truncates a string to a specific length.
+ * @param inputString - The input string to truncate.
+ * @param maxLength - The maximum length of the truncated string.
+ * @returns - The truncated string.
+ */
+declare function truncateString(inputString: string, maxLength: number): string;
 

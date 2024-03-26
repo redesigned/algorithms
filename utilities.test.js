@@ -97,3 +97,11 @@ test('Square Root: O(log(n))', () => {
 	expect(squareRoot(55, 4)).toBe(7.4162);
 	expect(squareRoot(9.86958, 5)).toBe(3.14159);
 });
+
+import { truncateString } from './algorithms/util/truncateString';
+test('Truncate String: O(1)', () => {
+	expect(truncateString('123456789', 1)).toBe('1');
+	expect(truncateString('123456789', 3)).toBe('123');
+	expect(truncateString('123456789', 9)).toBe('123456789');
+	expect(truncateString('123456789', 100)).toBe('123456789');
+});

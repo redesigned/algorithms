@@ -144,6 +144,11 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Problems
 
+* **Calculate Pi: O(√n)** `./algorithms/problems/calculatePi.js`
+	
+	- Params: _Number_
+	- Returns: _String_
+
 * **Fibonacci Numbers: O(√n)** `./algorithms/problems/fibonacciNumbers.js`
 	
 	- Params: _Number_
@@ -210,3 +215,8 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Number_
 	- Returns: _Number_
+
+* **NTruncate String: O(1)** `./algorithms/util/truncateString.js`
+	
+	- Params: _String, Length_
+	- Returns: _String_
