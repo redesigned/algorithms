@@ -1,5 +1,5 @@
 /**
- * Square Root
+ * Newtons Square Root
  * Calculates the square root of the number with given tolerance (precision)
  * by using Newton's method.
  * @param number - the number we want to find a square root of.
@@ -7,7 +7,7 @@
  * @return {number} - retuns square root, or 0 if a negative number.
  * @complexity O(log(n))
  */
-export function squareRoot(number, tolerance = 0) {
+export function newtondSquareRoot(number, tolerance = 0) {
 	if (number <= 0) {
 		return 0;
 	}

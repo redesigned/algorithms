@@ -87,12 +87,12 @@ declare module 'Stack' {
 }
 
 /**
- * Calculate Pi Calculates Pi up to 48 decimals places, Fakes Calculating Pi up to 10000 decemil places.
+ * Fake Pi Returns Pi up to 1000000 decimal places from proven pi calculation for testing Pi generation functions
  * @param n - The number of terms to use.
  * @returns - The value of pi as a string.
- * @throws - Throws an error if n exceeds 10,000.
+ * @throws - Throws an error if n exceeds 1,000,000.
  */
-declare function calculatePi(n: number): string;
+declare function fakePi(n: number): string;
 
 /**
  * Fibonacci Numbers Generates the Fibonacci numbers up to a given limit.
@@ -100,6 +100,13 @@ declare function calculatePi(n: number): string;
  * @returns - An array of Fibonacci numbers.
  */
 declare function fibonacciNumbers(limit: number): number[];
+
+/**
+ * Newtons Square Root Calculates the square root of the number with given tolerance (precision) by using Newton's method.
+ * @param number - the number we want to find a square root of.
+ * @param tolerance - how many precise numbers after the floating point we want to get.
+ */
+declare function newtondSquareRoot(number: any, tolerance?: any): number;
 
 /**
  * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
@@ -288,11 +295,25 @@ declare function selectionSort(myArray: number[]): number[];
 declare function shellSort(myArray: number[]): number[];
 
 /**
+ * Cumulative Sum Calculates the cumulative sum of an array of numbers.
+ * @param arr - The input array of numbers.
+ * @returns - The cumulative sum.
+ */
+declare function cumulativeSum(arr: number[]): number;
+
+/**
  * Array Max Return the largest value from an array of numbers or 0 if empty.
  * @param arr - The input array of numbers.
  * @returns - The largest number in the array or 0 if empty.
  */
 declare function arrayMax(arr: number[]): number;
+
+/**
+ * Mean Value (Average) Calculates the mean average value for an array of numbers, returns 0 if empty.
+ * @param arr - The input array of numbers.
+ * @returns - The mean average value.
+ */
+declare function meanAverage(arr: number[]): number;
 
 /**
  * Array Merge Merges two sorted arrays into a single sorted array.
@@ -331,28 +352,6 @@ declare function arrayOfNumbers(num: number): number[];
 declare function arrayRandomShuffle(myArray: any[]): any[];
 
 /**
- * Cumulative Sum Calculates the cumulative sum of an array of numbers.
- * @param arr - The input array of numbers.
- * @returns - The cumulative sum.
- */
-declare function cumulativeSum(arr: number[]): number;
-
-/**
- * Fake Pi Returns Pi up to 1000000 decimal places from proven pi calculation for testing Pi generation functions
- * @param n - The number of terms to use.
- * @returns - The value of pi as a string.
- * @throws - Throws an error if n exceeds 1,000,000.
- */
-declare function fakePi(n: number): string;
-
-/**
- * Mean Value (Average) Calculates the mean average value for an array of numbers, returns 0 if empty.
- * @param arr - The input array of numbers.
- * @returns - The mean average value.
- */
-declare function meanAverage(arr: number[]): number;
-
-/**
  * Number Digit At Given a number it returns the digit as a specific location
  * @param num - The number
  * @param place - The place to get the digit at 0-x starting at 0
@@ -366,13 +365,6 @@ declare function numberDigitAt(num: number, place: number): number;
  * @returns - The number of digits in the number
  */
 declare function numberDigitCount(num: number): number;
-
-/**
- * Square Root Calculates the square root of the number with given tolerance (precision) by using Newton's method.
- * @param number - the number we want to find a square root of.
- * @param tolerance - how many precise numbers after the floating point we want to get.
- */
-declare function squareRoot(number: any, tolerance?: any): number;
 
 /**
  * Truncate String Truncates a string to a specific length.

@@ -1,7 +1,7 @@
 // @ts-check
 "use strict";
 
-import { fibonacciNumbers } from '../problems/fibonacciNumbers';
+import { fibonacciNumbers } from '../math/fibonacciNumbers';
 
 /**
  * Fibonacci Search

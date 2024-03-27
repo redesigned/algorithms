@@ -1,11 +1,12 @@
 {
 	"source": {
 		"include": [
-			"algorithms/*.js"
+			"algorithms/algorithms/*.js"
 		],
 		"exclude": [
 			"*.test.js",
-			"node_modules"
+			"node_modules",
+			"algorithms/math/calculatePi.js"
 		]
 	},
 	"opts": {
