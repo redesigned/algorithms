@@ -133,7 +133,7 @@ function pi_chudnovsky_bs(digits, hexchars, hexdigits) {
  * @complexity O(n)
  */
 export function calculatePi(digits) {
-	if (n > 75000000) {
+	if (digits > 75000000) {
 		throw new Error("Only works up to 75,000,000 decimal places before the algorithm exceeds range for BiInt calculations in Javascript");
 	}
 	let desiredLength = digits + 2;

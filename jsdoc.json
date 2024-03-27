@@ -1,7 +1,7 @@
 {
 	"source": {
 		"include": [
-			"algorithms/algorithms/*.js"
+			"algorithms/*.js"
 		],
 		"exclude": [
 			"*.test.js",

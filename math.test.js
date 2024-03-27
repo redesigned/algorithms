@@ -2,6 +2,15 @@ import { expect, test } from 'vitest';
 
 /* ## MATH ## */
 
+import { babylonianSquareRoot } from './algorithms/math/babylonianSquareRoot';
+test('Babylonian Square Root: O(log(n))', () => {
+	expect(babylonianSquareRoot(4)).toBe(2);
+	expect(babylonianSquareRoot(100)).toBe(10);
+	expect(babylonianSquareRoot(55)).toBe(7.416199);
+	expect(babylonianSquareRoot(9.86958)).toBe(3.141589);
+	expect(babylonianSquareRoot(1471369)).toBe(1213);
+});
+
 import { fakePi } from './algorithms/math/fakePi';
 test('Fake Pi: O(1)', () => {
 	expect(fakePi(2)).toBe('3.14');
@@ -31,12 +40,13 @@ test('Fibonacci Numbers: O(log n)', () => {
 	expect(fibonacciNumbers(100)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]);
 });
 
-import { newtondSquareRoot } from './algorithms/math/newtonsSquareRoot';
-test('Square Root: O(log(n))', () => {
-	expect(newtondSquareRoot(4)).toBe(2);
-	expect(newtondSquareRoot(100)).toBe(10);
-	expect(newtondSquareRoot(55, 4)).toBe(7.4162);
-	expect(newtondSquareRoot(9.86958, 5)).toBe(3.14159);
+import { newtonsSquareRoot } from './algorithms/math/newtonsSquareRoot';
+test('Newtons Square Root: O(log(n))', () => {
+	expect(newtonsSquareRoot(4)).toBe(2);
+	expect(newtonsSquareRoot(100)).toBe(10);
+	expect(newtonsSquareRoot(55, 4)).toBe(7.4162);
+	expect(newtonsSquareRoot(9.86958, 5)).toBe(3.14159);
+	expect(newtonsSquareRoot(1471369)).toBe(1213);
 });
 
 import { sieveOfEratosthenes } from './algorithms/math/sieveOfEratosthenes';

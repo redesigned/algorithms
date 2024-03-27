@@ -1,3 +1,6 @@
+// @ts-check
+"use strict";
+
 /**
  * Newtons Square Root
  * Calculates the square root of the number with given tolerance (precision)
@@ -7,7 +10,7 @@
  * @return {number} - retuns square root, or 0 if a negative number.
  * @complexity O(log(n))
  */
-export function newtondSquareRoot(number, tolerance = 0) {
+export function newtonsSquareRoot(number, tolerance = 0) {
 	if (number <= 0) {
 		return 0;
 	}
