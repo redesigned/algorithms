@@ -33,6 +33,38 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Methods: _Push(item) Pop(), Peek(); Properties: length, isEmpty_
 
+### Math
+
+* **Calculate Pi: O(√n)** `./algorithms/mah/calculatePi.js`
+	
+	- Params: _Number_
+	- Returns: _String_
+
+* **Fake Pi: O(√n)** `./algorithms/math/fakePi.js`
+	
+	- Params: _Number_
+	- Returns: _String_
+
+* **Fibonacci Numbers: O(√n)** `./algorithms/math/fibonacciNumbers.js`
+	
+	- Params: _Number_
+	- Returns: _Array_
+
+* **Newtons Square Root: O(log(n))** `./algorithms/math/newtondSquareRoot.js`
+	
+	- Params: _Number, *Tolerance_
+	- Returns: _Number_
+
+* **Twin Crystal Balls: O(√n)** `./algorithms/math/twinCrystalBalls.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
+* **Sieve of Eratosthenes: O(n log(log(n)))** `./algorithms/math/sieveOfEratosthenes.js`
+	
+	- Params: _Number_
+	- Returns: _Array_
+
 ### Searches
 
 * **Binary Search: O(log(n))** `./algorithms/search/binarySearch.js`
@@ -144,25 +176,10 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 
 ### Problems
 
-* **Calculate Pi: O(√n)** `./algorithms/problems/calculatePi.js`
-	
-	- Params: _Number_
-	- Returns: _String_
-
-* **Fibonacci Numbers: O(√n)** `./algorithms/problems/fibonacciNumbers.js`
-	
-	- Params: _Number_
-	- Returns: _Array_
-
 * **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`
 	
 	- Params: _Array_
 	- Returns: _Number_
-
-* **Sieve of Eratosthenes: O(n log(log(n)))** `./algorithms/problems/sieveOfEratosthenes.js`
-	
-	- Params: _Number_
-	- Returns: _Array_
 
 ### Utilities
 
@@ -200,11 +217,6 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	
 	- Params: _Array_
 	- Returns: _Number_
-
-* **Fake Pi: O(1)** `./algorithms/util/fakePi.js`
-	
-	- Params: _decimalPlaces_
-	- Returns: _String_
 
 * **Mean Average: O(n)** `./algorithms/util/meanAverage.js`
 	
