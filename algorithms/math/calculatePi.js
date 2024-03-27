@@ -129,9 +129,13 @@ function pi_chudnovsky_bs(digits, hexchars, hexdigits) {
  * Calculates an approximation of π with a specified number of decimal digits using Chudnovsky Binary Splitting and Pell
  * @param {number} digits - The desired precision (number of decimal digits).
  * @returns {string} - The approximation of π as a string with the specified precision.
+ * @throws {Error} - Throws an error if n exceeds 75,000,000 decimal places.
  * @complexity O(n)
  */
 export function calculatePi(digits) {
+	if (n > 75000000) {
+		throw new Error("Only works up to 75,000,000 decimal places before the algorithm exceeds range for BiInt calculations in Javascript");
+	}
 	let desiredLength = digits + 2;
 	if (digits % 2 === 1) {
 		digits += 11;
