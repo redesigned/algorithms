@@ -196,12 +196,17 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Params: _Array_
 	- Returns: _Array_
 
-* **Cumulative Sum: O(n)** `./algorithms/problems/cumulativeSum.js`
+* **Cumulative Sum: O(n)** `./algorithms/util/cumulativeSum.js`
 	
 	- Params: _Array_
 	- Returns: _Number_
 
-* **Mean Average: O(n)** `./algorithms/problems/meanAverage.js`
+* **Fake Pi: O(1)** `./algorithms/util/fakePi.js`
+	
+	- Params: _decimalPlaces_
+	- Returns: _String_
+
+* **Mean Average: O(n)** `./algorithms/util/meanAverage.js`
 	
 	- Params: _Array_
 	- Returns: _Number_
@@ -216,7 +221,7 @@ pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
 	- Params: _Number_
 	- Returns: _Number_
 
-* **NTruncate String: O(1)** `./algorithms/util/truncateString.js`
+* **Truncate String: O(1)** `./algorithms/util/truncateString.js`
 	
 	- Params: _String, Length_
 	- Returns: _String_

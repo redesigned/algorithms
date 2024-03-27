@@ -338,6 +338,14 @@ declare function arrayRandomShuffle(myArray: any[]): any[];
 declare function cumulativeSum(arr: number[]): number;
 
 /**
+ * Fake Pi Returns Pi up to 1000000 decimal places from proven pi calculation for testing Pi generation functions
+ * @param n - The number of terms to use.
+ * @returns - The value of pi as a string.
+ * @throws - Throws an error if n exceeds 1,000,000.
+ */
+declare function fakePi(n: number): string;
+
+/**
  * Mean Value (Average) Calculates the mean average value for an array of numbers, returns 0 if empty.
  * @param arr - The input array of numbers.
  * @returns - The mean average value.
