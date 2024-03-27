@@ -1,7 +1,16 @@
 {
 	"compilerOptions": {
 		"target": "es2022",
-		"lib": ["dom", "dom.iterable", "esnext", "ES2023", "ES2023.Array"],
-		"checkJs": true
-	}
+		"lib": ["esnext.bigint", "dom", "dom.iterable", "esnext", "ES2023", "ES2023.Array"],
+		"checkJs": true,
+		"types": ["node"]
+	},
+	"include": [
+		"algorithms/*.js"
+	],
+	"exclude": [
+		"*.test.js",
+		"node_modules",
+		"**/calculatePi.js"
+	]
 }

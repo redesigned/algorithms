@@ -50,9 +50,8 @@ function gcd_euclid(a, b) {
 /**
  * Pell Square Root of 10005
  * Computes the square root of 10005 using the Pell series algorithm.
- * @ignore
  * @param {number} digits - The desired precision (number of decimal digits).
- * @returns {[bigint, bigint]} - A tuple containing two big integers representing the numerator and denominator of the square root.
+ * @returns {[string, string]} - A tuple containing two big integers representing the numerator and denominator of the square root.
  * @complexity O(n)
  */
 function pell_sqrt_10005(digits) {
@@ -63,7 +62,7 @@ function pell_sqrt_10005(digits) {
 	while (1) {
 		let [x, y] = [x1*x2 + D * y1 * y2, x1 * y2 + y1 * x2];
 		if ( y > y_target) {
-			return [x, y];
+			return [String(x), String(y)];
 		}
 		[x1, y1] = [x2, y2];
 		[x2, y2] = [x, y];
@@ -73,14 +72,15 @@ function pell_sqrt_10005(digits) {
 /**
  * Binary Split
  * Computes partial terms for the Chudnovsky algorithm to approximate π.
- * @ignore
- * @param {bigint} a - Lower bound of the summation.
- * @param {bigint} b - Upper bound of the summation.
+ * @param {string} ta - Lower bound of the summation.
+ * @param {string} tb - Upper bound of the summation.
  * @param {number} level - Recursion depth (used internally).
- * @returns {[bigint, bigint, bigint]} - A tuple containing three big integers representing partial terms.
+ * @returns {[string, string, string]} - A tuple containing three big integers representing partial terms.
  * @complexity O(log(b - a)), where a and b are the input bounds.
  */
-function  bs(a, b, level) {
+function  binarySplit(ta, tb, level) {
+	let a = BigInt(ta);
+	let b = BigInt(tb);
 	const C = 640320n;
 	const C3_OVER_24 = (C*C*C) / 24n;
 	if (BigInt(b) - BigInt(a) == 1n) {
@@ -97,34 +97,39 @@ function  bs(a, b, level) {
 		return [Pab, Qab, Tab];
 	} else {
 		const m = (a + b)>>1n;
-		const [Pam, Qam, Tam] = bs(a, m, level+1);
-		const [Pmb,Qmb,Tmb] = bs(m, b, level+1);
+		const [t1, t2, t3] = binarySplit(String(a), String(m), level+1);
+		const [Pam, Qam, Tam] = [BigInt(t1), BigInt(t2), BigInt(t3)];
+		const [t4, t5, t6] = binarySplit(String(m), String(b), level+1);
+		const [Pmb, Qmb, Tmb] = [BigInt(t4), BigInt(t5), BigInt(t6)];
 		const Pab = Pam * Pmb;
 		const Qab = Qam * Qmb;
 		const Tab = Qmb * Tam + Pam * Tmb;
-		return [Pab, Qab, Tab];
+		return [String(Pab), String(Qab), String(Tab)];
 	}
 }
 
 /**
  * Pi Chudnovsky Binary Splitting and Pell
  * Computes an approximation of π using the Chudnovsky algorithm.
- * @ignore
  * @param {number} digits - The desired precision (number of decimal digits).
- * @param {bigint} hexchars - Number of hexadecimal characters (used internally).
- * @param {bigint} hexdigits - Number of hexadecimal digits (used internally).
- * @returns {[bigint, bigint, bigint]} - A tuple containing the approximation of π, the number of hexadecimal characters, and the number of hexadecimal digits.
+ * @param {string} hc - Number of hexadecimal characters (used internally).
+ * @param {string} hd - Number of hexadecimal digits (used internally).
+ * @returns {[string, string, string]} - A tuple containing the approximation of π, the number of hexadecimal characters, and the number of hexadecimal digits.
  * @complexity O(n)
  */
-function pi_chudnovsky_bs(digits, hexchars, hexdigits) {
+function pi_chudnovsky_bs(digits, hc, hd) {
+	let hexchars = BigInt(hc);
+	let hexdigits = BigInt(hd);
 	let DIGITS_PER_TERM = Math.log10( (640320**3) / (6*2*6*24) );
 	let N = Math.floor(digits/DIGITS_PER_TERM + 10);
-	let P, Q, T, x, y;
-	[P, Q, T] = bs(0n, BigInt(N), 1);
-	[x,y] = pell_sqrt_10005(digits);
+	let P, Q, T, x, y, j1, j2, j3;
+	[j1, j2, j3] = binarySplit(String(0n), String(BigInt(N)), 1);
+	[P, Q, T] = [BigInt(j1), BigInt(j2), BigInt(j3)]
+	let [t1, t2] = pell_sqrt_10005(digits);
+	[x,y] = [BigInt(t1),BigInt(t2)];
 	hexdigits = BigInt(Math.floor(digits/1.20411998266));
 	hexchars = (Q * 426880n * x * (16n**(BigInt(hexdigits)+20n)) ) / (T*y);
-	return [(Q * 426880n * x * 10n ** BigInt(digits)) / (T*y), hexchars, hexdigits];
+	return [String((Q * 426880n * x * 10n ** BigInt(digits)) / (T*y)), String(hexchars), String(hexdigits)];
 }
 
 /**
@@ -148,7 +153,8 @@ export function calculatePi(digits) {
 	let hexchars = 0n;
 	let hexdigits = 0n;
 	let pi = 0n;
-	[pi, hexchars, hexdigits] = pi_chudnovsky_bs(digits, hexchars, hexdigits);
+	let [t1, t2, t3] = pi_chudnovsky_bs(digits, String(hexchars), String(hexdigits));
+	[pi, hexchars, hexdigits] = [BigInt(t1), BigInt(t2), BigInt(t3)];
 	let s = pi.toString().slice(0, digits);
 	let s_hex = hexchars.toString(16).slice(Number(hexdigits + 1n), Number(hexdigits + 11n));
 	let pretty_pi = s[0] + "." + s.slice(1, 100);

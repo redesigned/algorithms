@@ -50,7 +50,6 @@ function gcd_euclid(a, b) {
 /**
  * Pell Square Root of 10005
  * Computes the square root of 10005 using the Pell series algorithm.
- * @ignore
  * @param {number} digits - The desired precision (number of decimal digits).
  * @returns {[bigint, bigint]} - A tuple containing two big integers representing the numerator and denominator of the square root.
  * @complexity O(n)
@@ -73,7 +72,6 @@ function pell_sqrt_10005(digits) {
 /**
  * Binary Split
  * Computes partial terms for the Chudnovsky algorithm to approximate π.
- * @ignore
  * @param {bigint} a - Lower bound of the summation.
  * @param {bigint} b - Upper bound of the summation.
  * @param {number} level - Recursion depth (used internally).
@@ -109,7 +107,6 @@ function  bs(a, b, level) {
 /**
  * Pi Chudnovsky Binary Splitting and Pell
  * Computes an approximation of π using the Chudnovsky algorithm.
- * @ignore
  * @param {number} digits - The desired precision (number of decimal digits).
  * @param {bigint} hexchars - Number of hexadecimal characters (used internally).
  * @param {bigint} hexdigits - Number of hexadecimal digits (used internally).

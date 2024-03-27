@@ -6,7 +6,7 @@
 		"exclude": [
 			"*.test.js",
 			"node_modules",
-			"algorithms/math/calculatePi.js"
+			"**/calculatePi.js"
 		]
 	},
 	"opts": {

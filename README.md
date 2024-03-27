@@ -9,6 +9,7 @@
 ## Setup
 ```zsh
 pnpm install
+chmod +x generateTypes.sh
 ```
 
 ## Test
@@ -18,7 +19,7 @@ pnpm run test
 
 ## Generate TypeScript Type Definitions File
 ```zsh
-pnpm exec jsdoc -t node_modules/@otris/jsdoc-tsd -r ./algorithms -d types.d.ts
+./generateTypes.sh
 ```
 
 ## Algorithms Implimented

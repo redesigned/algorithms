@@ -87,6 +87,13 @@ declare module 'Stack' {
 }
 
 /**
+ * Babylonian Square Root Calculates the square root of a number using the Babylonian method.
+ * @param n - The input number.
+ * @returns - The square root of the input number (rounded to 6 decimal places).
+ */
+declare function babylonianSquareRoot(n: number): number;
+
+/**
  * Fake Pi Returns Pi up to 1000000 decimal places from proven pi calculation for testing Pi generation functions
  * @param n - The number of terms to use.
  * @returns - The value of pi as a string.
@@ -106,7 +113,7 @@ declare function fibonacciNumbers(limit: number): number[];
  * @param number - the number we want to find a square root of.
  * @param tolerance - how many precise numbers after the floating point we want to get.
  */
-declare function newtondSquareRoot(number: any, tolerance?: any): number;
+declare function newtonsSquareRoot(number: any, tolerance?: any): number;
 
 /**
  * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
