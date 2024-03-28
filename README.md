@@ -9,12 +9,12 @@
 ## Setup
 ```zsh
 pnpm install
-chmod +x generateTypes.sh
+chmod +x generateTypes.sh runTests.sh
 ```
 
 ## Test
 ```zsh
-pnpm run test
+./runTests.sh
 ```
 
 ## Generate TypeScript Type Definitions File
@@ -178,6 +178,11 @@ pnpm run test
 ### Problems
 
 * **Dijkstra's Maze Solver: O(n² log n)** `./algorithms/problems/dijkstraMazeSolver.js`
+	
+	- Params: _Maze, wallChar, startChar, endChar_
+	- Returns: _Number_
+
+* **Trémaux's Maze Solver: O(n²)** `./algorithms/problems/tremauxsMazeSolver.js`
 	
 	- Params: _Maze, wallChar, startChar, endChar_
 	- Returns: _Number_

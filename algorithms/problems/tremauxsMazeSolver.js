@@ -7,7 +7,7 @@
  * @param {string} startChar - The character that represents the start point in the maze.
  * @param {string} endChar - The character that represents the end point in the maze.
  * @returns {number[][] | number} - The path from start to end as an array of coordinates, or -1 if no solution exists.
- * @complexity O(n² log n) - Where n is the total number of cells in the maze.
+ * @complexity O(n²) - Where n is the total number of cells in the maze.
  */
 export function tremauxsMazeSolver(maze, wallChar, startChar, endChar) {
 	let start, end;

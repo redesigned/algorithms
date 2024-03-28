@@ -49,7 +49,7 @@ test('Dijkstra Maze Solver: O(n² log n)', () => {
 });
 
 import { tremauxsMazeSolver } from './algorithms/problems/tremauxsMazeSolver';
-test('Dijkstra Maze Solver: O(n² log n)', () => {
+test('Tremauxs Maze Solver: O(n²)', () => {
 	let wallChar = '#';
 	let startChar = 'S';
 	let endChar = 'E';
