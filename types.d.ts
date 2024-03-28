@@ -123,7 +123,7 @@ declare function newtonsSquareRoot(number: any, tolerance?: any): number;
 declare function sieveOfEratosthenes(maxNum: number): number[];
 
 /**
- * Dijkstra Maze Solver Solves a maze using Dijkstra's algorithm.
+ * Dijkstra Maze Solver Solves a maze using Dijkstra's algorithm to find the shortest path through a maze, returns -1 if no path can be found.
  * @param maze - The maze to be solved, represented as a 2D array of strings.
  * @param wallChar - The character that represents a wall in the maze.
  * @param startChar - The character that represents the start point in the maze.
@@ -131,6 +131,16 @@ declare function sieveOfEratosthenes(maxNum: number): number[];
  * @returns - The path from start to end as an array of coordinates, or -1 if no solution exists.
  */
 declare function dijkstraMazeSolver(maze: (string[])[], wallChar: string, startChar: string, endChar: string): (number[])[] | number;
+
+/**
+ * Tremauxs Maze Solver Solves a maze using Trémaux's algorithm to find a path through the maze, retuns -1 if no path can be found.
+ * @param maze - The maze to be solved, represented as a 2D array of strings.
+ * @param wallChar - The character that represents a wall in the maze.
+ * @param startChar - The character that represents the start point in the maze.
+ * @param endChar - The character that represents the end point in the maze.
+ * @returns - The path from start to end as an array of coordinates, or -1 if no solution exists.
+ */
+declare function tremauxsMazeSolver(maze: (string[])[], wallChar: string, startChar: string, endChar: string): (number[])[] | number;
 
 /**
  * Twin Crystal Balls Finds the index of the first true value in the array using a jump search approach.

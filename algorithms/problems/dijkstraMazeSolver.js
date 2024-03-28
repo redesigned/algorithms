@@ -1,6 +1,6 @@
 /**
  * Dijkstra Maze Solver
- * Solves a maze using Dijkstra's algorithm.
+ * Solves a maze using Dijkstra's algorithm to find the shortest path through a maze, returns -1 if no path can be found.
  * @param {string[][]} maze - The maze to be solved, represented as a 2D array of strings.
  * @param {string} wallChar - The character that represents a wall in the maze.
  * @param {string} startChar - The character that represents the start point in the maze.
