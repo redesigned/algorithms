@@ -177,6 +177,11 @@ pnpm run test
 
 ### Problems
 
+* **Dijkstra's Maze Solver: O(n² log n)** `./algorithms/problems/dijkstraMazeSolver.js`
+	
+	- Params: _Maze, wallChar, startChar, endChar_
+	- Returns: _Number_
+
 * **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`
 	
 	- Params: _Array_
