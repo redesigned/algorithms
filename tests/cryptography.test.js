@@ -27,3 +27,12 @@ test('ROT13: O(n)', () => {
 	expect(rot13('Call 1-800-555-1212 for Information!')).toBe('Pnyy 1-800-555-1212 sbe Vasbezngvba!');
 	expect(rot13(rot13('Nothing Has Changed'))).toBe('Nothing Has Changed');
 });
+
+import { rot18 } from '../algorithms/cryptography/rot18';
+test('ROT18: O(n)', () => {
+	expect(rot18('')).toBe('');
+	expect(rot18('The quick brown fox jumps over 13 lazy dogs.')).toBe('Gur dhvpx oebja sbk whzcf bire 68 ynml qbtf.');
+	expect(rot18('Gur dhvpx oebja sbk whzcf bire 68 ynml qbtf.')).toBe('The quick brown fox jumps over 13 lazy dogs.');
+	expect(rot18('Call 1-800-555-1212 for Information!')).toBe('Pnyy 6-355-000-6767 sbe Vasbezngvba!');
+	expect(rot18(rot18('Nothing Has Changed 0123456789'))).toBe('Nothing Has Changed 0123456789');
+});

@@ -14,6 +14,13 @@ declare function ceasarsCipher(str: string, offset?: number): string;
 declare function rot13(str: string): string;
 
 /**
+ * ROT18 Encrypts or decrypts letters and numbers in a given string using the rot18 cipher.  Use again to decrypt.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string after applying the Caesar cipher.
+ */
+declare function rot18(str: string): string;
+
+/**
  * ROT5 Encrypts or decrypts numbers in a given string using the rot5 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
