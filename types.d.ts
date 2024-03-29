@@ -1,4 +1,12 @@
 /**
+ * Cesars Cipher Encrypts or decrypts a given string using the Caesar cipher.  Use the negative of the value used to encrypt to decrypt.
+ * @param str - The input string to be transformed.
+ * @param offset - The offset value for the cipher (defaults to 0).
+ * @returns - The transformed string after applying the Caesar cipher.
+ */
+declare function ceasarsCipher(str: string, offset?: number): string;
+
+/**
  * Queue
  * Represents a queue data structure.
  */
@@ -121,14 +129,6 @@ declare function newtonsSquareRoot(number: any, tolerance?: any): number;
  * @returns - An array containing prime numbers up to 'maxNum'.
  */
 declare function sieveOfEratosthenes(maxNum: number): number[];
-
-/**
- * Cesars Cipher Encrypts or decrypts a given string using the Caesar cipher.
- * @param str - The input string to be transformed.
- * @param offset - The offset value for the cipher (defaults to 0).
- * @returns - The transformed string after applying the Caesar cipher.
- */
-declare function ceasarsCipher(str: string, offset?: number): string;
 
 /**
  * Dijkstra Maze Solver Solves a maze using Dijkstra's algorithm to find the shortest path through a maze, returns -1 if no path can be found.

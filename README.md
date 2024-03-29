@@ -24,6 +24,13 @@ chmod +x generateTypes.sh runTests.sh
 
 ## Algorithms Implimented
 
+### Cryptography
+
+* **Ceasars Cipher: O(n)** `./algorithms/cryptography/ceasarsCipher.js`
+	
+	- Methods: _String, Offset_
+	- Returns: _String_
+
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`
@@ -65,6 +72,25 @@ chmod +x generateTypes.sh runTests.sh
 	
 	- Params: _Number_
 	- Returns: _Array_
+
+### Path Finding
+
+* **Dijkstra's Maze Solver: O(n² log n)** `./algorithms/pathfinding/dijkstraMazeSolver.js`
+	
+	- Params: _Maze, wallChar, startChar, endChar_
+	- Returns: _Number_
+
+* **Trémaux's Maze Solver: O(n²)** `./algorithms/pathfinding/tremauxsMazeSolver.js`
+	
+	- Params: _Maze, wallChar, startChar, endChar_
+	- Returns: _Number_
+
+### Problems
+
+* **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
 
 ### Searches
 
@@ -174,23 +200,6 @@ chmod +x generateTypes.sh runTests.sh
 	
 	- Params: _Array_
 	- Returns: _Array_
-
-### Problems
-
-* **Dijkstra's Maze Solver: O(n² log n)** `./algorithms/problems/dijkstraMazeSolver.js`
-	
-	- Params: _Maze, wallChar, startChar, endChar_
-	- Returns: _Number_
-
-* **Trémaux's Maze Solver: O(n²)** `./algorithms/problems/tremauxsMazeSolver.js`
-	
-	- Params: _Maze, wallChar, startChar, endChar_
-	- Returns: _Number_
-
-* **Twin Crystal Balls: O(√n)** `./algorithms/problems/twinCrystalBalls.js`
-	
-	- Params: _Array_
-	- Returns: _Number_
 
 ### Utilities
 
