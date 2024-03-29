@@ -11,6 +11,14 @@ test('CesarsCipher: O(n)', () => {
 	expect(ceasarsCipher('Nothing Has Changed', 0)).toBe('Nothing Has Changed');
 });
 
+import { rot5 } from '../algorithms/cryptography/rot5';
+test('ROT13: O(n)', () => {
+	expect(rot5('')).toBe('');
+	expect(rot5('0123456789')).toBe('5678901234');
+	expect(rot5('Call 1-800-555-1212 for Information!')).toBe('Call 6-355-000-6767 for Information!');
+	expect(rot5(rot5('0123456789'))).toBe('0123456789');
+});
+
 import { rot13 } from '../algorithms/cryptography/rot13';
 test('ROT13: O(n)', () => {
 	expect(rot13('')).toBe('');
