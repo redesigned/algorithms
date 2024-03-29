@@ -123,6 +123,14 @@ declare function newtonsSquareRoot(number: any, tolerance?: any): number;
 declare function sieveOfEratosthenes(maxNum: number): number[];
 
 /**
+ * Cesars Cipher Encrypts or decrypts a given string using the Caesar cipher.
+ * @param str - The input string to be transformed.
+ * @param offset - The offset value for the cipher (defaults to 0).
+ * @returns - The transformed string after applying the Caesar cipher.
+ */
+declare function ceasarsCipher(str: string, offset?: number): string;
+
+/**
  * Dijkstra Maze Solver Solves a maze using Dijkstra's algorithm to find the shortest path through a maze, returns -1 if no path can be found.
  * @param maze - The maze to be solved, represented as a 2D array of strings.
  * @param wallChar - The character that represents a wall in the maze.
@@ -131,16 +139,6 @@ declare function sieveOfEratosthenes(maxNum: number): number[];
  * @returns - The path from start to end as an array of coordinates, or -1 if no solution exists.
  */
 declare function dijkstraMazeSolver(maze: (string[])[], wallChar: string, startChar: string, endChar: string): (number[])[] | number;
-
-/**
- * Tremauxs Maze Solver Solves a maze using Trémaux's algorithm to find a path through the maze, retuns -1 if no path can be found.
- * @param maze - The maze to be solved, represented as a 2D array of strings.
- * @param wallChar - The character that represents a wall in the maze.
- * @param startChar - The character that represents the start point in the maze.
- * @param endChar - The character that represents the end point in the maze.
- * @returns - The path from start to end as an array of coordinates, or -1 if no solution exists.
- */
-declare function tremauxsMazeSolver(maze: (string[])[], wallChar: string, startChar: string, endChar: string): (number[])[] | number;
 
 /**
  * Twin Crystal Balls Finds the index of the first true value in the array using a jump search approach.

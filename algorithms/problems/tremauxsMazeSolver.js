@@ -1,3 +1,5 @@
+// @ts-check
+"use strict";
 
 /**
  * Tremauxs Maze Solver
@@ -6,7 +8,7 @@
  * @param {string} wallChar - The character that represents a wall in the maze.
  * @param {string} startChar - The character that represents the start point in the maze.
  * @param {string} endChar - The character that represents the end point in the maze.
- * @returns {number[][] | number} - The path from start to end as an array of coordinates, or -1 if no solution exists.
+ * @returns {(number[] | undefined)[] | number} - The path from start to end as an array of coordinates, or -1 if no solution exists.
  * @complexity O(n²) - Where n is the total number of cells in the maze.
  */
 export function tremauxsMazeSolver(maze, wallChar, startChar, endChar) {
@@ -21,8 +23,8 @@ export function tremauxsMazeSolver(maze, wallChar, startChar, endChar) {
 	let intersections = [];
 	let direction = [[0, 1], [1, 0], [0, -1], [-1, 0]];
 	while(path.length > 0) {
-		let [x, y] = path[path.length - 1];
-		if(x === end[0] && y === end[1]) break;
+		let [x, y] = path[path.length - 1] || [0, 0];
+		if(x === end?.[0] && y === end?.[1]) break;
 		let options = direction.filter(([dx, dy]) => {
 			let [nx, ny] = [x + dx, y + dy];
 			return nx >= 0 && nx < maze.length && ny >= 0 && ny < maze[0].length && maze[nx][ny] !== wallChar;
@@ -32,7 +34,8 @@ export function tremauxsMazeSolver(maze, wallChar, startChar, endChar) {
 			if (intersections.length === 0) {
 				return -1;
 			}
-			let [ix, iy] = intersections.pop();
+			let [ix, iy] = intersections.pop() || [0, 0];
+			// @ts-ignore
 			path = path.slice(0, path.findIndex(([px, py]) => px === ix && py === iy) + 1);
 			continue;
 		}
@@ -40,20 +43,5 @@ export function tremauxsMazeSolver(maze, wallChar, startChar, endChar) {
 		path.push([x + dx, y + dy]);
 		maze[x][y] = wallChar;
 	}
-	return path;
+	return (path) ? path : -1;
 }
-
-let wallChar = '#';
-let startChar = 'S';
-let endChar = 'E';
-let maze = [
-    ['#','S','#','#','#','#','#'],
-    ['#',' ',' ',' ',' ',' ','#'],
-    ['#',' ','#','#','#','#','#'],
-    ['#',' ',' ',' ',' ',' ','#'],
-    ['#',' ','#','#','#','#','#'],
-    ['#',' ',' ',' ',' ',' ','E'],
-    ['#','#','#','#','#','#','#']
-];
-
-// console.log(solveMaze(maze, wallChar, startChar, endChar));

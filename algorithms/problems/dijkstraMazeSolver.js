@@ -1,3 +1,6 @@
+// @ts-check
+"use strict";
+
 /**
  * Dijkstra Maze Solver
  * Solves a maze using Dijkstra's algorithm to find the shortest path through a maze, returns -1 if no path can be found.
@@ -22,12 +25,18 @@ export function dijkstraMazeSolver(maze, wallChar, startChar, endChar) {
 			}
 		}
 	}
+	if (start === undefined || end === undefined) {
+		return -1;
+	}
 	dist[start.join(',')] = 0;
 	while (queue.length > 0) {
 		queue.sort(function(a, b) {
 			return dist[a.join(',')] - dist[b.join(',')];
 		});
 		let curr = queue.shift();
+		if (curr === undefined) {
+			return -1;
+		}
 		let currKey = curr.join(',');
 		const directions = [[-1, 0], [1, 0], [0, -1], [0, 1]];
 		for (let d = 0; d < directions.length; d++) {
