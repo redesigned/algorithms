@@ -3,8 +3,17 @@
  * @param str - The input string to be transformed.
  * @param offset - The offset value for the cipher (defaults to 0).
  * @returns - The transformed string after applying the Caesar cipher.
+ * @author Joshua Jarman
  */
 declare function ceasarsCipher(str: string, offset?: number): string;
+
+/**
+ * Encode Base64 Encodes a string to Base64.
+ * @param str - The input string to encode.
+ * @returns The Base64-encoded string.
+ * @author Joshua Jarman
+ */
+declare function encodeBase64(str: string): string;
 
 /**
  * Processes a block of input data for MD5 hashing.
@@ -124,6 +133,7 @@ declare function add32(a: number, b: number): number;
  * ROT13 Encrypts or decrypts letters in a given string using the rot13 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
+ * @author Joshua Jarman
  */
 declare function rot13(str: string): string;
 
@@ -131,6 +141,7 @@ declare function rot13(str: string): string;
  * ROT18 Encrypts or decrypts letters and numbers in a given string using the rot18 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
+ * @author Joshua Jarman
  */
 declare function rot18(str: string): string;
 
@@ -138,6 +149,7 @@ declare function rot18(str: string): string;
  * ROT47 Encrypts or decrypts all ASCII characters in a given string using the rot47 cipher.  Use again to decrypt. Note that the \ character needs to be escaped in the string passed into the fucntion due to limitations with javascript string escaping.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
+ * @author Joshua Jarman
  */
 declare function rot47(str: string): string;
 
@@ -145,6 +157,7 @@ declare function rot47(str: string): string;
  * ROT5 Encrypts or decrypts numbers in a given string using the rot5 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
+ * @author Joshua Jarman
  */
 declare function rot5(str: string): string;
 
@@ -155,6 +168,7 @@ declare function rot5(str: string): string;
 declare class Queue {
     /**
      * Queue Represents a queue data structure.
+     * @author Joshua Jarman
      */
     constructor();
 
@@ -199,6 +213,7 @@ declare module 'Queue' {
 declare class Stack {
     /**
      * Stack Represents a stack data structure.
+     * @author Joshua Jarman
      */
     constructor();
 
@@ -240,6 +255,7 @@ declare module 'Stack' {
  * Babylonian Square Root Calculates the square root of a number using the Babylonian method.
  * @param n - The input number.
  * @returns - The square root of the input number (rounded to 6 decimal places).
+ * @author Joshua Jarman
  */
 declare function babylonianSquareRoot(n: number): number;
 
@@ -248,6 +264,7 @@ declare function babylonianSquareRoot(n: number): number;
  * @param n - The number of terms to use.
  * @returns - The value of pi as a string.
  * @throws - Throws an error if n exceeds 1,000,000.
+ * @author Joshua Jarman
  */
 declare function fakePi(n: number): string;
 
@@ -255,6 +272,7 @@ declare function fakePi(n: number): string;
  * Fibonacci Numbers Generates the Fibonacci numbers up to a given limit.
  * @param limit - The maximum value for the Fibonacci numbers.
  * @returns - An array of Fibonacci numbers.
+ * @author Joshua Jarman
  */
 declare function fibonacciNumbers(limit: number): number[];
 
@@ -262,6 +280,7 @@ declare function fibonacciNumbers(limit: number): number[];
  * Newtons Square Root Calculates the square root of the number with given tolerance (precision) by using Newton's method.
  * @param number - the number we want to find a square root of.
  * @param tolerance - how many precise numbers after the floating point we want to get.
+ * @author Joshua Jarman
  */
 declare function newtonsSquareRoot(number: any, tolerance?: any): number;
 
@@ -269,6 +288,7 @@ declare function newtonsSquareRoot(number: any, tolerance?: any): number;
  * Sieve of Eratosthenes Generates an array of prime numbers using the Sieve of Eratosthenes algorithm.
  * @param maxNum - The maximum number up to which to find prime numbers.
  * @returns - An array containing prime numbers up to 'maxNum'.
+ * @author Joshua Jarman
  */
 declare function sieveOfEratosthenes(maxNum: number): number[];
 
@@ -279,6 +299,7 @@ declare function sieveOfEratosthenes(maxNum: number): number[];
  * @param startChar - The character that represents the start point in the maze.
  * @param endChar - The character that represents the end point in the maze.
  * @returns - The path from start to end as an array of coordinates, or -1 if no solution exists.
+ * @author Joshua Jarman
  */
 declare function dijkstraMazeSolver(maze: (string[])[], wallChar: string, startChar: string, endChar: string): (number[])[] | number;
 
@@ -286,6 +307,7 @@ declare function dijkstraMazeSolver(maze: (string[])[], wallChar: string, startC
  * Twin Crystal Balls Finds the index of the first true value in the array using a jump search approach.
  * @param arr - The array to search.
  * @returns - The index of the first true value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function twinCrystalBalls(arr: boolean[]): number;
 
@@ -296,6 +318,7 @@ declare function twinCrystalBalls(arr: boolean[]): number;
  * @param start - The starting index for the search (default is 0).
  * @param end - The ending index for the search (default is arr.length - 1).
  * @returns - The index of the target value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function binarySearch(arr: number[], target: number, start?: number, end?: number): number;
 
@@ -304,6 +327,7 @@ declare function binarySearch(arr: number[], target: number, start?: number, end
  * @param arr - The sorted array to search.
  * @param target - The target value to find.
  * @returns - The index of the target value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function fibonacciSearch(arr: number[], target: number): number;
 
@@ -314,6 +338,7 @@ declare function fibonacciSearch(arr: number[], target: number): number;
  * @param start - The starting index for the search (default is 0).
  * @param end - The ending index for the search (default is arr.length - 1).
  * @returns - The index of the target value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function interpolationSearch(arr: number[], target: number, start?: number, end?: number): number;
 
@@ -322,6 +347,7 @@ declare function interpolationSearch(arr: number[], target: number, start?: numb
  * @param arr - The array to search.
  * @param target - The value to search for.
  * @returns - The index of the first true value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function javascriptSearch(arr: any[], target: any): number;
 
@@ -330,6 +356,7 @@ declare function javascriptSearch(arr: any[], target: any): number;
  * @param arr - The array to search.
  * @param target - The value to search for.
  * @returns - The index of the first true value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function jumpSearch(arr: any[], target: any): number;
 
@@ -338,6 +365,7 @@ declare function jumpSearch(arr: any[], target: any): number;
  * @param arr - The array to search.
  * @param target - The value to search for.
  * @returns - The index of the target value, or -1 if not found.
+ * @author Joshua Jarman
  */
 declare function linearSearch(arr: any[], target: any): number;
 
@@ -345,6 +373,7 @@ declare function linearSearch(arr: any[], target: any): number;
  * Bubble Sort Repeatedly compares adjacent elements and swaps them if they’re in the wrong order.
  * @param myArray - The array to be sorted.
  * @returns - The sorted array.
+ * @author Joshua Jarman
  */
 declare function bubbleSort(myArray: number[]): number[];
 
@@ -353,6 +382,7 @@ declare function bubbleSort(myArray: number[]): number[];
  * @param arr - The input array to be sorted.
  * @param size - The size of each bucket (optional, default is 5).
  * @returns - The sorted array.
+ * @author Joshua Jarman
  */
 declare function bucketSort(arr: number[], size?: number): number[];
 
@@ -361,6 +391,7 @@ declare function bucketSort(arr: number[], size?: number): number[];
  * @param myArray - The input array to be sorted.
  * @param shrinkFactor - The shrink factor (optional, default is 1.3).
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function combSort(myArray: number[], shrinkFactor?: number): number[];
 
@@ -368,6 +399,7 @@ declare function combSort(myArray: number[], shrinkFactor?: number): number[];
  * Counting Sort Suitable for non-negative integers with a limited range.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function countingSort(myArray: number[]): number[];
 
@@ -375,6 +407,7 @@ declare function countingSort(myArray: number[]): number[];
  * Cycle Sort Minimizes the number of writes to the array by cyclically rotating elements to their correct positions.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function cycleSort(myArray: number[]): number[];
 
@@ -382,6 +415,7 @@ declare function cycleSort(myArray: number[]): number[];
  * Gnome Sort Compare adjacent elements. If they are out of order, swap them. Move the gnome one step backward
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function gnomeSort(myArray: number[]): number[];
 
@@ -391,6 +425,7 @@ declare function gnomeSort(myArray: number[]): number[];
  * @param n - Size of the heap.
  * @param i - Index of the root of the subtree.
  * @returns
+ * @author Joshua Jarman
  */
 declare function heapify(arr: number[], n: number, i: number): void;
 
@@ -405,18 +440,21 @@ declare function heapSort(arr: number[]): number[];
  * Insertion Sort Builds a sorted array by repeatedly inserting unsorted elements into their correct positions.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function insertionSort(myArray: number[]): number[];
 
 /**
  * Intro Sort Sorts an array using a combination of Quick Sort and Heap Sort or Insertion Sort
  * @param myArray - The input array to be sorted.
+ * @author Joshua Jarman
  */
 declare function introSort(myArray: any[]): any[];
 
 /**
  * Javascript Sort Sorts an array using the built in Javascript Sort algorithm, String-Based Lexicographic Sort with Timsort
  * @param myArray - The input array to be sorted.
+ * @author Joshua Jarman
  */
 declare function javascriptSort(myArray: any[]): any[];
 
@@ -424,6 +462,7 @@ declare function javascriptSort(myArray: any[]): any[];
  * Merge Sort Divides the array into halves until smallest units reached, and merges them back together in a sorted manner.
  * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function mergeSort(arr: number[]): number[];
 
@@ -431,6 +470,7 @@ declare function mergeSort(arr: number[]): number[];
  * Pancake Sort Moves elements backward if they’re in the wrong order
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function pancakeSort(myArray: number[]): number[];
 
@@ -465,6 +505,7 @@ declare function shellSort(myArray: number[]): number[];
  * Cumulative Sum Calculates the cumulative sum of an array of numbers.
  * @param arr - The input array of numbers.
  * @returns - The cumulative sum.
+ * @author Joshua Jarman
  */
 declare function cumulativeSum(arr: number[]): number;
 
@@ -472,6 +513,7 @@ declare function cumulativeSum(arr: number[]): number;
  * Array Max Return the largest value from an array of numbers or 0 if empty.
  * @param arr - The input array of numbers.
  * @returns - The largest number in the array or 0 if empty.
+ * @author Joshua Jarman
  */
 declare function arrayMax(arr: number[]): number;
 
@@ -479,6 +521,7 @@ declare function arrayMax(arr: number[]): number;
  * Mean Value (Average) Calculates the mean average value for an array of numbers, returns 0 if empty.
  * @param arr - The input array of numbers.
  * @returns - The mean average value.
+ * @author Joshua Jarman
  */
 declare function meanAverage(arr: number[]): number;
 
@@ -487,6 +530,7 @@ declare function meanAverage(arr: number[]): number;
  * @param leftArr - The left sorted array.
  * @param rightArr - The right sorted array.
  * @returns - The merged sorted array.
+ * @author Joshua Jarman
  */
 declare function arrayMerge(leftArr: number[], rightArr: number[]): number[];
 
@@ -494,6 +538,7 @@ declare function arrayMerge(leftArr: number[], rightArr: number[]): number[];
  * Array Min Return the smallest value from an array of numbers or 0 if empty.
  * @param arr - The input array of numbers.
  * @returns - The smallest number in the array or 0 if empty.
+ * @author Joshua Jarman
  */
 declare function arrayMin(arr: number[]): number;
 
@@ -501,6 +546,7 @@ declare function arrayMin(arr: number[]): number;
  * Number Digit Count Calculates the number of Digits of the largest number in an array.
  * @param arr - The number to count digits of
  * @returns - The digit count of the largest number in the array
+ * @author Joshua Jarman
  */
 declare function arrayMostDigits(arr: number[]): number;
 
@@ -508,6 +554,7 @@ declare function arrayMostDigits(arr: number[]): number;
  * Array of Numbers Returns an Array of a given Length filled with the numbers 1 through X
  * @param num - The length of the Array
  * @returns - A new array containing the numbers
+ * @author Joshua Jarman
  */
 declare function arrayOfNumbers(num: number): number[];
 
@@ -515,6 +562,7 @@ declare function arrayOfNumbers(num: number): number[];
  * Array Random Shuffle Fisher-Yates (or Knuth) Shuffle Returns an Array that has been randomly Shuffled
  * @param myArray - The length of the Array
  * @returns - A new array containing the numbers
+ * @author Joshua Jarman
  */
 declare function arrayRandomShuffle(myArray: any[]): any[];
 
@@ -523,6 +571,7 @@ declare function arrayRandomShuffle(myArray: any[]): any[];
  * @param num - The number
  * @param place - The place to get the digit at 0-x starting at 0
  * @returns - The digit at that location starting at 0th place
+ * @author Joshua Jarman
  */
 declare function numberDigitAt(num: number, place: number): number;
 
@@ -530,14 +579,16 @@ declare function numberDigitAt(num: number, place: number): number;
  * Number Digit Count Calculates the number of Digits in a given Number.
  * @param num - The number to count digits of
  * @returns - The number of digits in the number
+ * @author Joshua Jarman
  */
 declare function numberDigitCount(num: number): number;
 
 /**
- * Truncate String Truncates a string to a specific length.
+ * String Truncate Truncates a string to a specific length.
  * @param inputString - The input string to truncate.
  * @param maxLength - The maximum length of the truncated string.
  * @returns - The truncated string.
+ * @author Joshua Jarman
  */
-declare function truncateString(inputString: string, maxLength: number): string;
+declare function stringTruncate(inputString: string, maxLength: number): string;
 

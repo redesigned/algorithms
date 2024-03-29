@@ -31,6 +31,16 @@ chmod +x generateTypes.sh runTests.sh
 	- Methods: _String, Offset_
 	- Returns: _String_
 
+* **Encode Base64: O(n)** `./algorithms/cryptography/encodeBase64.js`
+	
+	- Methods: _String_
+	- Returns: _String_
+
+* **MD5: O(n)** `./algorithms/cryptography/md5.js`
+	
+	- Methods: _String_
+	- Returns: _String_
+
 * **ROT5: O(n)** `./algorithms/cryptography/rot5.js`
 	
 	- Methods: _String_
@@ -273,7 +283,7 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _Number_
 	- Returns: _Number_
 
-* **Truncate String: O(1)** `./algorithms/util/truncateString.js`
+* **Truncate String: O(1)** `./algorithms/util/stringTruncate.js`
 	
 	- Params: _String, Length_
 	- Returns: _String_

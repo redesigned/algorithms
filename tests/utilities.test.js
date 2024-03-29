@@ -90,10 +90,10 @@ test('Number Digit At: O(1)', () => {
 	expect(numberDigitCount(123456789)).toBe(9);
 });
 
-import { truncateString } from '../algorithms/util/truncateString';
+import { stringTruncate } from '../algorithms/util/stringTruncate';
 test('Truncate String: O(1)', () => {
-	expect(truncateString('123456789', 1)).toBe('1');
-	expect(truncateString('123456789', 3)).toBe('123');
-	expect(truncateString('123456789', 9)).toBe('123456789');
-	expect(truncateString('123456789', 100)).toBe('123456789');
+	expect(stringTruncate('123456789', 1)).toBe('1');
+	expect(stringTruncate('123456789', 3)).toBe('123');
+	expect(stringTruncate('123456789', 9)).toBe('123456789');
+	expect(stringTruncate('123456789', 100)).toBe('123456789');
 });

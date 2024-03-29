@@ -3,7 +3,7 @@ import { expect, test } from 'vitest';
 /* ## CRYPTOGRAPHY ## */
 
 import { ceasarsCipher } from '../algorithms/cryptography/ceasarsCipher';
-test('CesarsCipher: O(n)', () => {
+test('Cesars Cipher: O(n)', () => {
 	expect(ceasarsCipher('')).toBe('');
 	expect(ceasarsCipher('Always-Look-on-the-Bright-Side-of-Life', 5)).toBe('Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj');
 	expect(ceasarsCipher('Call 1-800-555-1212 for Information!', 111)).toBe('Jhss 2-911-666-2323 mvy Pumvythapvu!');
@@ -11,14 +11,19 @@ test('CesarsCipher: O(n)', () => {
 	expect(ceasarsCipher('Nothing Has Changed', 0)).toBe('Nothing Has Changed');
 });
 
+import { encodeBase64 } from '../algorithms/cryptography/encodeBase64';
+test('Encode Base64: O(n)', () => {
+	expect(encodeBase64('')).toBe('');
+	expect(encodeBase64('hello world')).toBe('aGVsbG8gd29ybGQ=');
+	expect(encodeBase64('Call 1-800-555-1212 for Information!')).toBe('Q2FsbCAxLTgwMC01NTUtMTIxMiBmb3IgSW5mb3JtYXRpb24h');
+	expect(encodeBase64('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('ISMkJSYoKSorLC0uLzAyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUlNUVVdYWVpeX2BgYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+');
+});
+
 import { md5 } from '../algorithms/cryptography/md5';
 test('MD5: O(n)', () => {
 	expect(md5('')).toBe('d41d8cd98f00b204e9800998ecf8427e');
 	expect(md5('hello world')).toBe('5eb63bbbe01eeed093cb22bb8f5acdc3');
 	expect(md5('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('d17620fa6551e412146752c734db90e2');
-	// expect(rot5('0123456789')).toBe('5678901234');
-	// expect(rot5('Call 1-800-555-1212 for Information!')).toBe('Call 6-355-000-6767 for Information!');
-	// expect(rot5(rot5('0123456789'))).toBe('0123456789');
 });
 
 import { rot5 } from '../algorithms/cryptography/rot5';
