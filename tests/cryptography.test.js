@@ -36,3 +36,10 @@ test('ROT18: O(n)', () => {
 	expect(rot18('Call 1-800-555-1212 for Information!')).toBe('Pnyy 6-355-000-6767 sbe Vasbezngvba!');
 	expect(rot18(rot18('Nothing Has Changed 0123456789'))).toBe('Nothing Has Changed 0123456789');
 });
+
+import { rot47 } from '../algorithms/cryptography/rot47';
+test('ROT47: O(n)', () => {
+	expect(rot47('')).toBe('');
+	expect(rot47('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('PRSTUWXYZ[\\]^_abcdefghijklmnopqrstuvwxyz{|}~!#$%&()*+/0-1123456789:;<=>?@ABCDEFGHIJKLMNO');
+	expect(rot47(rot47('!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_\``abcdefghijklmnopqrstuvwxyz{|}~'))).toBe('!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_\``abcdefghijklmnopqrstuvwxyz{|}~');
+});

@@ -21,6 +21,13 @@ declare function rot13(str: string): string;
 declare function rot18(str: string): string;
 
 /**
+ * ROT47 Encrypts or decrypts all ASCII characters in a given string using the rot47 cipher.  Use again to decrypt. Note that the \ character needs to be escaped in the string passed into the fucntion due to limitations with javascript string escaping.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string after applying the Caesar cipher.
+ */
+declare function rot47(str: string): string;
+
+/**
  * ROT5 Encrypts or decrypts numbers in a given string using the rot5 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
