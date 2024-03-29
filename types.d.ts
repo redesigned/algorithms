@@ -1,4 +1,20 @@
 /**
+ * Encode Base64 Encodes a string to Base64.
+ * @param str - The input string to encode.
+ * @returns The Base64-encoded string.
+ * @author Joshua Jarman
+ */
+declare function encodeBase64(str: string): string;
+
+/**
+ * Decode Base64 Decodes a string from Base64.
+ * @param str - The input string to encode.
+ * @returns The Base64-encoded string.
+ * @author Joshua Jarman
+ */
+declare function decodeBase64(str: string): string;
+
+/**
  * Cesars Cipher Encrypts or decrypts a given string using the Caesar cipher.  Use the negative of the value used to encrypt to decrypt.
  * @param str - The input string to be transformed.
  * @param offset - The offset value for the cipher (defaults to 0).
@@ -6,14 +22,6 @@
  * @author Joshua Jarman
  */
 declare function ceasarsCipher(str: string, offset?: number): string;
-
-/**
- * Encode Base64 Encodes a string to Base64.
- * @param str - The input string to encode.
- * @returns The Base64-encoded string.
- * @author Joshua Jarman
- */
-declare function encodeBase64(str: string): string;
 
 /**
  * Processes a block of input data for MD5 hashing.

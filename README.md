@@ -31,7 +31,12 @@ chmod +x generateTypes.sh runTests.sh
 	- Methods: _String, Offset_
 	- Returns: _String_
 
-* **Encode Base64: O(n)** `./algorithms/cryptography/encodeBase64.js`
+* **Encode Base64: O(n)** `./algorithms/cryptography/base64.js`
+	
+	- Methods: _String_
+	- Returns: _String_
+
+* **Decode Base64: O(n)** `./algorithms/cryptography/base64.js`
 	
 	- Methods: _String_
 	- Returns: _String_
