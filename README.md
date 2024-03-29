@@ -31,6 +31,11 @@ chmod +x generateTypes.sh runTests.sh
 	- Methods: _String, Offset_
 	- Returns: _String_
 
+* **ROT13: O(n)** `./algorithms/cryptography/rot13.js`
+	
+	- Methods: _String_
+	- Returns: _String_
+
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`

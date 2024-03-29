@@ -10,3 +10,12 @@ test('CesarsCipher: O(n)', () => {
 	expect(ceasarsCipher('Jhss 2-911-666-2323 mvy Pumvythapvu!', -111)).toBe('Call 1-800-555-1212 for Information!');
 	expect(ceasarsCipher('Nothing Has Changed', 0)).toBe('Nothing Has Changed');
 });
+
+import { rot13 } from '../algorithms/cryptography/rot13';
+test('ROT13: O(n)', () => {
+	expect(rot13('')).toBe('');
+	expect(rot13('The quick brown fox jumps over 13 lazy dogs.')).toBe('Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.');
+	expect(rot13('Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.')).toBe('The quick brown fox jumps over 13 lazy dogs.');
+	expect(rot13('Call 1-800-555-1212 for Information!')).toBe('Pnyy 1-800-555-1212 sbe Vasbezngvba!');
+	expect(rot13(rot13('Nothing Has Changed'))).toBe('Nothing Has Changed');
+});

@@ -7,6 +7,13 @@
 declare function ceasarsCipher(str: string, offset?: number): string;
 
 /**
+ * ROT13 Encrypts or decrypts a given string using the rot13 cipher.  Use again to decrypt.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string after applying the Caesar cipher.
+ */
+declare function rot13(str: string): string;
+
+/**
  * Queue
  * Represents a queue data structure.
  */
