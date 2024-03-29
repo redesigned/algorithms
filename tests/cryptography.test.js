@@ -2,7 +2,7 @@ import { expect, test } from 'vitest';
 
 /* ## CRYPTOGRAPHY ## */
 
-import { ceasarsCipher } from './algorithms/cryptography/ceasarsCipher';
+import { ceasarsCipher } from '../algorithms/cryptography/ceasarsCipher';
 test('CesarsCipher: O(n)', () => {
 	expect(ceasarsCipher('')).toBe('');
 	expect(ceasarsCipher('Always-Look-on-the-Bright-Side-of-Life', 5)).toBe('Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj');

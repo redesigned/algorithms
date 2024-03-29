@@ -1,11 +1,11 @@
 import { expect, test } from 'vitest';
 
-import { arrayOfNumbers } from './algorithms/util/arrayOfNumbers';
-import { arrayRandomShuffle } from './algorithms/util/arrayRandomShuffle';
+import { arrayOfNumbers } from '../algorithms/util/arrayOfNumbers';
+import { arrayRandomShuffle } from '../algorithms/util/arrayRandomShuffle';
 
 /* ## SORTS ## */
 
-import { bubbleSort } from './algorithms/sort/bubbleSort';
+import { bubbleSort } from '../algorithms/sort/bubbleSort';
 test('Bubble Sort: O(n²)', () => {
 	expect(bubbleSort([])).to.be.empty;
 	expect(bubbleSort([9])).toStrictEqual([9]);
@@ -17,7 +17,7 @@ test('Bubble Sort: O(n²)', () => {
 	expect(bubbleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { bucketSort } from './algorithms/sort/bucketSort';
+import { bucketSort } from '../algorithms/sort/bucketSort';
 test('Bucket Sort: O(n + k)', () => {
 	expect(bucketSort([])).to.be.empty;
 	expect(bucketSort([9])).toStrictEqual([9]);
@@ -29,7 +29,7 @@ test('Bucket Sort: O(n + k)', () => {
 	expect(bucketSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { combSort } from './algorithms/sort/combSort';
+import { combSort } from '../algorithms/sort/combSort';
 test('Comb Sort: O(n²)', () => {
 	expect(combSort([])).to.be.empty;
 	expect(combSort([9])).toStrictEqual([9]);
@@ -41,7 +41,7 @@ test('Comb Sort: O(n²)', () => {
 	expect(combSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { countingSort } from './algorithms/sort/countingSort';
+import { countingSort } from '../algorithms/sort/countingSort';
 test('Counting Sort: O(n+k)', () => {
 	expect(countingSort([])).to.be.empty;
 	expect(countingSort([9])).toStrictEqual([9]);
@@ -53,7 +53,7 @@ test('Counting Sort: O(n+k)', () => {
 	expect(countingSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { cycleSort } from './algorithms/sort/cycleSort';
+import { cycleSort } from '../algorithms/sort/cycleSort';
 test('Cycle Sort: O(n²)', () => {
 	expect(cycleSort([])).to.be.empty;
 	expect(cycleSort([9])).toStrictEqual([9]);
@@ -65,7 +65,7 @@ test('Cycle Sort: O(n²)', () => {
 	expect(cycleSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { gnomeSort } from './algorithms/sort/gnomeSort';
+import { gnomeSort } from '../algorithms/sort/gnomeSort';
 test('Gonome Sort: O(n²)', () => {
 	expect(gnomeSort([])).to.be.empty;
 	expect(gnomeSort([9])).toStrictEqual([9]);
@@ -77,7 +77,7 @@ test('Gonome Sort: O(n²)', () => {
 	expect(gnomeSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { heapSort } from './algorithms/sort/heapSort';
+import { heapSort } from '../algorithms/sort/heapSort';
 test('Heap Sort: O(n log(n))', () => {
 	expect(heapSort([])).to.be.empty;
 	expect(heapSort([9])).toStrictEqual([9]);
@@ -89,7 +89,7 @@ test('Heap Sort: O(n log(n))', () => {
 	expect(heapSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { insertionSort } from './algorithms/sort/insertionSort';
+import { insertionSort } from '../algorithms/sort/insertionSort';
 test('Insertion Sort: O(n log(n))', () => {
 	expect(insertionSort([])).to.be.empty;
 	expect(insertionSort([9])).toStrictEqual([9]);
@@ -101,7 +101,7 @@ test('Insertion Sort: O(n log(n))', () => {
 	expect(insertionSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { introSort } from './algorithms/sort/introSort';
+import { introSort } from '../algorithms/sort/introSort';
 test('Intro Sort: O(n log(n))', () => {
 	expect(introSort([])).to.be.empty;
 	expect(introSort([9])).toStrictEqual([9]);
@@ -113,7 +113,7 @@ test('Intro Sort: O(n log(n))', () => {
 	expect(introSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { javascriptSort } from './algorithms/sort/javascriptSort';
+import { javascriptSort } from '../algorithms/sort/javascriptSort';
 test('Javascript Built In String-Based Lexicographic Sort: O(n²)', () => {
 	expect(javascriptSort([])).to.be.empty;
 	expect(javascriptSort([9])).toStrictEqual([9]);
@@ -125,7 +125,7 @@ test('Javascript Built In String-Based Lexicographic Sort: O(n²)', () => {
 	expect(javascriptSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual([1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]);
 });
 
-import { mergeSort } from './algorithms/sort/mergeSort';
+import { mergeSort } from '../algorithms/sort/mergeSort';
 test('Merge Sort: O(n log(n))', () => {
 	expect(mergeSort([])).to.be.empty;
 	expect(mergeSort([9])).toStrictEqual([9]);
@@ -137,7 +137,7 @@ test('Merge Sort: O(n log(n))', () => {
 	expect(mergeSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { pancakeSort } from './algorithms/sort/pancakeSort';
+import { pancakeSort } from '../algorithms/sort/pancakeSort';
 test('Pancake Sort: O(n²)', () => {
 	expect(pancakeSort([])).to.be.empty;
 	expect(pancakeSort([9])).toStrictEqual([9]);
@@ -149,7 +149,7 @@ test('Pancake Sort: O(n²)', () => {
 	expect(pancakeSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { quickSort } from './algorithms/sort/quickSort';
+import { quickSort } from '../algorithms/sort/quickSort';
 test('Quick Sort: O(n²)', () => {
 	expect(quickSort([])).to.be.empty;
 	expect(quickSort([9])).toStrictEqual([9]);
@@ -161,7 +161,7 @@ test('Quick Sort: O(n²)', () => {
 	expect(quickSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { radixSort } from './algorithms/sort/radixSort';
+import { radixSort } from '../algorithms/sort/radixSort';
 test('Radix Sort: O(nk)', () => {
 	expect(radixSort([])).to.be.empty;
 	expect(radixSort([9])).toStrictEqual([9]);
@@ -173,7 +173,7 @@ test('Radix Sort: O(nk)', () => {
 	expect(radixSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { selectionSort } from './algorithms/sort/selectionSort';
+import { selectionSort } from '../algorithms/sort/selectionSort';
 test('Selection Sort: O(n²)', () => {
 	expect(selectionSort([])).to.be.empty;
 	expect(selectionSort([9])).toStrictEqual([9]);
@@ -185,7 +185,7 @@ test('Selection Sort: O(n²)', () => {
 	expect(selectionSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
-import { shellSort } from './algorithms/sort/shellSort';
+import { shellSort } from '../algorithms/sort/shellSort';
 test('Shell Sort: O(n²)', () => {
 	expect(shellSort([])).to.be.empty;
 	expect(shellSort([9])).toStrictEqual([9]);

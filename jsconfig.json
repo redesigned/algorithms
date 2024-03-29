@@ -9,7 +9,7 @@
 		"algorithms/*.js"
 	],
 	"exclude": [
-		"*.test.js",
+		"tests/*.test.js",
 		"node_modules",
 		"**/calculatePi.js"
 	]

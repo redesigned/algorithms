@@ -2,7 +2,7 @@ import { expect, test } from 'vitest';
 
 /* ## PROBLEMS ## */
 
-import { twinCrystalBalls } from './algorithms/problems/twinCrystalBalls';
+import { twinCrystalBalls } from '../algorithms/problems/twinCrystalBalls';
 test('Twin Crystal Balls: O(√n)', () => {
 	expect(twinCrystalBalls([])).toBe(-1);
 	expect(twinCrystalBalls([1])).toBe(-1);

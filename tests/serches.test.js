@@ -2,7 +2,7 @@ import { expect, test } from 'vitest';
 
 /* ## SEARCHES ## */
 
-import { binarySearch } from './algorithms/search/binarySearch';
+import { binarySearch } from '../algorithms/search/binarySearch';
 test('Binary Search: O(log(n))', () => {
 	expect(binarySearch([], 5)).toBe(-1);
 	expect(binarySearch([1, 3, 5, 7, 9], 1)).toBe(0);
@@ -15,7 +15,7 @@ test('Binary Search: O(log(n))', () => {
 	expect(binarySearch([21, 23, 35, 47, 59, 61, 72, 83], 95)).toBe(-1);
 });
 
-import { fibonacciSearch } from './algorithms/search/fibonacciSearch';
+import { fibonacciSearch } from '../algorithms/search/fibonacciSearch';
 test('Fibonacci Search: O(log(n))', () => {
 	expect(fibonacciSearch([], 5)).toBe(-1);
 	expect(fibonacciSearch([1, 3, 5, 7, 9], 1)).toBe(0);
@@ -28,7 +28,7 @@ test('Fibonacci Search: O(log(n))', () => {
 	expect(fibonacciSearch([21, 23, 35, 47, 59, 61, 72, 83], 95)).toBe(-1);
 });
 
-import { interpolationSearch } from './algorithms/search/interpolationSearch';
+import { interpolationSearch } from '../algorithms/search/interpolationSearch';
 test('Interpolation Search: O(log(log(n)))', () => {
 	expect(interpolationSearch([], 5)).toBe(-1);
 	expect(interpolationSearch([1, 3, 5, 7, 9], 1)).toBe(0);
@@ -41,7 +41,7 @@ test('Interpolation Search: O(log(log(n)))', () => {
 	expect(interpolationSearch([21, 23, 35, 47, 59, 61, 72, 83], 95)).toBe(-1);
 });
 
-import { javascriptSearch } from './algorithms/search/javascriptSearch';
+import { javascriptSearch } from '../algorithms/search/javascriptSearch';
 test('Linear Search: O(n)', () => {
 	expect(javascriptSearch([], 5)).toBe(-1);
 	expect(javascriptSearch([1, 9, 3, 4, 7, 0], 5)).toBe(-1);
@@ -50,7 +50,7 @@ test('Linear Search: O(n)', () => {
 	expect(javascriptSearch([1, 9, 3, 4, 7, 0], 0)).toBe(5);
 });
 
-import { jumpSearch } from './algorithms/search/jumpSearch';
+import { jumpSearch } from '../algorithms/search/jumpSearch';
 test('Jump Search: O(√n)', () => {
 	expect(jumpSearch([], 5)).toBe(-1);
 	expect(jumpSearch([1], 1)).toBe(0);
@@ -62,7 +62,7 @@ test('Jump Search: O(√n)', () => {
 	expect(jumpSearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 9)).toBe(8);
 });
 
-import { linearSearch } from './algorithms/search/linearSearch';
+import { linearSearch } from '../algorithms/search/linearSearch';
 test('Linear Search: O(n)', () => {
 	expect(linearSearch([], 5)).toBe(-1);
 	expect(linearSearch([1, 9, 3, 4, 7, 0], 5)).toBe(-1);
