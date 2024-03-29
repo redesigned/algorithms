@@ -7,6 +7,7 @@
  * @param {string} str - The input string to be transformed.
  * @returns {string} - The transformed string after applying the Caesar cipher.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 export function rot18(str) {
 	let charOffset = 13;

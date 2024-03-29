@@ -10,6 +10,7 @@
  * @param {number} [end=arr.length - 1] - The ending index for the search (default is arr.length - 1).
  * @returns {number} - The index of the target value, or -1 if not found.
  * @complexity O(log(n))
+ * @author Joshua Jarman
  */
 export function binarySearch(arr, target, start = 0, end = arr.length - 1) {
 	const middleIndex = Math.floor((start+end)/2);

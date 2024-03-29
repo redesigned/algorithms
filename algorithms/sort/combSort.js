@@ -8,6 +8,7 @@
  * @param {number} [shrinkFactor=1.3] - The shrink factor (optional, default is 1.3).
  * @returns {number[]} - A new array containing the sorted elements.
  * @complexity O(n²)
+ * @author Joshua Jarman
  */
 export function combSort(myArray, shrinkFactor = 1.3) {
 	const arr = [...myArray];

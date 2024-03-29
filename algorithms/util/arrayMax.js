@@ -7,6 +7,7 @@
  * @param {number[]} arr - The input array of numbers.
  * @returns {number} - The largest number in the array or 0 if empty.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 export function arrayMax(arr) {
 	return (arr.length === 0) ? 0 : Math.max(...arr);

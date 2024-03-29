@@ -8,6 +8,7 @@
  * @param {number} [size=5] - The size of each bucket (optional, default is 5).
  * @returns {number[]} - The sorted array.
  * @complexity O(n + k)
+ * @author Joshua Jarman
  */
 export function bucketSort(arr, size = 5) {
 	const min = Math.min(...arr);

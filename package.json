@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@otris/jsdoc-tsd": "^3.0.0",
-    "big-integer": "^1.6.52",
-    "jsdoc": "^4.0.2"
+    "jsdoc": "^4.0.2",
+    "md5-jkmyers": "^0.0.1"
   }
 }

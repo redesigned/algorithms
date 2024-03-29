@@ -7,6 +7,7 @@
  * @param {Array} myArray - The input array to be sorted.
  * @return {Array} - The sorted array.
  * @complexity O(n log(n))
+ * @author Joshua Jarman
  */
 export function introSort(myArray) {
 	return myArray.toSorted((a, b) => a - b);

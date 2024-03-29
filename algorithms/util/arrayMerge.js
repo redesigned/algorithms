@@ -8,6 +8,7 @@
  * @param {number[]} rightArr - The right sorted array.
  * @returns {number[]} - The merged sorted array.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 export function arrayMerge(leftArr, rightArr) {
 	return Array.from({ length: leftArr.length + rightArr.length }, () => {

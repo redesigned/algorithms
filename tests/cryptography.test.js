@@ -11,6 +11,16 @@ test('CesarsCipher: O(n)', () => {
 	expect(ceasarsCipher('Nothing Has Changed', 0)).toBe('Nothing Has Changed');
 });
 
+import { md5 } from '../algorithms/cryptography/md5';
+test('MD5: O(n)', () => {
+	expect(md5('')).toBe('d41d8cd98f00b204e9800998ecf8427e');
+	expect(md5('hello world')).toBe('5eb63bbbe01eeed093cb22bb8f5acdc3');
+	expect(md5('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('d17620fa6551e412146752c734db90e2');
+	// expect(rot5('0123456789')).toBe('5678901234');
+	// expect(rot5('Call 1-800-555-1212 for Information!')).toBe('Call 6-355-000-6767 for Information!');
+	// expect(rot5(rot5('0123456789'))).toBe('0123456789');
+});
+
 import { rot5 } from '../algorithms/cryptography/rot5';
 test('ROT13: O(n)', () => {
 	expect(rot5('')).toBe('');

@@ -8,6 +8,7 @@
  * @param {string} find - The substring to find.
  * @returns {number[]} - An array of indices where the substring occurs in the source.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 function indexes(source, find) {
 	let result = [];

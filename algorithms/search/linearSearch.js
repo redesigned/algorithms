@@ -8,6 +8,7 @@
  * @param {*} target - The value to search for.
  * @returns {number} - The index of the target value, or -1 if not found.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 export function linearSearch(arr, target) {
 	for (let i = 0; i < arr.length; ++i) {

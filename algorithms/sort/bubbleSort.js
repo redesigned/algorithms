@@ -7,6 +7,7 @@
  * @param {number[]} myArray - The array to be sorted.
  * @returns {number[]} - The sorted array.
  * @complexity O(n²)
+ * @author Joshua Jarman
  */
 export function bubbleSort(myArray) {
 	const arr = [...myArray];

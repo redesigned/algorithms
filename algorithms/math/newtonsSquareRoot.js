@@ -9,6 +9,7 @@
  * @param [tolerance] - how many precise numbers after the floating point we want to get.
  * @return {number} - retuns square root, or 0 if a negative number.
  * @complexity O(log(n))
+ * @author Joshua Jarman
  */
 export function newtonsSquareRoot(number, tolerance = 0) {
 	if (number <= 0) {

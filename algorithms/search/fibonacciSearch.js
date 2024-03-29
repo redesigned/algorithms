@@ -10,6 +10,7 @@ import { fibonacciNumbers } from '../math/fibonacciNumbers';
  * @param {number} target - The target value to find.
  * @returns {number} - The index of the target value, or -1 if not found.
  * @complexity O(log n)
+ * @author Joshua Jarman
  */
 export function fibonacciSearch(arr, target) {
 	const n = arr.length;

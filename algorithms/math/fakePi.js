@@ -10,6 +10,7 @@ import { truncateString } from '../util/truncateString';
  * @returns {string} - The value of pi as a string.
  * @throws {Error} - Throws an error if n exceeds 1,000,000.
  * @complexity O(1)
+ * @author Joshua Jarman
  */
 export function fakePi(n) {
 	if (n > 1000000) {

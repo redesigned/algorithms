@@ -4,6 +4,7 @@
  * @param {string} inputString - The input string to truncate.
  * @param {number} maxLength - The maximum length of the truncated string.
  * @returns {string} - The truncated string.
+ * @author Joshua Jarman
  */
 export function truncateString(inputString, maxLength) {
     return inputString.length > maxLength ? inputString.substring(0, maxLength) : inputString;

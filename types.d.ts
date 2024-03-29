@@ -7,6 +7,120 @@
 declare function ceasarsCipher(str: string, offset?: number): string;
 
 /**
+ * Processes a block of input data for MD5 hashing.
+ * @param x - An array of 16 32-bit integers representing the current state.
+ * @param k - An array of 64 32-bit integers representing the input block.
+ */
+declare function md5cycle(x: number[], k: number[]): void;
+
+/**
+ * Performs a common operation on the input values.
+ * @param q - A number.
+ * @param a - First operand.
+ * @param b - Second operand.
+ * @param x - Third operand.
+ * @param s - Shift value.
+ * @param t - Fourth operand.
+ * @returns - Result of the operation.
+ */
+declare function cmn(q: number, a: number, b: number, x: number, s: number, t: number): number;
+
+/**
+ * Applies the FF function to the input values.
+ * @param a - First operand.
+ * @param b - Second operand.
+ * @param c - Third operand.
+ * @param d - Fourth operand.
+ * @param x - Fifth operand.
+ * @param s - Shift value.
+ * @param t - Sixth operand.
+ * @returns - Result of the FF function.
+ */
+declare function ff(a: number, b: number, c: number, d: number, x: number, s: number, t: number): number;
+
+/**
+ * Applies the GG function to the input values.
+ * @param a - First operand.
+ * @param b - Second operand.
+ * @param c - Third operand.
+ * @param d - Fourth operand.
+ * @param x - Fifth operand.
+ * @param s - Shift value.
+ * @param t - Sixth operand.
+ * @returns - Result of the GG function.
+ */
+declare function gg(a: number, b: number, c: number, d: number, x: number, s: number, t: number): number;
+
+/**
+ * Applies the HH function to the input values.
+ * @param a - First operand.
+ * @param b - Second operand.
+ * @param c - Third operand.
+ * @param d - Fourth operand.
+ * @param x - Fifth operand.
+ * @param s - Shift value.
+ * @param t - Sixth operand.
+ * @returns - Result of the HH function.
+ */
+declare function hh(a: number, b: number, c: number, d: number, x: number, s: number, t: number): number;
+
+/**
+ * Applies the II function to the input values.
+ * @param a - First operand.
+ * @param b - Second operand.
+ * @param c - Third operand.
+ * @param d - Fourth operand.
+ * @param x - Fifth operand.
+ * @param s - Shift value.
+ * @param t - Sixth operand.
+ * @returns - Result of the II function.
+ */
+declare function ii(a: number, b: number, c: number, d: number, x: number, s: number, t: number): number;
+
+/**
+ * Computes the MD5 hash of the input string.
+ * @param s - The input string.
+ * @returns - The MD5 hash state (array of four 32-bit integers).
+ */
+declare function md51(s: string): number[];
+
+/**
+ * Processes a block of input data for MD5 hashing.
+ * @param s - The input block (64 characters).
+ * @returns - An array of 16 32-bit integers representing the processed block.
+ */
+declare function md5blk(s: string): number[];
+
+/**
+ * Converts a 32-bit integer to a hexadecimal string.
+ * @param n - The input integer.
+ * @returns - The hexadecimal representation.
+ */
+declare function rhex(n: number): string;
+
+/**
+ * Converts an array of 32-bit integers to a concatenated hexadecimal string.
+ * @param x - The array of integers.
+ * @returns - The concatenated hexadecimal string.
+ */
+declare function hex(x: number[]): string;
+
+/**
+ * Computes the MD5 hash of the input string.
+ * @param str - The input string.
+ * @returns - The MD5 hash.
+ */
+declare function md5(str: string): string;
+
+/**
+ * Adds two 32-bit integers.
+ * @param a - First operand.
+ * @param b - Second operand.
+ * @returns - Sum of the two integers.
+ */
+declare function add32(a: number, b: number): number;
+
+/**
  * ROT13 Encrypts or decrypts letters in a given string using the rot13 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.

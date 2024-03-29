@@ -6,6 +6,7 @@
  * Represents a queue data structure.
  * @class
  * @complexity O(1) - The time complexity of a queue
+ * @author Joshua Jarman
  */
 class Queue {
 

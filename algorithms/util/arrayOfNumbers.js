@@ -7,6 +7,7 @@
  * @param {number} num - The length of the Array
  * @returns {number[]} - A new array containing the numbers
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 export function arrayOfNumbers(num) {
 	return Array.from({ length: num }, (_, index) => index + 1);

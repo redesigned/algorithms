@@ -7,6 +7,7 @@
  * @param {boolean[]} arr - The array to search.
  * @returns {number} - The index of the first true value, or -1 if not found.
  * @complexity O(√n) - The time complexity of the Twin Crystal Ball algorithm.
+ * @author Joshua Jarman
  */
 export function twinCrystalBalls(arr) {
 	const length = arr.length - 1;

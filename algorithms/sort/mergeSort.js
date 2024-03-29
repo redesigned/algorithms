@@ -7,6 +7,7 @@
  * @param {number[]} arr - The input array to be sorted.
  * @returns {number[]} - A new array containing the sorted elements.
  * @complexity O(log(n))
+ * @author Joshua Jarman
  */
 export function mergeSort(arr) {
 	if (arr.length < 2) {

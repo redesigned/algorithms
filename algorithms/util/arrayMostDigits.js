@@ -9,6 +9,7 @@ import { numberDigitCount } from './numberDigitCount';
  * @param {number[]} arr - The number to count digits of
  * @returns {number} - The digit count of the largest number in the array
  * @complexity O(1)
+ * @author Joshua Jarman
  */
 export function arrayMostDigits(arr) {
 	let maxDigits = 0;

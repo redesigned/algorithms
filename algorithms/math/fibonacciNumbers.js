@@ -7,6 +7,7 @@
  * @param {number} limit - The maximum value for the Fibonacci numbers.
  * @returns {number[]} - An array of Fibonacci numbers.
  * @complexity O(log n)
+ * @author Joshua Jarman
  */
 export function fibonacciNumbers(limit) {
     const fib = [0, 1];

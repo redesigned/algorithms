@@ -8,6 +8,7 @@
  * @param {number} [offset=0] - The offset value for the cipher (defaults to 0).
  * @returns {string} - The transformed string after applying the Caesar cipher.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 export function ceasarsCipher(str, offset = 0) {
 	let numOffset = (offset >= 0) ? offset % 10 : 10 + offset % 10;

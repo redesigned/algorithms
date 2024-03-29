@@ -7,6 +7,7 @@
  * @param {Array} myArray - The input array to be sorted.
  * @return {Array} - The sorted array.
  * @complexity O(n²)
+ * @author Joshua Jarman
  */
 export function javascriptSort(myArray) {
 	return myArray.toSorted();

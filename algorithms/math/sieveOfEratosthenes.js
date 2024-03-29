@@ -7,6 +7,7 @@
  * @param {number} maxNum - The maximum number up to which to find prime numbers.
  * @returns {number[]} - An array containing prime numbers up to 'maxNum'.
  * @complexity O(n log(log(n))) - The time complexity of the Sieve of Eratosthenes.
+ * @author Joshua Jarman
  */
 export function sieveOfEratosthenes(maxNum) {
 	const sieve = new Array(maxNum + 1).fill(true);

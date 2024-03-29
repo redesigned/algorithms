@@ -7,6 +7,7 @@
  * @param {number[]} myArray - The input array to be sorted.
  * @returns {number[]} - A new array containing the sorted elements.
  * @complexity O(n+k)
+ * @author Joshua Jarman
  */
 export function countingSort(myArray) {
 	const arr = [...myArray];

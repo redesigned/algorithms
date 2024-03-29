@@ -8,6 +8,7 @@
  * @param {number} n - Size of the heap.
  * @param {number} i - Index of the root of the subtree.
  * @returns {void}
+ * @author Joshua Jarman
  */
 function heapify(arr, n, i) {
     let largest = i;
