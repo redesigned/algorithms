@@ -28,6 +28,30 @@ test('Decode Base64: O(n)', () => {
 	expect(decodeBase64(encodeBase64('Nothing Has Changed 0123456789'))).toBe('Nothing Has Changed 0123456789');
 });
 
+import { decodeBase64 } from '../algorithms/cryptography/base64';
+test('Decode Base64: O(n)', () => {
+	expect(decodeBase64('')).toBe('');
+	expect(decodeBase64('aGVsbG8gd29ybGQ=')).toBe('hello world');
+	expect(decodeBase64('Q2FsbCAxLTgwMC01NTUtMTIxMiBmb3IgSW5mb3JtYXRpb24h')).toBe('Call 1-800-555-1212 for Information!');
+	expect(decodeBase64('ISMkJSYoKSorLC0uLzAyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUlNUVVdYWVpeX2BgYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+')).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~');
+	expect(decodeBase64(encodeBase64('Nothing Has Changed 0123456789'))).toBe('Nothing Has Changed 0123456789');
+});
+
+import { interleave } from '../algorithms/cryptography/interleave';
+test('Interleave: O(n)', () => {
+	expect(interleave('')).toBe('');
+	expect(interleave('Hello World!')).toBe('HlWleoodl r!');
+	expect(interleave('The quick brown fox jumps over 13 lazy dogs.')).toBe('Trm hoplewsa n zq oyufv ioedcxrok  g j1sbu3.');
+});
+
+import { deinterleave } from '../algorithms/cryptography/interleave';
+test('Denterleave: O(segsize * length)', () => {
+	expect(deinterleave('')).toBe('');
+	expect(deinterleave('HlWleoodl r!')).toBe('Hello World!');
+	expect(deinterleave('Trm hoplewsa n zq oyufv ioedcxrok  g j1sbu3.')).toBe('The quick brown fox jumps over 13 lazy dogs.');
+	expect(deinterleave(interleave('Nothing Has Changed 0123456789'))).toBe('Nothing Has Changed 0123456789');
+});
+
 import { md5 } from '../algorithms/cryptography/md5';
 test('MD5: O(n)', () => {
 	expect(md5('')).toBe('d41d8cd98f00b204e9800998ecf8427e');

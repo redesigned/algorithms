@@ -8,8 +8,8 @@ declare function encodeBase64(str: string): string;
 
 /**
  * Decode Base64 Decodes a string from Base64.
- * @param str - The input string to encode.
- * @returns The Base64-encoded string.
+ * @param str - The input string to decode.
+ * @returns The Base64-decoded string.
  * @author Joshua Jarman
  */
 declare function decodeBase64(str: string): string;
@@ -22,6 +22,24 @@ declare function decodeBase64(str: string): string;
  * @author Joshua Jarman
  */
 declare function ceasarsCipher(str: string, offset?: number): string;
+
+/**
+ * Interleave Interleaves characters from the input.
+ * @param str - The input string to be interleaved.
+ * @param segments - The number of segments to create.
+ * @returns - The interleaved string.
+ * @author Joshua Jarman
+ */
+declare function interleave(str?: string, segments?: number): string;
+
+/**
+ * Deinterlave Deinterleaves characters from the input string.
+ * @param str - The input string to be deinterleaved.
+ * @param segments - The number of segments to create.
+ * @returns - The deinterleaved string.
+ * @author Joshua Jarman
+ */
+declare function deinterleave(str?: string, segments?: number): string;
 
 /**
  * Processes a block of input data for MD5 hashing.

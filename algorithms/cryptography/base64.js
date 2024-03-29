@@ -22,8 +22,8 @@ export function encodeBase64(str = '') {
 /**
  * Decode Base64
  * Decodes a string from Base64.
- * @param {string} str - The input string to encode.
- * @returns {string} The Base64-encoded string.
+ * @param {string} str - The input string to decode.
+ * @returns {string} The Base64-decoded string.
  * @complexity O(n)
  * @author Joshua Jarman
  */
