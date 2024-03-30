@@ -91,3 +91,13 @@ test('ROT47: O(n)', () => {
 	expect(rot47('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('PRSTUWXYZ[\\]^_abcdefghijklmnopqrstuvwxyz{|}~!#$%&()*+/0-1123456789:;<=>?@ABCDEFGHIJKLMNO');
 	expect(rot47(rot47('!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_\``abcdefghijklmnopqrstuvwxyz{|}~'))).toBe('!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_\``abcdefghijklmnopqrstuvwxyz{|}~');
 });
+
+import { xOR } from '../algorithms/cryptography/xOR';
+test('xOR: O(n)', () => {
+	expect(xOR('')).toBe('');
+	expect(xOR('Hello World!')).toBe('{V__\\\x13d\\A_W\x12');
+	expect(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~',1024)).toBe('СУФХЦШЩЪЫЬЭЮЯавгдежзийклмнопрстуфхцчшщъыьэюяѐђѓєѕїјљњўџќѠѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾ');
+	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~'))).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
+	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~',11),11)).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
+	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~',1024),1024)).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
+});

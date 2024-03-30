@@ -66,6 +66,11 @@ chmod +x generateTypes.sh runTests.sh
 	- Methods: _String_
 	- Returns: _String_
 
+* **xOR: O(n)** `./algorithms/cryptography/xOR.js`
+	
+	- Methods: _String, *Key_
+	- Returns: _String_
+
 ### Data Structures
 
 * **Queue: O(1)** `./algorithms/datastructures/queue.js`

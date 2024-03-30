@@ -188,6 +188,15 @@ declare function rot47(str: string): string;
 declare function rot5(str: string): string;
 
 /**
+ * xOR Encodes a string using XOR operation with a given key.
+ * @param str - The input string to be encoded.
+ * @param key - The XOR key (default is 51).
+ * @returns - The encoded string.
+ * @author Joshua Jarman
+ */
+declare function xOR(str?: string, key?: number): string;
+
+/**
  * Queue
  * Represents a queue data structure.
  */
