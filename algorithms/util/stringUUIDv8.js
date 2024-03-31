@@ -3,7 +3,7 @@
 
 /**
  * String UUID v8
- * Generates a Version 8 UUID (randomly generated UUID) in string format
+ * Generates a Version 8 UUID (randomly generated UUID v8 not time based v8) in string format
  * @returns {string} A randomly generated UUID.
  * @complexity O(1)
  * @author Joshua Jarman

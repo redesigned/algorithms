@@ -293,6 +293,12 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _Number_
 	- Returns: _Number_
 
+* **String Random: O(1)** `./algorithms/util/stringRandom.js`
+	
+	- Params: _Length, *PossibleChars_
+	- Returns: _String_
+
+
 * **String Truncate: O(1)** `./algorithms/util/stringTruncate.js`
 	
 	- Params: _String, Length_

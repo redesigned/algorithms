@@ -90,6 +90,22 @@ test('Number Digit count: O(1)', () => {
 	expect(numberDigitCount(123456789)).toBe(9);
 });
 
+import { stringRandom } from '../algorithms/util/stringRandom';
+test('String Random: O(1)', () => {
+	let randPattern = /^[0-9a-zA-Z]{10}$/;
+	expect(stringRandom(10)).toMatch(randPattern);
+	randPattern = /^[0-9a-zA-Z]{100}$/;
+	expect(stringRandom(100)).toMatch(randPattern);
+	randPattern = /^[0-9]{20}$/;
+	expect(stringRandom(20, '0123456789')).toMatch(randPattern);
+	randPattern = /^[A-Z]{15}$/;
+	expect(stringRandom(15, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toMatch(randPattern);
+	randPattern = /^[0-9A-F]{6}$/;
+	expect(stringRandom(6, '0123456789ABCDEF')).toMatch(randPattern);
+	randPattern = /^[01]{1024}$/;
+	expect(stringRandom(1024, '01')).toMatch(randPattern);
+});
+
 import { stringTruncate } from '../algorithms/util/stringTruncate';
 test('String Truncate: O(1)', () => {
 	expect(stringTruncate('123456789', 1)).toBe('1');

@@ -619,6 +619,14 @@ declare function numberDigitAt(num: number, place: number): number;
 declare function numberDigitCount(num: number): number;
 
 /**
+ * String Random Generates a random string of specified length.
+ * @param length - The desired length of the random string.
+ * @param possible - A string containing possible characters for the random string.
+ * @returns - The randomly generated string.
+ */
+declare function stringRandom(length?: number, possible?: string): string;
+
+/**
  * String Truncate Truncates a string to a specific length.
  * @param inputString - The input string to truncate.
  * @param maxLength - The maximum length of the truncated string.
@@ -635,7 +643,7 @@ declare function stringTruncate(inputString: string, maxLength: number): string;
 declare function stringUUIDv4(): string;
 
 /**
- * String UUID v8 Generates a Version 8 UUID (randomly generated UUID) in string format
+ * String UUID v8 Generates a Version 8 UUID (randomly generated UUID v8 not time based v8) in string format
  * @returns A randomly generated UUID.
  * @author Joshua Jarman
  */
