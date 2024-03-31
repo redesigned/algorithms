@@ -11,10 +11,8 @@
  * @author Joshua Jarman
  */
 export function interleave(str = '', segments = Math.floor(str.length / 4)) {
-	let newStr = '';
 	let arr = Array(segments).fill('');
 	let segRemainder = str.length % segments;
-    let segSize = Math.floor(str.length / segments);
     let extraChar = (segRemainder > 0) ? str.slice(-1 * segRemainder) : '';
 	let length = str.length - segRemainder ;
 	let strReturn = '';
@@ -42,7 +40,6 @@ export function interleave(str = '', segments = Math.floor(str.length / 4)) {
  * @author Joshua Jarman
  */
 export function deinterleave(str = '', segments = Math.floor(str.length / 4)) {
-	let newStr = '';
 	let segRemainder = str.length % segments;
     let segSize = Math.floor(str.length / segments);
     let extraChar = (segRemainder > 0) ? str.slice(-1 * segRemainder) : '';

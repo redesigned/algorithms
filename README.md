@@ -243,6 +243,16 @@ chmod +x generateTypes.sh runTests.sh
 
 ### Utilities
 
+* **Array Average: O(n)** `./algorithms/util/arrayAverage.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
+* **Array Cumulative Sum: O(n)** `./algorithms/util/arrayCumulativeSum.js`
+	
+	- Params: _Array_
+	- Returns: _Number_
+
 * **Array Max: O(n)** `./algorithms/util/arrayMax.js`
 	
 	- Params: _Array_
@@ -273,16 +283,6 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _Array_
 	- Returns: _Array_
 
-* **Cumulative Sum: O(n)** `./algorithms/util/cumulativeSum.js`
-	
-	- Params: _Array_
-	- Returns: _Number_
-
-* **Mean Average: O(n)** `./algorithms/util/meanAverage.js`
-	
-	- Params: _Array_
-	- Returns: _Number_
-
 * **Number Digit At: O(1)** `./algorithms/util/numberDigitAt.js`
 	
 	- Params: _Number, Place_
@@ -293,7 +293,11 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _Number_
 	- Returns: _Number_
 
-* **Truncate String: O(1)** `./algorithms/util/stringTruncate.js`
+* **String Truncate: O(1)** `./algorithms/util/stringTruncate.js`
 	
 	- Params: _String, Length_
+	- Returns: _String_
+
+* **String UUID v4: O(1)** `./algorithms/util/stringUUIDv4.js`
+	
 	- Returns: _String_

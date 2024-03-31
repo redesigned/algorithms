@@ -2,6 +2,27 @@ import { expect, test } from 'vitest';
 
 /* ## UTILITIES ## */
 
+import { arrayAverage } from '../algorithms/util/arrayAverage';
+test('Array Average: O(n)', () => {
+	expect(arrayAverage([])).toBe(0);
+	expect(arrayAverage([0])).toBe(0);
+	expect(arrayAverage([1])).toBe(1);
+	expect(arrayAverage([0, 0])).toBe(0);
+	expect(arrayAverage([2, 2, 2])).toBe(2);
+	expect(arrayAverage([1, 2, 3])).toBe(2);
+	expect(arrayAverage([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(5);
+});
+
+import { arrayCumulativeSum } from '../algorithms/util/arrayCumulativeSum';
+test('Cumulative Sum: O(n)', () => {
+	expect(arrayCumulativeSum([])).toBe(0);
+	expect(arrayCumulativeSum([0])).toBe(0);
+	expect(arrayCumulativeSum([1])).toBe(1);
+	expect(arrayCumulativeSum([0, 0])).toBe(0);
+	expect(arrayCumulativeSum([11, 3, 7])).toBe(21);
+	expect(arrayCumulativeSum([5, 10, 15])).toBe(30);
+});
+
 import { arrayMax } from '../algorithms/util/arrayMax';
 test('Array Max: O(n)', () => {
 	expect(arrayMax([])).toBe(0);
@@ -54,36 +75,15 @@ test('Array Random Shuffle: O(n)', () => {
 	expect(shuffledArray).not.toEqual(shuffledArray2);
 });
 
-import { cumulativeSum } from '../algorithms/util/arrayCumulativeSum';
-test('Cumulative Sum: O(n)', () => {
-	expect(cumulativeSum([])).toBe(0);
-	expect(cumulativeSum([0])).toBe(0);
-	expect(cumulativeSum([1])).toBe(1);
-	expect(cumulativeSum([0, 0])).toBe(0);
-	expect(cumulativeSum([11, 3, 7])).toBe(21);
-	expect(cumulativeSum([5, 10, 15])).toBe(30);
-});
-
-import { meanAverage } from '../algorithms/util/arrayMeanAverage';
-test('Mean Average: O(n)', () => {
-	expect(meanAverage([])).toBe(0);
-	expect(meanAverage([0])).toBe(0);
-	expect(meanAverage([1])).toBe(1);
-	expect(meanAverage([0, 0])).toBe(0);
-	expect(meanAverage([2, 2, 2])).toBe(2);
-	expect(meanAverage([1, 2, 3])).toBe(2);
-	expect(meanAverage([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(5);
-});
-
 import { numberDigitAt } from '../algorithms/util/numberDigitAt';
-test('Number Digit Count: O(1)', () => {
+test('Number Digit At: O(1)', () => {
 	expect(numberDigitAt(123456789, 0)).toBe(9);
 	expect(numberDigitAt(123456789, 4)).toBe(5);
 	expect(numberDigitAt(123456789, 8)).toBe(1);
 });
 
 import { numberDigitCount } from '../algorithms/util/numberDigitCount';
-test('Number Digit At: O(1)', () => {
+test('Number Digit count: O(1)', () => {
 	expect(numberDigitCount(0)).toBe(1);
 	expect(numberDigitCount(1)).toBe(1);
 	expect(numberDigitCount(12)).toBe(2);
@@ -91,9 +91,18 @@ test('Number Digit At: O(1)', () => {
 });
 
 import { stringTruncate } from '../algorithms/util/stringTruncate';
-test('Truncate String: O(1)', () => {
+test('String Truncate: O(1)', () => {
 	expect(stringTruncate('123456789', 1)).toBe('1');
 	expect(stringTruncate('123456789', 3)).toBe('123');
 	expect(stringTruncate('123456789', 9)).toBe('123456789');
 	expect(stringTruncate('123456789', 100)).toBe('123456789');
+});
+
+import { stringUUIDv4 } from '../algorithms/util/stringUUIDv4';
+test('String UUID v4: O(1)', () => {
+	const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
+	expect(stringUUIDv4()).toMatch(uuidPattern);
+	expect(stringUUIDv4()).toMatch(uuidPattern);
+	expect(stringUUIDv4()).toMatch(uuidPattern);
+	expect(stringUUIDv4()).toMatch(uuidPattern);
 });

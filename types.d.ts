@@ -537,12 +537,20 @@ declare function selectionSort(myArray: number[]): number[];
 declare function shellSort(myArray: number[]): number[];
 
 /**
- * Cumulative Sum Calculates the cumulative sum of an array of numbers.
+ * Average Average Calculates the average value for an array of numbers, returns 0 if empty.
+ * @param arr - The input array of numbers.
+ * @returns - The average value.
+ * @author Joshua Jarman
+ */
+declare function arrayAverage(arr: number[]): number;
+
+/**
+ * Array Cumulative Sum Calculates the cumulative sum of an array of numbers.
  * @param arr - The input array of numbers.
  * @returns - The cumulative sum.
  * @author Joshua Jarman
  */
-declare function cumulativeSum(arr: number[]): number;
+declare function arrayCumulativeSum(arr: number[]): number;
 
 /**
  * Array Max Return the largest value from an array of numbers or 0 if empty.
@@ -551,14 +559,6 @@ declare function cumulativeSum(arr: number[]): number;
  * @author Joshua Jarman
  */
 declare function arrayMax(arr: number[]): number;
-
-/**
- * Mean Value (Average) Calculates the mean average value for an array of numbers, returns 0 if empty.
- * @param arr - The input array of numbers.
- * @returns - The mean average value.
- * @author Joshua Jarman
- */
-declare function meanAverage(arr: number[]): number;
 
 /**
  * Array Merge Merges two sorted arrays into a single sorted array.
@@ -626,4 +626,11 @@ declare function numberDigitCount(num: number): number;
  * @author Joshua Jarman
  */
 declare function stringTruncate(inputString: string, maxLength: number): string;
+
+/**
+ * String UUID v4 Generates a Version 4 UUID (randomly generated UUID) in string format following the IETF RFC 4122
+ * @returns A randomly generated UUID.
+ * @author Joshua Jarman
+ */
+declare function stringUUIDv4(): string;
 
