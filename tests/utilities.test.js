@@ -114,6 +114,26 @@ test('String Truncate: O(1)', () => {
 	expect(stringTruncate('123456789', 100)).toBe('123456789');
 });
 
+import { stringUIIvX, stringUIINumeric, stringUIIHexidecimal, stringUIIAlphaNumeric } from '../algorithms/util/stringUIIvX';
+test('String UII vX: O(1)', () => {
+	let uiiPattern = /^[0-9a-zA-Z]{32}$/;
+	expect(stringUIIvX(32)).toMatch(uiiPattern);
+	uiiPattern = /^19741112134723000[0-9a-zA-Z]{15}$/;
+	expect(stringUIIvX(32, new Date('1974-11-12T13:47:23Z'))).toMatch(uiiPattern);
+	uiiPattern = /^[0-9]{32}$/;
+	expect(stringUIINumeric(32)).toMatch(uiiPattern);
+	uiiPattern = /^19741112134723000[0-9]{15}$/;
+	expect(stringUIINumeric(32, new Date('1974-11-12T13:47:23Z'))).toMatch(uiiPattern);
+	uiiPattern = /^[0-9A-F]{32}$/;
+	expect(stringUIIHexidecimal(32)).toMatch(uiiPattern);
+	uiiPattern = /^19741112134723000[0-9A-F]{15}$/;
+	expect(stringUIIHexidecimal(32, new Date('1974-11-12T13:47:23Z'))).toMatch(uiiPattern);
+	uiiPattern = /^[0-9A-Z]{32}$/;
+	expect(stringUIIAlphaNumeric(32)).toMatch(uiiPattern);
+	uiiPattern = /^19741112134723000[0-9A-Z]{15}$/;
+	expect(stringUIIAlphaNumeric(32, new Date('1974-11-12T13:47:23Z'))).toMatch(uiiPattern);
+});
+
 import { stringUUIDv4 } from '../algorithms/util/stringUUIDv4';
 test('String UUID v4: O(1)', () => {
 	const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;

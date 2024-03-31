@@ -623,6 +623,7 @@ declare function numberDigitCount(num: number): number;
  * @param length - The desired length of the random string.
  * @param possible - A string containing possible characters for the random string.
  * @returns - The randomly generated string.
+ * @author Joshua Jarman
  */
 declare function stringRandom(length?: number, possible?: string): string;
 
@@ -634,6 +635,47 @@ declare function stringRandom(length?: number, possible?: string): string;
  * @author Joshua Jarman
  */
 declare function stringTruncate(inputString: string, maxLength: number): string;
+
+/**
+ * String UUI vX Generates a unique identifier (UII) alphanumeric string upper and lower case.
+ * @param length - The desired length of the UII.
+ * @param dateKey - The date key used in generating the UII.
+ * @param charset - The character set for the UII.
+ * @throws Throws an error if the specified length is less than 32.
+ * @returns The generated UII.
+ * @author Joshua Jarman
+ */
+declare function stringUIIvX(length?: number, dateKey?: Date, charset?: string): string;
+
+/**
+ * String UUI Numeric Generates a unique identifier (UII) numeric string.
+ * @param length - The desired length of the UII.
+ * @param dateKey - The date key used in generating the UII.
+ * @throws Throws an error if the specified length is less than 32.
+ * @returns The generated numeric UII.
+ * @author Joshua Jarman
+ */
+declare function stringUIINumeric(length?: number, dateKey?: Date): string;
+
+/**
+ * String UUI Hexidecimal Generates a unique identifier (UII) hexidecimal string.
+ * @param length - The desired length of the UII.
+ * @param dateKey - The date key used in generating the UII.
+ * @throws Throws an error if the specified length is less than 32.
+ * @returns The generated hexidecimal UII.
+ * @author Joshua Jarman
+ */
+declare function stringUIIHexidecimal(length?: number, dateKey?: Date): string;
+
+/**
+ * String UUI AlphaNumeric Generates a unique identifier (UII) alphanumeric string.
+ * @param length - The desired length of the UII.
+ * @param dateKey - The date key used in generating the UII.
+ * @throws Throws an error if the specified length is less than 32.
+ * @returns The generated alphanumeric UII.
+ * @author Joshua Jarman
+ */
+declare function stringUIIAlphaNumeric(length?: number, dateKey?: Date): string;
 
 /**
  * String UUID v4 Generates a Version 4 UUID (randomly generated UUID) in string format following the IETF RFC 4122

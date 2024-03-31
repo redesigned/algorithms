@@ -304,6 +304,26 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _String, Length_
 	- Returns: _String_
 
+* **String UII vX: O(1)** `./algorithms/util/stringUIIvX.js`
+	
+	 Params: _*Length, *Date, *CharSet_
+	- Returns: _String_
+
+* **String UII Numeric: O(1)** `./algorithms/util/stringUIIvX.js`
+	
+	 Params: _*Length, *Date_
+	- Returns: _String_
+
+* **String UII Hexidecimal: O(1)** `./algorithms/util/stringUIIvX.js`
+	
+	 Params: _*Length, *Date_
+	- Returns: _String_
+
+* **String UII AlphaNumeric: O(1)** `./algorithms/util/stringUIIvX.js`
+	
+	 Params: _*Length, *Date_
+	- Returns: _String_
+
 * **String UUID v4: O(1)** `./algorithms/util/stringUUIDv4.js`
 	
 	- Returns: _String_

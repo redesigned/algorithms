@@ -1,20 +1,18 @@
 // @ts-check
 "use strict";
 
+// pnpm install md5-jkmyers;
+// export const md5 = require('md5-jkmyers');
+
 /**
  * md5-jkmyers Server Side Implimentation
  * Computes the MD5 hash of the input string.
  * @param {string} str - The input string.
  * @returns {string} - The MD5 hash.
- */
-// pnpm install md5-jkmyers;
-// export const md5 = require('md5-jkmyers');
-
-/**
  * The Following code is ported over from:
  * https://raw.githubusercontent.com/AndreasPizsa/md5-jkmyers/master/src/md5.js
  * with jsdoc type definitions added.  This way we can use it standalone client or server side as needed.
- * @author JKMyers
+ * @author Ported from Andreas Pizsa JKMyers MD5 implimentation by Joshua Jarman
 */
 
 /**
