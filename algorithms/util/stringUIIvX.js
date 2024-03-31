@@ -11,7 +11,7 @@
  * @complexity O(n)
  * @author Joshua Jarman
  */
-export function stringUIIvX (length = 64, dateKey = new Date(), charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
+export function stringUIIvX(length = 64, dateKey = new Date(), charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
 	if (length < 32) {
 		throw new Error("Must be at least 32 characters.");
 	}
@@ -33,7 +33,7 @@ export function stringUIIvX (length = 64, dateKey = new Date(), charset = 'ABCDE
  * @complexity O(n)
  * @author Joshua Jarman
  */
-export function stringUIINumeric (length = 64, dateKey = new Date()) {
+export function stringUIINumeric(length = 64, dateKey = new Date()) {
 	return stringUIIvX(length, dateKey, '0123456789');
 }
 
@@ -47,7 +47,7 @@ export function stringUIINumeric (length = 64, dateKey = new Date()) {
  * @complexity O(n)
  * @author Joshua Jarman
  */
-export function stringUIIHexidecimal (length = 64, dateKey = new Date()) {
+export function stringUIIHexidecimal(length = 64, dateKey = new Date()) {
 	return stringUIIvX(length, dateKey, '0123456789ABCDEF');
 }
 
@@ -61,6 +61,6 @@ export function stringUIIHexidecimal (length = 64, dateKey = new Date()) {
  * @complexity O(n)
  * @author Joshua Jarman
  */
-export function stringUIIAlphaNumeric (length = 64, dateKey = new Date()) {
+export function stringUIIAlphaNumeric(length = 64, dateKey = new Date()) {
 	return stringUIIvX(length, dateKey, '0123456789ABCDEFGIJKLMNOPQRSTUVWXYZ');
 }

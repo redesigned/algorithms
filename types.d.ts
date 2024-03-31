@@ -628,6 +628,14 @@ declare function numberDigitCount(num: number): number;
 declare function stringRandom(length?: number, possible?: string): string;
 
 /**
+ * String Random Binary Generates a random binary string of specified length.
+ * @param length - The desired length of the random string.
+ * @returns - The randomly generated binary string.
+ * @author Joshua Jarman
+ */
+declare function stringRandomBinary(length?: number): string;
+
+/**
  * String Truncate Truncates a string to a specific length.
  * @param inputString - The input string to truncate.
  * @param maxLength - The maximum length of the truncated string.
