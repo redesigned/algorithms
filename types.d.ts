@@ -635,11 +635,9 @@ declare function stringTruncate(inputString: string, maxLength: number): string;
 declare function stringUUIDv4(): string;
 
 /**
- * String UUID v5 Generates a version 5 UUID (Universally Unique Identifier) based on the provided namespace UUID and domain name following the IETF RFC 4122
- * @param namespaceUUID - The namespace UUID (e.g., a version 3 or 5 UUID).
- * @param domainName - The domain name for which the UUID is generated.
- * @returns - A version 5 UUID in the format xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.
+ * String UUID v8 Generates a Version 8 UUID (randomly generated UUID) in string format
+ * @returns A randomly generated UUID.
  * @author Joshua Jarman
  */
-declare function stringUUIDv5(namespaceUUID: string, domainName: string): Promise<string>;
+declare function stringUUIDv8(): string;
 

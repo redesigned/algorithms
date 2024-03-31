@@ -107,10 +107,11 @@ test('String UUID v4: O(1)', () => {
 	expect(stringUUIDv4()).toMatch(uuidPattern);
 });
 
-import { stringUUIDv5 } from '../algorithms/util/stringUUIDv5';
-test('String UUID v5: O(n)', async () => {
-	expect(await stringUUIDv5('6ba7b810-9dad-11d1-80b4-00c04fd430c8', 'example.com')).toBe('3ab92561-7b20-57ee-9658-9b551a047fc6afe6a801');
-	expect(await stringUUIDv5('6ba7b810-9dad-11d1-80b4-00c04fd430c8', 'stackoverflow.com')).toBe('614790c5-95a4-5b3c-af66-e8715d86b09e7d30bdc8');
-	expect(await stringUUIDv5('6ba7b810-9dad-11d1-80b4-00c04fd430c8', 'google.com')).toBe('9e5e4d4d-78d9-5e0e-b6ec-8c5db4f5961f144e0ee9');
+import { stringUUIDv8 } from '../algorithms/util/stringUUIDv8';
+test('String UUID v8: O(1)', () => {
+	const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+	expect(stringUUIDv8()).toMatch(uuidPattern);
+	expect(stringUUIDv8()).toMatch(uuidPattern);
+	expect(stringUUIDv8()).toMatch(uuidPattern);
+	expect(stringUUIDv8()).toMatch(uuidPattern);
 });
-

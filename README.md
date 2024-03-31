@@ -301,3 +301,7 @@ chmod +x generateTypes.sh runTests.sh
 * **String UUID v4: O(1)** `./algorithms/util/stringUUIDv4.js`
 	
 	- Returns: _String_
+
+* **String UUID v8: O(1)** `./algorithms/util/stringUUIDv8.js`
+	
+	- Returns: _String_
