@@ -31,6 +31,7 @@ function indexes(source, find) {
  * @param {number} b - Second integer.
  * @returns {number} - The GCD of a and b.
  * @complexity O(log(min(a, b))), where a and b are the input integers.
+ * @author Joshua Jarman
  */
 function gcd_euclid(a, b) {
 	if (a < 0) a = -a;
@@ -55,6 +56,7 @@ function gcd_euclid(a, b) {
  * @param {number} digits - The desired precision (number of decimal digits).
  * @returns {[bigint, bigint]} - A tuple containing two big integers representing the numerator and denominator of the square root.
  * @complexity O(n)
+ * @author Joshua Jarman
  */
 function pell_sqrt_10005(digits) {
 	let D = 10005n;
@@ -80,6 +82,7 @@ function pell_sqrt_10005(digits) {
  * @param {number} level - Recursion depth (used internally).
  * @returns {[bigint, bigint, bigint]} - A tuple containing three big integers representing partial terms.
  * @complexity O(log(b - a)), where a and b are the input bounds.
+ * @author Joshua Jarman
  */
 function  bs(a, b, level) {
 	const C = 640320n;
@@ -116,6 +119,7 @@ function  bs(a, b, level) {
  * @param {bigint} hexdigits - Number of hexadecimal digits (used internally).
  * @returns {[bigint, bigint, bigint]} - A tuple containing the approximation of π, the number of hexadecimal characters, and the number of hexadecimal digits.
  * @complexity O(n)
+ * @author Joshua Jarman built upon an improved version of Arthur Vause's soultion
  */
 function pi_chudnovsky_bs(digits, hexchars, hexdigits) {
 	let DIGITS_PER_TERM = Math.log10( (640320**3) / (6*2*6*24) );
@@ -135,6 +139,7 @@ function pi_chudnovsky_bs(digits, hexchars, hexdigits) {
  * @returns {string} - The approximation of π as a string with the specified precision.
  * @throws {Error} - Throws an error if n exceeds 75,000,000 decimal places.
  * @complexity O(n)
+ * @author Joshua Jarman built upon an improved version of Arthur Vause's soultion
  */
 export function calculatePi(digits) {
 	if (digits > 75000000) {
