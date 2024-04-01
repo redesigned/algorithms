@@ -10,6 +10,7 @@ import { arrayMostDigits } from '../util/arrayMostDigits';
  * @param {number[]} myArray - The input array to be sorted.
  * @returns {number[]} - The sorted array.
  * @complexity O(nk)
+ * @author Joshua Jarman
  */
 export function radixSort(myArray) {
 	let arr = [...myArray];

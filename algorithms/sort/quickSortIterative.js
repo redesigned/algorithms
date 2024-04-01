@@ -9,6 +9,7 @@
  * @param {number} high - The high index.
  * @return {number} - The pivot.
  * @complexity O(n²)
+ * @author Joshua Jarman
  */
 function partition(arr, low, high) {
 	let temp;
@@ -34,6 +35,7 @@ function partition(arr, low, high) {
  * @param {number[]} myArray - The input array to be sorted.
  * @return {number[]} - The sorted array.
  * @complexity O(n²)
+ * @author Joshua Jarman
  */
 export function quickSortIterative(myArray) {
 	let arr = [...myArray];
