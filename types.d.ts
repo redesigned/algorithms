@@ -514,25 +514,47 @@ declare function pancakeSort(myArray: number[]): number[];
  * @param arr - The input array to be sorted.
  * @param low - The low index.
  * @param high - The high index.
+ * @author Joshua Jarman
  */
 declare function partition(arr: number[], low: number, high: number): number;
 
 /**
  * Quick Sort Iterative Algorithm Chooses a pivot, partitions the array, and iterativly sorts the array.
  * @param myArray - The input array to be sorted.
+ * @author Joshua Jarman
  */
 declare function quickSortIterative(myArray: number[]): number[];
 
 /**
- * Quick Sort Recursive Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays.
+ * Quick Sort Merge Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
  * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
  */
-declare function quickSortRecursive(arr: any[]): any[];
+declare function quickSortmerge(arr: any[]): any[];
+
+/**
+ * Quick Sort Pivot Chooses a pivot, partitions the array, and iterativly sorts the elements to either side of the pivot.  Mutates the array passed to it, to be used by Quick Sort Iterative Algorithm
+ * @param arr - The input array to be sorted.
+ * @param start - The low index.
+ * @param end - The high index.
+ * @author Joshua Jarman
+ */
+declare function pivot(arr: number[], start?: number, end: number): number;
+
+/**
+ * Quick Sort Recursive Algorithm Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * @param arr - The input array to be sorted.
+ * @param start - The low index.
+ * @param end - The high index.
+ * @author Joshua Jarman
+ */
+declare function quickSortRecursive(arr: number[], start: number, end: number): number[];
 
 /**
  * Radix Sort Sorts by individual digits, from least significant to most significant.
  * @param myArray - The input array to be sorted.
  * @returns - The sorted array.
+ * @author Joshua Jarman
  */
 declare function radixSort(myArray: number[]): number[];
 
@@ -540,6 +562,7 @@ declare function radixSort(myArray: number[]): number[];
  * Selection Sort Finds the smallest element and places it at the beginning, then repeats the process for the remaining elements.
  * @param myArray - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
  */
 declare function selectionSort(myArray: number[]): number[];
 

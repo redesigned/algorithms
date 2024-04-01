@@ -161,6 +161,18 @@ test('Quick Sort Iterative: O(n²)', () => {
 	expect(quickSortIterative(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
+import { quickSortMerge } from '../algorithms/sort/quickSortMerge';
+test('Quick Sort Merge: O(n²)', () => {
+	expect(quickSortMerge([])).to.be.empty;
+	expect(quickSortMerge([9])).toStrictEqual([9]);
+	expect(quickSortMerge([1, 3])).toStrictEqual([1, 3]);
+	expect(quickSortMerge([3, 1])).toStrictEqual([1, 3]);
+	expect(quickSortMerge([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(quickSortMerge([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(quickSortMerge([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(quickSortMerge(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
+});
+
 import { quickSortRecursive } from '../algorithms/sort/quickSortRecursive';
 test('Quick Sort Recursive: O(n²)', () => {
 	expect(quickSortRecursive([])).to.be.empty;

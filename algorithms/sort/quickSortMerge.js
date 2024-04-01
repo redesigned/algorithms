@@ -9,7 +9,7 @@
  * @complexity O(n²)
  * @author Joshua Jarman
  */
-export function quickSortmerge(arr) {
+export function quickSortMerge(arr) {
 	if (arr.length <= 1) {
 		return arr;
 	}
@@ -26,5 +26,5 @@ export function quickSortmerge(arr) {
 			}
 		}
 	}
-	return [...quickSortmerge(smallerArr), pivotValue, ...quickSortmerge(largerArr)];
+	return [...quickSortMerge(smallerArr), pivotValue, ...quickSortMerge(largerArr)];
 }

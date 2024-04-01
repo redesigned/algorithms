@@ -12,7 +12,7 @@
  * @author Joshua Jarman
  */
 function pivot(arr, start = 0, end = arr.length + 1) {
-	const swap = (list, a, b) => [list[a], list[b]] = [list[b], list[a]];
+	const swap = (list, a, b) => { if (list[a] && list[b]) {[list[a], list[b]] = [list[b], list[a]]; } }
 	let pivot = arr[start],
 		pointer = start;
 	for (let i = start; i < arr.length; i++) {
@@ -36,6 +36,9 @@ function pivot(arr, start = 0, end = arr.length + 1) {
  * @author Joshua Jarman
  */
 export function quickSortRecursive(arr, start = 0, end = arr.length - 1) {
+	if (arr.length === 0) {
+		return arr;
+	}
 	let pivotIndex = pivot(arr, start, end);
 	if (start >= end) return arr;
 	quickSortRecursive(arr, start, pivotIndex);
