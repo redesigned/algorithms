@@ -636,6 +636,30 @@ declare function stringRandom(length?: number, possible?: string): string;
 declare function stringRandomBinary(length?: number): string;
 
 /**
+ * String Random Hexidecimal Generates a random hexidecimal string of specified length.
+ * @param length - The desired length of the random string.
+ * @returns - The randomly generated hexidecimal string.
+ * @author Joshua Jarman
+ */
+declare function stringRandomHexidecimal(length?: number): string;
+
+/**
+ * String Random Numeric Generates a random hexidecimal string of specified length.
+ * @param length - The desired length of the random string.
+ * @returns - The randomly generated hexidecimal string.
+ * @author Joshua Jarman
+ */
+declare function stringRandomNumeric(length?: number): string;
+
+/**
+ * String Reverse Reverses a String
+ * @param str - The string to reverse
+ * @returns - The rreversed string
+ * @author Joshua Jarman
+ */
+declare function stringReverse(str?: string): string;
+
+/**
  * String Truncate Truncates a string to a specific length.
  * @param inputString - The input string to truncate.
  * @param maxLength - The maximum length of the truncated string.

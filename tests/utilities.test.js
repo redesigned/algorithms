@@ -106,6 +106,14 @@ test('String Random: O(1)', () => {
 	expect(stringRandomBinary(1024)).toMatch(randPattern);
 });
 
+import { stringReverse } from '../algorithms/util/stringReverse';
+test('String Reverse: O(n)', () => {
+	expect(stringReverse('')).toBe('');
+	expect(stringReverse('Hello World!')).toBe('!dlroW olleH');
+	expect(stringReverse('0123456789')).toBe('9876543210');
+});
+
+
 import { stringTruncate } from '../algorithms/util/stringTruncate';
 test('String Truncate: O(1)', () => {
 	expect(stringTruncate('123456789', 1)).toBe('1');

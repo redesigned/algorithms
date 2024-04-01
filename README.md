@@ -313,6 +313,11 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _Length_
 	- Returns: _String_
 
+* **String Reverse: O(n)** `./algorithms/util/stringReverse.js`
+	
+	- Params: _String_
+	- Returns: _String_
+
 * **String Truncate: O(1)** `./algorithms/util/stringTruncate.js`
 	
 	- Params: _String, Length_
