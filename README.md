@@ -26,7 +26,7 @@ chmod +x generateTypes.sh runTests.sh
 
 ### Cryptography
 
-* **Ceasars Cipher: O(n)** `./algorithms/cryptography/ceasarsCipher.js`
+* **[Ceasars Cipher: O(n)](algorithms/cryptography/ceasarsCipher.js)**
 	
 	- Methods: _String, Offset_
 	- Returns: _String_

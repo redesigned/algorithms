@@ -30,7 +30,7 @@ function partition(arr, low, high) {
 }
 
 /**
- * Quick Sort Iterative Algorithm
+ * Quick Sort Iterative
  * Chooses a pivot, partitions the array, and iterativly sorts the array.
  * @param {number[]} myArray - The input array to be sorted.
  * @return {number[]} - The sorted array.

@@ -12,7 +12,7 @@
  * @author Joshua Jarman
  */
 function pivot(arr, start = 0, end = arr.length + 1) {
-	const swap = (list, a, b) => { if (list[a] && list[b]) {[list[a], list[b]] = [list[b], list[a]]; } }
+	const swap = (list, a, b) => { if (list[a] && list[b]) { [list[a], list[b]] = [list[b], list[a]]; }; }
 	let pivot = arr[start],
 		pointer = start;
 	for (let i = start; i < arr.length; i++) {
@@ -26,8 +26,8 @@ function pivot(arr, start = 0, end = arr.length + 1) {
 }
 
 /**
- * Quick Sort Recursive Algorithm
- * Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * Quick Sort Recursive
+ * Chooses a pivot, partitions the array, and recursivly sorts the array.
  * @param {number[]} arr - The input array to be sorted.
  * @param {number} start - The low index.
  * @param {number} end - The high index.
