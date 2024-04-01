@@ -8,7 +8,7 @@
  */
 export async function generateAESCTRKey() {
 	let new_key = {};
-	await window.crypto.subtle.generateKey(
+	await crypto.subtle.generateKey(
 		{
 			name: 'AES-CBC',
 			length: 256,
@@ -17,7 +17,7 @@ export async function generateAESCTRKey() {
 		['encrypt', 'decrypt']
 	)
 	.then(async (key) => {
-		await window.crypto.subtle.exportKey(
+		await crypto.subtle.exportKey(
 			'jwk',
 			key
 		)
