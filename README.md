@@ -44,10 +44,10 @@ chmod +x generateTypes.sh runTests.sh
 ### Math
 
 * **[Babylonian Square Root: O(log(n))](algorithms/math/babylonianSquareRoot.js)**
-* **[Calculate Pi: O(√n)](algorithms/mah/calculatePi.js)**
+* **[Calculate Pi: O(√n)](algorithms/math/calculatePi.js)**
 * **[Fake Pi: O(√n)](algorithms/math/fakePi.js)**
 * **[Fibonacci Numbers: O(√n)](algorithms/math/fibonacciNumbers.js)**
-* **[Newtons Square Root: O(log(n))](algorithms/math/newtondSquareRoot.js)**
+* **[Newtons Square Root: O(log(n))](algorithms/math/newtonsSquareRoot.js)**
 * **[Sieve of Eratosthenes: O(n log(log(n)))](algorithms/math/sieveOfEratosthenes.js)**
 
 ### Path Finding
@@ -63,7 +63,7 @@ chmod +x generateTypes.sh runTests.sh
 
 * **[Binary Search: O(log(n))](algorithms/search/binarySearch.js)**
 * **[Fibonacci Search: O(log n)](algorithms/search/fibonacciSearch.js)**
-* **[Interpolation Search: O(log(log(n)))](algorithms/search/binarySearch.js)**
+* **[Interpolation Search: O(log(log(n)))](algorithms/search/interpolationSearch.js)**
 * **[Javascript Built In Default Search: O(n)](algorithms/search/javascriptSearch.js)**
 * **[Jump Search: O(√n)](algorithms/search/jumpSearch.js)**
 * **[Linear Search: O(n)](algorithms/search/linearSearch.js)**
@@ -95,7 +95,7 @@ chmod +x generateTypes.sh runTests.sh
 * **[Array Max: O(n)](algorithms/util/arrayMax.js)**
 * **[Array Merge: O(n)](algorithms/util/arrayMerge.js)**
 * **[Array Min: O(n)](algorithms/util/arrayMin.js)**
-* **[Array Most Digits: O(n)](algorithms/util/arrayMostDigits.js`)**
+* **[Array Most Digits: O(n)](algorithms/util/arrayMostDigits.js)**
 * **[Array of Numbers: O(n)](algorithms/util/arrayOfNumbers.js)**
 * **[Array Random Shuffle: O(n)](algorithms/util/arrayRandomShuffle.js)**
 * **[Number Digit At: O(1)](algorithms/util/numberDigitAt.js)**
