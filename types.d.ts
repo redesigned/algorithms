@@ -510,10 +510,24 @@ declare function mergeSort(arr: number[]): number[];
 declare function pancakeSort(myArray: number[]): number[];
 
 /**
- * Quick Sort Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays.
+ * Quick Sort Pivot Chooses a pivot, partitions the array, and iterativly sorts the elements to either side of the pivot.  Mutates the array passed to it, to be used by Quick Sort Iterative Algorithm
+ * @param arr - The input array to be sorted.
+ * @param low - The low index.
+ * @param high - The high index.
+ */
+declare function partition(arr: number[], low: number, high: number): number;
+
+/**
+ * Quick Sort Iterative Algorithm Chooses a pivot, partitions the array, and iterativly sorts the array.
  * @param myArray - The input array to be sorted.
  */
-declare function quickSort(myArray: any[]): any[];
+declare function quickSortIterative(myArray: number[]): number[];
+
+/**
+ * Quick Sort Recursive Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays.
+ * @param arr - The input array to be sorted.
+ */
+declare function quickSortRecursive(arr: any[]): any[];
 
 /**
  * Radix Sort Sorts by individual digits, from least significant to most significant.

@@ -221,7 +221,12 @@ chmod +x generateTypes.sh runTests.sh
 	- Params: _Array_
 	- Returns: _Array_
 
-* **Quick Sort: O(n²)** `./algorithms/sort/quickSort.js`
+* **Quick Sort Recursive: O(n²)** `./algorithms/sort/quickSortRecursive.js`
+	
+	- Params: _Array_
+	- Returns: _Array_
+
+* **Quick Sort Iterative: O(n²)** `./algorithms/sort/quickSortIterative.js`
 	
 	- Params: _Array_
 	- Returns: _Array_
