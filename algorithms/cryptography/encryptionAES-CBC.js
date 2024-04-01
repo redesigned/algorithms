@@ -6,7 +6,7 @@
  * Generates an AES-CBC key asynchronously.
  * @returns {Promise<string>} The base64-encoded key.
  */
-export async function generateAESGCMKey() {
+export async function generateAESCBCKey() {
 	let new_key = {};
 	await window.crypto.subtle.generateKey(
 		{
