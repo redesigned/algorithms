@@ -11,45 +11,12 @@ test('Cesars Cipher: O(n)', () => {
 	expect(ceasarsCipher('Nothing Has Changed', 0)).toBe('Nothing Has Changed');
 });
 
-import { generateAESCBCKey, encryptAESCBC, decryptAESCBC } from '../algorithms/cryptography/encryptionAES-CBC';
-test('AES-CBC Encryption: O???', async () => {
-	let key = await generateAESCBCKey();
-	let encrypted = await encryptAESCBC(key, 'SecretPassword', 'Hello World!');
-	let decrypted = await decryptAESCBC(key, 'SecretPassword', encrypted);
-	expect(decrypted).toBe('Hello World!');
-});
-
-import { generateAESCTRKey, encryptAESCTR, decryptAESCTR } from '../algorithms/cryptography/encryptionAES-CTR';
-test('AES-CTR Encryption: O???', async () => {
-	let key = await generateAESCTRKey();
-	let encrypted = await encryptAESCTR(key, 'SecretPassword', 'Hello World!');
-	let decrypted = await decryptAESCTR(key, 'SecretPassword', encrypted);
-	expect(decrypted).toBe('Hello World!');
-});
-
-import { generateAESGCMKey, encryptAESGCM, decryptAESGCM } from '../algorithms/cryptography/encryptionAES-GCM';
-test('AES-GCM Encryption: O???', async () => {
-	let key = await generateAESGCMKey();
-	let encrypted = await encryptAESGCM(key, 'SecretPassword', 'Hello World!');
-	let decrypted = await decryptAESGCM(key, 'SecretPassword', encrypted);
-	expect(decrypted).toBe('Hello World!');
-});
-
 import { encodeBase64 } from '../algorithms/cryptography/base64';
 test('Encode Base64: O(n)', () => {
 	expect(encodeBase64('')).toBe('');
 	expect(encodeBase64('hello world')).toBe('aGVsbG8gd29ybGQ=');
 	expect(encodeBase64('Call 1-800-555-1212 for Information!')).toBe('Q2FsbCAxLTgwMC01NTUtMTIxMiBmb3IgSW5mb3JtYXRpb24h');
 	expect(encodeBase64('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('ISMkJSYoKSorLC0uLzAyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUlNUVVdYWVpeX2BgYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+');
-});
-
-import { decodeBase64 } from '../algorithms/cryptography/base64';
-test('Decode Base64: O(n)', () => {
-	expect(decodeBase64('')).toBe('');
-	expect(decodeBase64('aGVsbG8gd29ybGQ=')).toBe('hello world');
-	expect(decodeBase64('Q2FsbCAxLTgwMC01NTUtMTIxMiBmb3IgSW5mb3JtYXRpb24h')).toBe('Call 1-800-555-1212 for Information!');
-	expect(decodeBase64('ISMkJSYoKSorLC0uLzAyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUlNUVVdYWVpeX2BgYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+')).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~');
-	expect(decodeBase64(encodeBase64('Nothing Has Changed 0123456789'))).toBe('Nothing Has Changed 0123456789');
 });
 
 import { decodeBase64 } from '../algorithms/cryptography/base64';
@@ -124,4 +91,47 @@ test('xOR: O(n)', () => {
 	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~'))).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
 	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~',11),11)).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
 	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~',1024),1024)).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
+});
+
+import { generateAESCBCKey, encryptAESCBC, decryptAESCBC } from '../algorithms/cryptography/encryptionAES-CBC';
+test('AES-CBC Encryption: O???', async () => {
+	let key = await generateAESCBCKey();
+	let encrypted = await encryptAESCBC(key, 'SecretPassword', 'Hello World!');
+	let decrypted = await decryptAESCBC(key, 'SecretPassword', encrypted);
+	expect(decrypted).toBe('Hello World!');
+});
+
+import { generateAESCTRKey, encryptAESCTR, decryptAESCTR } from '../algorithms/cryptography/encryptionAES-CTR';
+test('AES-CTR Encryption: O???', async () => {
+	let key = await generateAESCTRKey();
+	let encrypted = await encryptAESCTR(key, 'SecretPassword', 'Hello World!');
+	let decrypted = await decryptAESCTR(key, 'SecretPassword', encrypted);
+	expect(decrypted).toBe('Hello World!');
+});
+
+import { generateAESGCMKey, encryptAESGCM, decryptAESGCM } from '../algorithms/cryptography/encryptionAES-GCM';
+test('AES-GCM Encryption: O???', async () => {
+	let key = await generateAESGCMKey();
+	let encrypted = await encryptAESGCM(key, 'SecretPassword', 'Hello World!');
+	let decrypted = await decryptAESGCM(key, 'SecretPassword', encrypted);
+	expect(decrypted).toBe('Hello World!');
+});
+
+import { generateRSAOAEPKeyPrivate, extractRSAOAEPKeyPublic, encryptRSAOAEP, decryptRSAOAEP } from '../algorithms/cryptography/encryptionRSA-OAEP';
+test('RSA-OAEP Encryption: O???', async () => {
+	let private_key = await generateRSAOAEPKeyPrivate(1024);
+	let public_key = await extractRSAOAEPKeyPublic(private_key);
+	let encrypted = await encryptRSAOAEP(public_key, 'Hello World!');
+	let decrypted = await decryptRSAOAEP(private_key, encrypted);
+	expect(decrypted).toBe('Hello World!');
+	private_key = await generateRSAOAEPKeyPrivate(2048);
+	public_key = await extractRSAOAEPKeyPublic(private_key);
+	encrypted = await encryptRSAOAEP(public_key, 'Hello World!');
+	decrypted = await decryptRSAOAEP(private_key, encrypted);
+	expect(decrypted).toBe('Hello World!');
+	private_key = await generateRSAOAEPKeyPrivate(4096);
+	public_key = await extractRSAOAEPKeyPublic(private_key);
+	encrypted = await encryptRSAOAEP(public_key, 'Hello World!');
+	decrypted = await decryptRSAOAEP(private_key, encrypted);
+	expect(decrypted).toBe('Hello World!');
 });

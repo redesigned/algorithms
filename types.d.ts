@@ -105,16 +105,19 @@ declare function encryptAESGCM(key: string, secret: string, data: string): Promi
 declare function decryptAESGCM(key: string, secret: string, data: string): Promise<string>;
 
 /**
- * Generate RSA-OAEP Encryption Key Generates an RSA-OAEP key asynchronously.
+ * Generate RSA-OAEP Private Key Generates an RSA-OAEP key asynchronously for decryption.
+ * @param length - The key length.  Must be at least 1024, if less will be set to 1024 automatically.
  * @returns The base64-encoded key.
  */
-declare function generateRSAOAEPKeys(): Promise<Object>;
+declare function generateRSAOAEPKeyPrivate(length?: number): Promise<Object>;
 
 /**
- * Generate RSA-OAEP Decryption Key Generates an RSA-OAEP key asynchronously.
- * @returns The base64-encoded key.
+ * Exract RSA-OAEP Public Key Extracts an RSA-OAEP Public Key for encrption from a Private Key.
+ * @param privateKey - The base64-encoded encryption key.
+ * @returns - The encrypted text.
+ * @author Joshua Jarman
  */
-declare function generateRSAOAEPKeyDecryption(): Promise<string>;
+declare function extractRSAOAEPKeyPublic(privateKey: string): string;
 
 /**
  * Encrypt RSA-OAEP Encrypts text via RSA-OAEP encrption asynchronously.
@@ -124,6 +127,15 @@ declare function generateRSAOAEPKeyDecryption(): Promise<string>;
  * @author Joshua Jarman
  */
 declare function encryptRSAOAEP(key: string, data: string): Promise<string>;
+
+/**
+ * Decrypt RSA-OAEP Decrypts text via RSA-OAEP encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param data -The text to decrypt
+ * @returns - The decrypted text.
+ * @author Joshua Jarman
+ */
+declare function decryptRSAOAEP(key: string, data: string): Promise<string>;
 
 /**
  * Interleave Interleaves characters from the input.

@@ -56,8 +56,8 @@ export async function generateAESGCMKey() {
 export async function encryptAESGCM(key, secret, data) {
 	let encoded_data = '';
 	if (secret.length < 1) { secret = '$3(63+$^|+__Utw:afXjtE,viA>ji2k>.CC_'; };
-	secret = new TextEncoder().encode(secret);
-	data = new TextEncoder().encode(data);
+	const bufferSecret = new TextEncoder().encode(secret);
+	const bufferData = new TextEncoder().encode(data);
 	await window.crypto.subtle.importKey(
 		'jwk',
 		{
@@ -76,12 +76,12 @@ export async function encryptAESGCM(key, secret, data) {
 		await window.crypto.subtle.encrypt(
 			{
 				name: 'AES-GCM',
-				iv: secret,
-				additionalData: secret,
+				iv: bufferSecret,
+				additionalData: bufferSecret,
 				tagLength: 128,
 			},
 			key,
-			data
+			bufferData
 		)
 		.then((encrypted) => {
 			let binary = '';
@@ -114,11 +114,11 @@ export async function encryptAESGCM(key, secret, data) {
 export async function decryptAESGCM(key, secret, data) {
 	let decoded_data = '';
 	if (secret.length < 1) { secret = '$3(63+$^|+__Utw:afXjtE,viA>ji2k>.CC_'; };
-	secret = new TextEncoder().encode(secret);
+	const bufferSecret = new TextEncoder().encode(secret);
 	const binary_string = window.atob(`${decodeURIComponent(data)}`);
 	let bytes = new Uint8Array(binary_string.length);
 	for (let i = 0; i < binary_string.length; i++){ bytes[i] = binary_string.charCodeAt(i); };
-	data = bytes.buffer;
+	const bufferData = bytes.buffer;
 	await window.crypto.subtle.importKey(
 		'jwk',
 		{
@@ -137,12 +137,12 @@ export async function decryptAESGCM(key, secret, data) {
 		await window.crypto.subtle.decrypt(
 			{
 				name: 'AES-GCM',
-				iv: secret,
-				additionalData: secret,
+				iv: bufferSecret,
+				additionalData: bufferSecret,
 				tagLength: 128,
 			},
 			key,
-			data
+			bufferData
 		)
 		.then((decrypted) => {
 			decoded_data = new TextDecoder().decode(new Uint8Array(decrypted));

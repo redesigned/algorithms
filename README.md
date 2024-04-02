@@ -27,6 +27,15 @@ chmod +x generateTypes.sh runTests.sh
 ### Cryptography
 
 * **[Ceasars Cipher: O(n)](algorithms/cryptography/ceasarsCipher.js)**
+* **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
+* **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
+* **[MD5: O(n)](algorithms/cryptography/md5.js)**
+* **[ROT5: O(n)](algorithms/cryptography/rot5.js)**
+* **[ROT13: O(n)](algorithms/cryptography/rot13.js)**
+* **[ROT18: O(n)](algorithms/cryptography/rot18.js)**
+* **[ROT47: O(n)](algorithms/cryptography/rot47.js)**
+* **[xOR: O(n)](algorithms/cryptography/xOR.js)**
+
 * **[Generate Key AES-CBC: O(1)](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Encrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Decrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
@@ -36,14 +45,10 @@ chmod +x generateTypes.sh runTests.sh
 * **[Generate Key AES-GCM: O(1)](algorithms/cryptography/encryptionAES-GCM.js)**
 * **[Encrypt AES-GCM: O???](algorithms/cryptography/encryptionAES-GCM.js)**
 * **[Decrypt AES-GCM: O???](algorithms/cryptography/encryptionAES-GCM.js)**
-* **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
-* **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
-* **[MD5: O(n)](algorithms/cryptography/md5.js)**
-* **[ROT5: O(n)](algorithms/cryptography/rot5.js)**
-* **[ROT13: O(n)](algorithms/cryptography/rot13.js)**
-* **[ROT18: O(n)](algorithms/cryptography/rot18.js)**
-* **[ROT47: O(n)](algorithms/cryptography/rot47.js)**
-* **[xOR: O(n)](algorithms/cryptography/xOR.js)**
+* **[Generate Private Key RSA-OAEP: O(n)](algorithms/cryptography/encryptionRSA-OAEP.js)**
+* **[Extract Public Key RSA-OAEP: O(1)](algorithms/cryptography/encryptionRSA-OAEP.js)**
+* **[Encrypt RSA-OAEP: O???](algorithms/cryptography/encryptionRSA-OAEP.js)**
+* **[Decrypt RSA-OAEP: O???](algorithms/cryptography/encryptionRSA-OAEP.js)**
 
 ### Data Structures
 

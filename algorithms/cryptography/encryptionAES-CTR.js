@@ -54,8 +54,8 @@ export async function generateAESCTRKey() {
 export async function encryptAESCTR(key, secret, data) {
 	let encoded_data = '';
 	if (secret.length < 1) { secret = '$3(63+$^|+__Utw:afXjtE,viA>ji2k>.CC_'; };
-	secret = new TextEncoder().encode(secret.slice(0, 16).padStart(16, " "));
-	data = new TextEncoder().encode(data);
+	const bufferSecret = new TextEncoder().encode(secret.slice(0, 16).padStart(16, " "));
+	const bufferData = new TextEncoder().encode(data);
 	await window.crypto.subtle.importKey(
 		'jwk',
 		{
@@ -74,11 +74,11 @@ export async function encryptAESCTR(key, secret, data) {
 		await window.crypto.subtle.encrypt(
 			{
 				name: 'AES-CTR',
-				counter: secret,
+				counter: bufferSecret,
 				length: 64,
 			},
 			key,
-			data
+			bufferData
 		)
 		.then((encrypted) => {
 			let binary = '';
@@ -111,11 +111,11 @@ export async function encryptAESCTR(key, secret, data) {
 export async function decryptAESCTR(key, secret, data) {
 	let decoded_data = '';
 	if (secret.length < 1) { secret = '$3(63+$^|+__Utw:afXjtE,viA>ji2k>.CC_'; };
-	secret = new TextEncoder().encode(secret.slice(0, 16).padStart(16, " "));
+	const bufferSecret = new TextEncoder().encode(secret.slice(0, 16).padStart(16, " "));
 	const binary_string = window.atob(`${decodeURIComponent(data)}`);
 	let bytes = new Uint8Array(binary_string.length);
 	for (let i = 0; i < binary_string.length; i++){ bytes[i] = binary_string.charCodeAt(i); };
-	data = bytes.buffer;
+	const bufferData = bytes.buffer;
 	await window.crypto.subtle.importKey(
 		'jwk',
 		{
@@ -134,11 +134,11 @@ export async function decryptAESCTR(key, secret, data) {
 		await window.crypto.subtle.decrypt(
 			{
 				name: 'AES-CTR',
-				counter: secret,
+				counter: bufferSecret,
 				length: 64
 			},
 			key,
-			data
+			bufferData
 		)
 		.then((decrypted) => {
 			decoded_data = new TextDecoder().decode(new Uint8Array(decrypted));
