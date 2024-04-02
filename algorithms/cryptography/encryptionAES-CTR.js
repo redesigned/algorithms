@@ -1,6 +1,7 @@
 // @ts-check
 "use strict";
 
+// node compatibility
 if (typeof window === 'undefined') {
 	var window = global;
 }
@@ -9,6 +10,7 @@ if (typeof window === 'undefined') {
  * Generate AES-CTR Encryption Key
  * Generates an AES-CTR key asynchronously.
  * @returns {Promise<string>} The base64-encoded key.
+ * @complexity O(1)
  * @author Joshua Jarman
  */
 export async function generateAESCTRKey() {
@@ -46,6 +48,7 @@ export async function generateAESCTRKey() {
  * @param {string} secret - A password
  * @param {string} data -The text to encrypt
  * @returns {Promise<string>} - The encrypted text.
+ * @complexity O???
  * @author Joshua Jarman
  */
 export async function encryptAESCTR(key, secret, data) {
@@ -102,6 +105,7 @@ export async function encryptAESCTR(key, secret, data) {
  * @param {string} secret - A password
  * @param {string} data -The text to decrypt
  * @returns {Promise<string>} - The decrypted text.
+ * @complexity O???
  * @author Joshua Jarman
  */
 export async function decryptAESCTR(key, secret, data) {

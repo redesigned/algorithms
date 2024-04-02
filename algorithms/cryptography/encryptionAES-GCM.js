@@ -1,6 +1,7 @@
 // @ts-check
 "use strict";
 
+// node compatibility
 if (typeof window === 'undefined') {
 	var window = global;
 }
@@ -9,11 +10,12 @@ if (typeof window === 'undefined') {
  * Generate AES-GCM Encryption Key
  * Generates an AES-GCM encrption key asynchronously.
  * @returns {Promise<string>} - The base64-encoded key.
+ * @complexity O(1)
  * @author Joshua Jarman
  */
 export async function generateAESGCMKey() {
 	let new_key = {};
-	await crypto.subtle.generateKey(
+	await window.crypto.subtle.generateKey(
 		{
 			name: 'AES-GCM',
 			length: 256,
@@ -22,7 +24,7 @@ export async function generateAESGCMKey() {
 		['encrypt', 'decrypt']
 	)
 	.then(async (key) => {
-		await crypto.subtle.exportKey(
+		await window.crypto.subtle.exportKey(
 			'jwk',
 			key
 		)
@@ -48,6 +50,7 @@ export async function generateAESGCMKey() {
  * @param {string} secret - A password
  * @param {string} data -The text to encrypt
  * @returns {Promise<string>} - The encrypted text.
+ * @complexity O???
  * @author Joshua Jarman
  */
 export async function encryptAESGCM(key, secret, data) {
@@ -105,6 +108,7 @@ export async function encryptAESGCM(key, secret, data) {
  * @param {string} secret - A password
  * @param {string} data -The text to decrypt
  * @returns {Promise<string>} - The decrypted text.
+ * @complexity O???
  * @author Joshua Jarman
  */
 export async function decryptAESGCM(key, secret, data) {
