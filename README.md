@@ -27,9 +27,15 @@ chmod +x generateTypes.sh runTests.sh
 ### Cryptography
 
 * **[Ceasars Cipher: O(n)](algorithms/cryptography/ceasarsCipher.js)**
-* **[Encrypt AES-CBC: O(n)](algorithms/cryptography/encryptionAESCBC.js)**
-* **[Encrypt AES-CTR: O(n)](algorithms/cryptography/encryptionAESCTR.js)**
-* **[Encrypt AES-GCM: O(n)](algorithms/cryptography/encryptionAESGCM.js)**
+* **[Generate Key AES-CBC: O(n)](algorithms/cryptography/encryptionAES-CBC.js)**
+* **[Encrypt AES-CBC: O(n)](algorithms/cryptography/encryptionAES-CBC.js)**
+* **[Decrypt AES-CBC: O(n)](algorithms/cryptography/encryptionAES-CBC.js)**
+* **[Generte Key AES-CTR: O(n)](algorithms/cryptography/encryptionAES-CTR.js)**
+* **[Encrypt AES-CTR: O(n)](algorithms/cryptography/encryptionAES-CTR.js)**
+* **[Decrypt AES-CTR: O(n)](algorithms/cryptography/encryptionAES-CTR.js)**
+* **[Generate Key AES-GCM: O(n)](algorithms/cryptography/encryptionAES-GCM.js)**
+* **[Encrypt AES-GCM: O(n)](algorithms/cryptography/encryptionAES-GCM.js)**
+* **[Decrypt AES-GCM: O(n)](algorithms/cryptography/encryptionAES-GCM.js)**
 * **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[MD5: O(n)](algorithms/cryptography/md5.js)**
