@@ -1,6 +1,10 @@
 // @ts-check
 "use strict";
 
+if (typeof window === 'undefined') {
+	var window = global;
+}
+
 /**
  * Generate AES-CBC Encryption Key
  * Generates an AES-CBC key asynchronously.
@@ -76,7 +80,7 @@ export async function encryptAESCBC(key, secret, data) {
 			let binary = '';
 			const bytes = new Uint8Array(encrypted);
 			for (let i = 0; i < bytes.byteLength; i++) { binary += String.fromCharCode(bytes[i]); };
-			encoded_data = `${new Uint8Array(encrypted, 0, 5)}`;
+			encoded_data = `${encodeURIComponent(window.btoa(binary))}`;
 		})
 		.catch((err) => {
 			console.error(err);

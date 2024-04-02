@@ -24,6 +24,108 @@ declare function decodeBase64(str: string): string;
 declare function ceasarsCipher(str: string, offset?: number): string;
 
 /**
+ * Generate AES-CBC Encryption Key Generates an AES-CBC key asynchronously.
+ * @returns The base64-encoded key.
+ * @author Joshua Jarman
+ */
+declare function generateAESCBCKey(): Promise<string>;
+
+/**
+ * Encrypt AES-CBC Encrypts text via AES-CBC encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param secret - A password
+ * @param data -The text to encrypt
+ * @returns - The encrypted text.
+ * @author Joshua Jarman
+ */
+declare function encryptAESCBC(key: string, secret: string, data: string): Promise<string>;
+
+/**
+ * decrypt AES-CBC Decrypts text via AES-GCM encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param secret - A password
+ * @param data -The text to decrypt
+ * @returns - The decrypted text.
+ * @author Joshua Jarman
+ */
+declare function decryptAESCBC(key: string, secret: string, data: string): Promise<string>;
+
+/**
+ * Generate AES-CTR Encryption Key Generates an AES-CTR key asynchronously.
+ * @returns The base64-encoded key.
+ * @author Joshua Jarman
+ */
+declare function generateAESCTRKey(): Promise<string>;
+
+/**
+ * Encrypt AES-CTR Encrypts text via AES-CTR encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param secret - A password
+ * @param data -The text to encrypt
+ * @returns - The encrypted text.
+ * @author Joshua Jarman
+ */
+declare function encryptAESCTR(key: string, secret: string, data: string): Promise<string>;
+
+/**
+ * decrypt AES-CTR Decrypts text via AES-CTR encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param secret - A password
+ * @param data -The text to decrypt
+ * @returns - The decrypted text.
+ * @author Joshua Jarman
+ */
+declare function decryptAESCTR(key: string, secret: string, data: string): Promise<string>;
+
+/**
+ * Generate AES-GCM Encryption Key Generates an AES-GCM encrption key asynchronously.
+ * @returns - The base64-encoded key.
+ * @author Joshua Jarman
+ */
+declare function generateAESGCMKey(): Promise<string>;
+
+/**
+ * Encrypt AES-GCM Encrypts text via AES-GCM encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param secret - A password
+ * @param data -The text to encrypt
+ * @returns - The encrypted text.
+ * @author Joshua Jarman
+ */
+declare function encryptAESGCM(key: string, secret: string, data: string): Promise<string>;
+
+/**
+ * decrypt AES-GCM Decrypts text via AES-GCM encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param secret - A password
+ * @param data -The text to decrypt
+ * @returns - The decrypted text.
+ * @author Joshua Jarman
+ */
+declare function decryptAESGCM(key: string, secret: string, data: string): Promise<string>;
+
+/**
+ * Generate RSA-OAEP Encryption Key Generates an RSA-OAEP key asynchronously.
+ * @returns The base64-encoded key.
+ */
+declare function generateRSAOAEPKeys(): Promise<Object>;
+
+/**
+ * Generate RSA-OAEP Decryption Key Generates an RSA-OAEP key asynchronously.
+ * @returns The base64-encoded key.
+ */
+declare function generateRSAOAEPKeyDecryption(): Promise<string>;
+
+/**
+ * Encrypt RSA-OAEP Encrypts text via RSA-OAEP encrption asynchronously.
+ * @param key - The base64-encoded encryption key.
+ * @param data -The text to encrypt
+ * @returns - The encrypted text.
+ * @author Joshua Jarman
+ */
+declare function encryptRSAOAEP(key: string, data: string): Promise<string>;
+
+/**
  * Interleave Interleaves characters from the input.
  * @param str - The input string to be interleaved.
  * @param segments - The number of segments to create.
@@ -519,18 +621,18 @@ declare function pancakeSort(myArray: number[]): number[];
 declare function partition(arr: number[], low: number, high: number): number;
 
 /**
- * Quick Sort Iterative Algorithm Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * Quick Sort Iterative Chooses a pivot, partitions the array, and iterativly sorts the array.
  * @param myArray - The input array to be sorted.
  * @author Joshua Jarman
  */
 declare function quickSortIterative(myArray: number[]): number[];
 
 /**
- * Quick Sort Merge Algorithm Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
+ * Quick Sort Merge Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
  * @param arr - The input array to be sorted.
  * @author Joshua Jarman
  */
-declare function quickSortmerge(arr: any[]): any[];
+declare function quickSortMerge(arr: any[]): any[];
 
 /**
  * Quick Sort Pivot Chooses a pivot, partitions the array, and iterativly sorts the elements to either side of the pivot.  Mutates the array passed to it, to be used by Quick Sort Iterative Algorithm
@@ -542,7 +644,7 @@ declare function quickSortmerge(arr: any[]): any[];
 declare function pivot(arr: number[], start?: number, end: number): number;
 
 /**
- * Quick Sort Recursive Algorithm Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * Quick Sort Recursive Chooses a pivot, partitions the array, and recursivly sorts the array.
  * @param arr - The input array to be sorted.
  * @param start - The low index.
  * @param end - The high index.

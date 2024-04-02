@@ -1,6 +1,10 @@
 // @ts-check
 "use strict";
 
+if (typeof window === 'undefined') {
+	var window = global;
+}
+
 /**
  * Generate AES-CTR Encryption Key
  * Generates an AES-CTR key asynchronously.

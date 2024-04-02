@@ -11,6 +11,30 @@ test('Cesars Cipher: O(n)', () => {
 	expect(ceasarsCipher('Nothing Has Changed', 0)).toBe('Nothing Has Changed');
 });
 
+import { generateAESCBCKey, encryptAESCBC, decryptAESCBC } from '../algorithms/cryptography/encryptionAES-CBC';
+test('AES-CBC Encryption: O???', async () => {
+	let key = await generateAESCBCKey();
+	let encrypted = await encryptAESCBC(key, 'SecretPassword', 'Hello World!');
+	let decrypted = await decryptAESCBC(key, 'SecretPassword', encrypted);
+	expect(decrypted).toBe('Hello World!');
+});
+
+import { generateAESCTRKey, encryptAESCTR, decryptAESCTR } from '../algorithms/cryptography/encryptionAES-CTR';
+test('AES-CTR Encryption: O???', async () => {
+	let key = await generateAESCTRKey();
+	let encrypted = await encryptAESCTR(key, 'SecretPassword', 'Hello World!');
+	let decrypted = await decryptAESCTR(key, 'SecretPassword', encrypted);
+	expect(decrypted).toBe('Hello World!');
+});
+
+import { generateAESGCMKey, encryptAESGCM, decryptAESGCM } from '../algorithms/cryptography/encryptionAES-GCM';
+test('AES-GCM Encryption: O???', async () => {
+	let key = await generateAESGCMKey();
+	let encrypted = await encryptAESGCM(key, 'SecretPassword', 'Hello World!');
+	let decrypted = await decryptAESGCM(key, 'SecretPassword', encrypted);
+	expect(decrypted).toBe('Hello World!');
+});
+
 import { encodeBase64 } from '../algorithms/cryptography/base64';
 test('Encode Base64: O(n)', () => {
 	expect(encodeBase64('')).toBe('');
