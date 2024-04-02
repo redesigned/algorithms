@@ -5,6 +5,7 @@
  * Generate AES-CBC Encryption Key
  * Generates an AES-CBC key asynchronously.
  * @returns {Promise<string>} The base64-encoded key.
+ * @author Joshua Jarman
  */
 export async function generateAESCBCKey() {
 	let new_key = {};
@@ -41,6 +42,7 @@ export async function generateAESCBCKey() {
  * @param {string} secret - A password
  * @param {string} data -The text to encrypt
  * @returns {Promise<string>} - The encrypted text.
+ * @author Joshua Jarman
  */
 export async function encryptAESCBC(key, secret, data) {
 	let encoded_data = '';
@@ -95,6 +97,7 @@ export async function encryptAESCBC(key, secret, data) {
  * @param {string} secret - A password
  * @param {string} data -The text to decrypt
  * @returns {Promise<string>} - The decrypted text.
+ * @author Joshua Jarman
  */
 export async function decryptAESCBC(key, secret, data) {
 	let decoded_data = '';

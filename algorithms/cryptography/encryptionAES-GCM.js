@@ -5,6 +5,7 @@
  * Generate AES-GCM Encryption Key
  * Generates an AES-GCM encrption key asynchronously.
  * @returns {Promise<string>} - The base64-encoded key.
+ * @author Joshua Jarman
  */
 export async function generateAESGCMKey() {
 	let new_key = {};
@@ -43,6 +44,7 @@ export async function generateAESGCMKey() {
  * @param {string} secret - A password
  * @param {string} data -The text to encrypt
  * @returns {Promise<string>} - The encrypted text.
+ * @author Joshua Jarman
  */
 export async function encryptAESGCM(key, secret, data) {
 	let encoded_data = '';
@@ -99,6 +101,7 @@ export async function encryptAESGCM(key, secret, data) {
  * @param {string} secret - A password
  * @param {string} data -The text to decrypt
  * @returns {Promise<string>} - The decrypted text.
+ * @author Joshua Jarman
  */
 export async function decryptAESGCM(key, secret, data) {
 	let decoded_data = '';
