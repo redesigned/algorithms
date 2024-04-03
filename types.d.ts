@@ -109,7 +109,7 @@ declare function decryptAESGCM(key: string, secret: string, data: string): Promi
  * @param length - The key length.  Must be at least 1024, if less will be set to 1024 automatically.
  * @returns The base64-encoded key.
  */
-declare function generateRSAOAEPKeyPrivate(length?: number): Promise<Object>;
+declare function generateRSAOAEPKeyPrivate(length?: number): Promise<String>;
 
 /**
  * Exract RSA-OAEP Public Key Extracts an RSA-OAEP Public Key for encrption from a Private Key.
@@ -624,45 +624,41 @@ declare function mergeSort(arr: number[]): number[];
 declare function pancakeSort(myArray: number[]): number[];
 
 /**
- * Quick Sort Pivot Chooses a pivot, partitions the array, and iterativly sorts the elements to either side of the pivot.  Mutates the array passed to it, to be used by Quick Sort Iterative Algorithm
+ * Quick Sort Iterative Mutates Array In Place. Chooses a pivot, partitions the array, and iterativly sorts the array.
  * @param arr - The input array to be sorted.
- * @param low - The low index.
- * @param high - The high index.
  * @author Joshua Jarman
  */
-declare function partition(arr: number[], low: number, high: number): number;
+declare function quickSortIterative(arr: number[]): number[];
 
 /**
- * Quick Sort Iterative Chooses a pivot, partitions the array, and iterativly sorts the array.
- * @param myArray - The input array to be sorted.
+ * Quick Sort Iterative Non Mutating Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * @param arr - The input array to be sorted.
  * @author Joshua Jarman
  */
-declare function quickSortIterative(myArray: number[]): number[];
+declare function quickSortIterativeNonMutating(arr: number[]): number[];
 
 /**
- * Quick Sort Merge Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
+ * Quick Sort Merge Non Mutating. Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
  * @param arr - The input array to be sorted.
  * @author Joshua Jarman
  */
 declare function quickSortMerge(arr: any[]): any[];
 
 /**
- * Quick Sort Pivot Chooses a pivot, partitions the array, and iterativly sorts the elements to either side of the pivot.  Mutates the array passed to it, to be used by Quick Sort Iterative Algorithm
+ * Quick Sort Recursive Mutates Array In Place. Chooses a pivot, partitions the array, and recursivly sorts the array.
  * @param arr - The input array to be sorted.
- * @param start - The low index.
- * @param end - The high index.
+ * @param low - The low index.
+ * @param high - The high index.
  * @author Joshua Jarman
  */
-declare function pivot(arr: number[], start?: number, end: number): number;
+declare function quickSortRecursive(arr: number[], low: number, high: number): number[];
 
 /**
- * Quick Sort Recursive Chooses a pivot, partitions the array, and recursivly sorts the array.
+ * Quick Sort Recursive Non Mutating Chooses a pivot, partitions the array, and recursivly sorts the array.
  * @param arr - The input array to be sorted.
- * @param start - The low index.
- * @param end - The high index.
  * @author Joshua Jarman
  */
-declare function quickSortRecursive(arr: number[], start: number, end: number): number[];
+declare function quickSortRecursiveNonMutating(arr: number[]): number[];
 
 /**
  * Radix Sort Sorts by individual digits, from least significant to most significant.

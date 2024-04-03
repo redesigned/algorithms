@@ -35,7 +35,6 @@ chmod +x generateTypes.sh runTests.sh
 * **[ROT18: O(n)](algorithms/cryptography/rot18.js)**
 * **[ROT47: O(n)](algorithms/cryptography/rot47.js)**
 * **[xOR: O(n)](algorithms/cryptography/xOR.js)**
-
 * **[Generate Key AES-CBC: O(1)](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Encrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Decrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**

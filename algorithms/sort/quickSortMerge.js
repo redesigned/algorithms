@@ -3,7 +3,7 @@
 
 /**
  * Quick Sort Merge
- * Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
+ * Non Mutating. Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
  * @param {Array} arr - The input array to be sorted.
  * @return {Array} - The sorted array.
  * @complexity O(n²)

@@ -10,7 +10,7 @@ if (typeof window === 'undefined') {
  * Generate RSA-OAEP Private Key
  * Generates an RSA-OAEP key asynchronously for decryption.
  * @param {number} [length=4096] - The key length.  Must be at least 1024, if less will be set to 1024 automatically.
- * @returns {Promise<Object>} The base64-encoded key.
+ * @returns {Promise<String>} The base64-encoded key.
  */
 export async function generateRSAOAEPKeyPrivate(length = 4096) {
 	if (length < 1024) {
