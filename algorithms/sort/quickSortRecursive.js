@@ -5,8 +5,8 @@
  * Quick Sort Recursive
  * Mutates Array In Place. Chooses a pivot, partitions the array, and recursivly sorts the array.
  * @param {number[]} arr - The input array to be sorted.
- * @param {number} low - The low index.
- * @param {number} high - The high index.
+ * @param {number} [low] - The low index.
+ * @param {number} [high] - The high index.
  * @return {number[]} - The sorted array.
  * @complexity O(n²)
  * @author Joshua Jarman
@@ -40,6 +40,6 @@ export function quickSortRecursive(arr, low = 0, high = arr.length - 1) {
  */
 export function quickSortRecursiveNonMutating(arr) {
 	const newArr = [...arr];
-	quickSortRecursive(newArr, 0, newArr.length - 1);
+	quickSortRecursive(newArr);
 	return newArr;
 }

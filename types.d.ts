@@ -520,45 +520,80 @@ declare function linearSearch(arr: any[], target: any): number;
 
 /**
  * Bubble Sort Repeatedly compares adjacent elements and swaps them if they’re in the wrong order.
- * @param myArray - The array to be sorted.
+ * @param arr - The array to be sorted.
  * @returns - The sorted array.
  * @author Joshua Jarman
  */
-declare function bubbleSort(myArray: number[]): number[];
+declare function bubbleSort(arr: number[]): number[];
 
 /**
- * Bucket Sort Distributes elements into buckets and sorts each bucket individually.
+ * Bubble Sort Non Mutating Copies the array and calls Bubble Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function bubbleSortNonMutating(arr: number[]): number[];
+
+/**
+ * Bucket Sort Non Mutating Distributes elements into buckets and sorts each bucket individually.
  * @param arr - The input array to be sorted.
  * @param size - The size of each bucket (optional, default is 5).
  * @returns - The sorted array.
  * @author Joshua Jarman
  */
-declare function bucketSort(arr: number[], size?: number): number[];
+declare function bucketSortNonMutating(arr: number[], size?: number): number[];
+
+/**
+ * Bucket Sort Mutates the original array with the results from the Non Mutating Bucket Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function bucketSort(arr: any[]): any[];
 
 /**
  * Comb Sort Similar to bubble sort but with a larger gap between compared elements, which reduces the number of swaps.
- * @param myArray - The input array to be sorted.
+ * @param arr - The input array to be sorted.
  * @param shrinkFactor - The shrink factor (optional, default is 1.3).
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function combSort(myArray: number[], shrinkFactor?: number): number[];
+declare function combSort(arr: number[], shrinkFactor?: number): number[];
 
 /**
- * Counting Sort Suitable for non-negative integers with a limited range.
- * @param myArray - The input array to be sorted.
+ * Comb Sort Non Mutating Copies the array and calls Comb Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function combSortNonMutating(arr: number[]): number[];
+
+/**
+ * Counting Sort Non Mutating Suitable for non-negative integers with a limited range.
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function countingSort(myArray: number[]): number[];
+declare function countingSortNonMutatin(arr: number[]): number[];
+
+/**
+ * Counting Sort Mutates the original array with the results from the Non Mutating Counting Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function countingSort(arr: any[]): any[];
 
 /**
  * Cycle Sort Minimizes the number of writes to the array by cyclically rotating elements to their correct positions.
- * @param myArray - The input array to be sorted.
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function cycleSort(myArray: number[]): number[];
+declare function cycleSort(arr: number[]): number[];
+
+/**
+ * Cycle Sort Non Mutating Copies the array and calls Cycle Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function cycleSortNonMutating(arr: number[]): number[];
 
 /**
  * Gnome Sort Compare adjacent elements. If they are out of order, swap them. Move the gnome one step backward
@@ -567,6 +602,13 @@ declare function cycleSort(myArray: number[]): number[];
  * @author Joshua Jarman
  */
 declare function gnomeSort(myArray: number[]): number[];
+
+/**
+ * Gnome Sort Non Mutating Copies the array and calls Gnome Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function gnomeSortNonMutating(arr: number[]): number[];
 
 /**
  * Heapify Heapify a subtree rooted at index i.
@@ -586,42 +628,84 @@ declare function heapify(arr: number[], n: number, i: number): void;
 declare function heapSort(arr: number[]): number[];
 
 /**
- * Insertion Sort Builds a sorted array by repeatedly inserting unsorted elements into their correct positions.
- * @param myArray - The input array to be sorted.
+ * Heap Sort Non Mutating Copies the array and calls Heap Sort on the copy
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
- * @author Joshua Jarman
  */
-declare function insertionSort(myArray: number[]): number[];
+declare function heapSortNonMutating(arr: number[]): number[];
 
 /**
- * Intro Sort Sorts an array using a combination of Quick Sort and Heap Sort or Insertion Sort
- * @param myArray - The input array to be sorted.
- * @author Joshua Jarman
- */
-declare function introSort(myArray: any[]): any[];
-
-/**
- * Javascript Sort Sorts an array using the built in Javascript Sort algorithm, String-Based Lexicographic Sort with Timsort
- * @param myArray - The input array to be sorted.
- * @author Joshua Jarman
- */
-declare function javascriptSort(myArray: any[]): any[];
-
-/**
- * Merge Sort Divides the array into halves until smallest units reached, and merges them back together in a sorted manner.
+ * Insertion Sort Builds a sorted array by repeatedly inserting unsorted elements into their correct positions.
  * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function mergeSort(arr: number[]): number[];
+declare function insertionSort(arr: number[]): number[];
 
 /**
- * Pancake Sort Moves elements backward if they’re in the wrong order
+ * Insertion Sort Non Mutating Copies the array and calls Insertion Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function insertionSortNonMutating(arr: number[]): number[];
+
+/**
+ * Intro Sort Non Mutating Non Mutating. Sorts an array using a combination of Quick Sort and Heap Sort or Insertion Sort
  * @param myArray - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function introSortNonMutating(myArray: any[]): any[];
+
+/**
+ * Intro Sort Mutates the original array with the results from the Non Mutating Intro Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function introSort(arr: any[]): any[];
+
+/**
+ * Javascript Sort Non Mutating Non Mutating. Sorts an array using the built in Javascript Sort algorithm, String-Based Lexicographic Sort with Timsort
+ * @param myArray - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function javascriptSortNonMutating(myArray: any[]): any[];
+
+/**
+ * Merge Sort Mutates the original array with the results from the Non Mutating Merge Javascript
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function javascriptSort(arr: any[]): any[];
+
+/**
+ * Merge Sort Non Mutating Divides the array into halves until smallest units reached, and merges them back together in a sorted manner.
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function pancakeSort(myArray: number[]): number[];
+declare function mergeSortNonMutating(arr: number[]): number[];
+
+/**
+ * Merge Sort Mutates the original array with the results from the Non Mutating Merge Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function mergeSort(arr: any[]): any[];
+
+/**
+ * Pancake Sort Moves elements backward if they’re in the wrong order
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ * @author Joshua Jarman
+ */
+declare function pancakeSort(arr: number[]): number[];
+
+/**
+ * Pancake Sort Non Mutating Copies the array and calls Pancake Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function pancakeSortNonMutating(arr: number[]): number[];
 
 /**
  * Quick Sort Iterative Mutates Array In Place. Chooses a pivot, partitions the array, and iterativly sorts the array.
@@ -638,7 +722,14 @@ declare function quickSortIterative(arr: number[]): number[];
 declare function quickSortIterativeNonMutating(arr: number[]): number[];
 
 /**
- * Quick Sort Merge Non Mutating. Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
+ * Quick Sort Merge Non Mutating Non Mutating. Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function quickSortMergeNonMutating(arr: any[]): any[];
+
+/**
+ * Quick Sort Merge Mutates the original array with the results from the Non Mutating Quick Sort Merge
  * @param arr - The input array to be sorted.
  * @author Joshua Jarman
  */
@@ -651,7 +742,7 @@ declare function quickSortMerge(arr: any[]): any[];
  * @param high - The high index.
  * @author Joshua Jarman
  */
-declare function quickSortRecursive(arr: number[], low: number, high: number): number[];
+declare function quickSortRecursive(arr: number[], low?: number, high?: number): number[];
 
 /**
  * Quick Sort Recursive Non Mutating Copies the array and calls Quick Sort Recursive on the copy
@@ -661,27 +752,48 @@ declare function quickSortRecursive(arr: number[], low: number, high: number): n
 declare function quickSortRecursiveNonMutating(arr: number[]): number[];
 
 /**
- * Radix Sort Sorts by individual digits, from least significant to most significant.
- * @param myArray - The input array to be sorted.
+ * Radix Sort Non Mutating Non Mutating. Sorts by individual digits, from least significant to most significant.
+ * @param arr - The input array to be sorted.
  * @returns - The sorted array.
  * @author Joshua Jarman
  */
-declare function radixSort(myArray: number[]): number[];
+declare function radixSortNonMutating(arr: number[]): number[];
 
 /**
- * Selection Sort Finds the smallest element and places it at the beginning, then repeats the process for the remaining elements.
- * @param myArray - The input array to be sorted.
+ * Radix Sort Mutates the original array with the results from the Non Mutating Radix Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function radixSort(arr: any[]): any[];
+
+/**
+ * Selection Sort Mutates Array In Place. AFinds the smallest element and places it at the beginning, then repeats the process for the remaining elements.
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function selectionSort(myArray: number[]): number[];
+declare function selectionSort(arr: number[]): number[];
 
 /**
- * Shell Sort An extension of insertion sort that compares elements separated by a fixed gap and gradually reduces the gap until it becomes 1.
- * @param myArray - The input array to be sorted.
+ * Selection Sort Non Mutating Copies the array and calls Selection Sort on the copy
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  */
-declare function shellSort(myArray: number[]): number[];
+declare function selectionSortNonMutating(arr: number[]): number[];
+
+/**
+ * Shell Sort Mutates Array In Place. An extension of insertion sort that compares elements separated by a fixed gap and gradually reduces the gap until it becomes 1.
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function shellSort(arr: number[]): number[];
+
+/**
+ * Shell Sort Non Mutating Copies the array and calls Shell Sort on the copy
+ * @param arr - The input array to be sorted.
+ * @returns - A new array containing the sorted elements.
+ */
+declare function shellSortNonMutating(arr: number[]): number[];
 
 /**
  * Average Average Calculates the average value for an array of numbers, returns 0 if empty.

@@ -4,13 +4,12 @@
 /**
  * Cycle Sort
  * Minimizes the number of writes to the array by cyclically rotating elements to their correct positions.
- * @param {number[]} myArray - The input array to be sorted.
+ * @param {number[]} arr - The input array to be sorted.
  * @returns {number[]} - A new array containing the sorted elements.
  * @complexity O(n²)
  * @author Joshua Jarman
  */
-export function cycleSort(myArray) {
-	const arr = [...myArray];
+export function cycleSort(arr) {
 	const n = arr.length;
 	for (let start = 0; start < n - 1; start++) {
 		let item = arr[start];
@@ -41,4 +40,17 @@ export function cycleSort(myArray) {
 		}
 	}
 	return arr;
+}
+
+/**
+ * Cycle Sort Non Mutating
+ * Copies the array and calls Cycle Sort on the copy
+ * @param {number[]} arr - The input array to be sorted.
+ * @returns {number[]} - A new array containing the sorted elements.
+ * @complexity O(n²)
+ */
+export function cycleSortNonMutating(arr) {
+	const newArr = [...arr];
+	cycleSort(newArr);
+	return newArr;
 }

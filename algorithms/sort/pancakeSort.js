@@ -4,13 +4,12 @@
 /**
  * Pancake Sort
  * Moves elements backward if they’re in the wrong order
- * @param {number[]} myArray - The input array to be sorted.
+ * @param {number[]} arr - The input array to be sorted.
  * @returns {number[]} - A new array containing the sorted elements.
  * @complexity O(n²)
  * @author Joshua Jarman
  */
-export function pancakeSort(myArray) {
-	const arr = [...myArray];
+export function pancakeSort(arr) {
 	for (let i = arr.length - 1; i >= 1; i--) {
 		let max_idx = 0;
 		let max_val = arr[0];
@@ -38,4 +37,17 @@ export function pancakeSort(myArray) {
 		}
 	}
 	return arr;
+}
+
+/**
+ * Pancake Sort Non Mutating
+ * Copies the array and calls Pancake Sort on the copy
+ * @param {number[]} arr - The input array to be sorted.
+ * @returns {number[]} - A new array containing the sorted elements.
+ * @complexity O(n²)
+ */
+export function pancakeSortNonMutating(arr) {
+	const newArr = [...arr];
+	pancakeSort(newArr);
+	return newArr;
 }

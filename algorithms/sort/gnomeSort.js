@@ -16,10 +16,22 @@ export function gnomeSort(myArray) {
 		if (pos === 0 || arr[pos] >= arr[pos - 1]) {
 			pos++;
 		} else {
-			// Swap adjacent elements
 			[arr[pos], arr[pos - 1]] = [arr[pos - 1], arr[pos]];
 			pos--;
 		}
 	}
 	return arr;
+}
+
+/**
+ * Gnome Sort Non Mutating
+ * Copies the array and calls Gnome Sort on the copy
+ * @param {number[]} arr - The input array to be sorted.
+ * @returns {number[]} - A new array containing the sorted elements.
+ * @complexity O(n²)
+ */
+export function gnomeSortNonMutating(arr) {
+	const newArr = [...arr];
+	gnomeSort(newArr);
+	return newArr;
 }

@@ -2,15 +2,14 @@
 "use strict";
 
 /**
- * Counting Sort
+ * Counting Sort Non Mutating
  * Suitable for non-negative integers with a limited range.
- * @param {number[]} myArray - The input array to be sorted.
+ * @param {number[]} arr - The input array to be sorted.
  * @returns {number[]} - A new array containing the sorted elements.
  * @complexity O(n+k)
  * @author Joshua Jarman
  */
-export function countingSort(myArray) {
-	const arr = [...myArray];
+export function countingSortNonMutatin(arr) {
 	const tmpArr = [];
 	for (let i = 0; i < arr.length; i++) {
 		if (!tmpArr[arr[i]]) {
@@ -27,4 +26,19 @@ export function countingSort(myArray) {
 		}
 	}
 	return newArr;
+}
+
+/**
+ * Counting Sort
+ * Mutates the original array with the results from the Non Mutating Counting Sort
+ * @param {Array} arr - The input array to be sorted.
+ * @return {Array} - The sorted array.
+ * @complexity O(n²)
+ * @author Joshua Jarman
+ */
+export function countingSort(arr) {
+	const newArr = [...countingSortNonMutatin(arr)];
+	arr.length = 0;
+	arr.push(...newArr);
+	return arr;
 }
