@@ -10,7 +10,7 @@
  * @complexity O(n)
  * @author Joshua Jarman
  */
-export function interleave(str = '', segments = Math.floor(str.length / 4)) {
+export function interleave(str = '', segments = Math.ceil(str.length / 4)) {
 	let arr = Array(segments).fill('');
 	let segRemainder = str.length % segments;
     let extraChar = (segRemainder > 0) ? str.slice(-1 * segRemainder) : '';
@@ -39,7 +39,7 @@ export function interleave(str = '', segments = Math.floor(str.length / 4)) {
  * @complexity O(segsize * length)
  * @author Joshua Jarman
  */
-export function deinterleave(str = '', segments = Math.floor(str.length / 4)) {
+export function deinterleave(str = '', segments = Math.ceil(str.length / 4)) {
 	let segRemainder = str.length % segments;
     let segSize = Math.floor(str.length / segments);
     let extraChar = (segRemainder > 0) ? str.slice(-1 * segRemainder) : '';

@@ -50,6 +50,20 @@ test('MD5: O(n)', () => {
 	expect(md5('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('d17620fa6551e412146752c734db90e2');
 });
 
+import { railFenceEncrypt, railFenceDecrypt } from '../algorithms/cryptography/railFenceCipher';
+test('Rail Fence Cipher: O(n)', () => {
+	expect(railFenceEncrypt('')).toBe('');
+	expect(railFenceEncrypt('Hello World!')).toBe('HloWrdel ol!');
+	expect(railFenceEncrypt('Hello World!', 3)).toBe('Horel ol!lWd');
+	expect(railFenceEncrypt('Hello World!', 4)).toBe('HWe o!lordll');
+	expect(railFenceEncrypt('The quick brown fox jumps over 13 lazy dogs.', 6)).toBe('Tbj oh r ur1dgekoxme3 s cwopv y.qinfsolzu  a');
+	expect(railFenceDecrypt('')).toBe('');
+	expect(railFenceDecrypt('HloWrdel ol!')).toBe('Hello World!');
+	expect(railFenceDecrypt('Horel ol!lWd', 3)).toBe('Hello World!');
+	expect(railFenceDecrypt('HWe o!lordll', 4)).toBe('Hello World!');
+	expect(railFenceDecrypt('Tbj oh r ur1dgekoxme3 s cwopv y.qinfsolzu  a', 6)).toBe('The quick brown fox jumps over 13 lazy dogs.');
+});
+
 import { rot5 } from '../algorithms/cryptography/rot5';
 test('ROT13: O(n)', () => {
 	expect(rot5('')).toBe('');
