@@ -97,6 +97,14 @@ test('ROT47: O(n)', () => {
 	expect(rot47(rot47('!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_\``abcdefghijklmnopqrstuvwxyz{|}~'))).toBe('!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_\``abcdefghijklmnopqrstuvwxyz{|}~');
 });
 
+import { shiftKeyEncrypt, shiftKeyDecrypt } from '../algorithms/cryptography/shiftKeyCipher';
+test('Shift Cipher Encrypt/Decrypt: O(n)', () => {
+	expect(shiftKeyEncrypt('', 'SuperSecret')).toBe('');
+	expect(shiftKeyDecrypt('', 'SuperSecret')).toBe('');
+	expect(shiftKeyEncrypt('Hello World!', 'SuperSecret')).toBe('\x1BZ\\Qas<RdQXt');
+	expect(shiftKeyDecrypt('\x1BZ\\Qas<RdQXt', 'SuperSecret')).toBe('Hello World!');
+});
+
 import { xOR } from '../algorithms/cryptography/xOR';
 test('xOR: O(n)', () => {
 	expect(xOR('')).toBe('');

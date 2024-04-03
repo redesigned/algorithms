@@ -36,6 +36,8 @@ chmod +x generateTypes.sh runTests.sh
 * **[ROT13: O(n)](algorithms/cryptography/rot13.js)**
 * **[ROT18: O(n)](algorithms/cryptography/rot18.js)**
 * **[ROT47: O(n)](algorithms/cryptography/rot47.js)**
+* **[Shift Key Cipher Encrypt: O(n)](algorithms/cryptography/shiftKeyCipher.js)**
+* **[Shift Key Cipher Decrypt: O(n)](algorithms/cryptography/shiftKeyCipher.js)**
 * **[xOR: O(n)](algorithms/cryptography/xOR.js)**
 * **[xOR Encrypt: O(n)](algorithms/cryptography/xOR.js)**
 * **[xOR Decrypt: O(n)](algorithms/cryptography/xOR.js)**

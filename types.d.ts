@@ -320,6 +320,24 @@ declare function rot47(str: string): string;
 declare function rot5(str: string): string;
 
 /**
+ * Shift Key Cipher Encrypt Encrypts a message using the Shift Key Cipher .
+ * @param str - The input message to be encrypted.
+ * @param key - The keyword for the Shift Key Cipher .
+ * @returns The resulting encrypted message.
+ * @author Joshua Jarman
+ */
+declare function shiftKeyEncrypt(str: string, key?: string): string;
+
+/**
+ * Shift Key Cipher Decrypt Encrypts a message using the Shift Key Cipher .
+ * @param str - The input message to be decrypted.
+ * @param key - The keyword for the Shift KeyCipher .
+ * @returns The resulting decrypted message.
+ * @author Joshua Jarman
+ */
+declare function shiftKeyDecrypt(str: string, key?: string): string;
+
+/**
  * Vigenère Cipher Encrypts or decrypts a message using the Vigenère cipher.
  * @param message - The input message to be encrypted or decrypted.
  * @param keyword - The keyword for the Vigenère cipher.
