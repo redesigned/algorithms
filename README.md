@@ -39,8 +39,8 @@ chmod +x generateTypes.sh runTests.sh
 * **[xOR: O(n)](algorithms/cryptography/xOR.js)**
 * **[xOR Encrypt: O(n)](algorithms/cryptography/xOR.js)**
 * **[xOR Decrypt: O(n)](algorithms/cryptography/xOR.js)**
-* **[Vigenère Cipher Encrypt: O(n)](algorithms/cryptography/xOR.js)**
-* **[Vigenère Cipher Decrypt: O(n)](algorithms/cryptography/xOR.js)**
+* **[Vigenère Cipher Encrypt: O(n)](algorithms/cryptography/vigenereCipher.js)**
+* **[Vigenère Cipher Decrypt: O(n)](algorithms/cryptography/vigenereCipher.js)**
 * **[Generate Key AES-CBC: O(1)](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Encrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Decrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
