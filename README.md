@@ -26,6 +26,7 @@ chmod +x generateTypes.sh runTests.sh
 
 ### Cryptography
 
+* **[Atabash Cipher: O(n)](algorithms/cryptography/atabashCipher.js)**
 * **[Ceasars Cipher: O(n)](algorithms/cryptography/ceasarsCipher.js)**
 * **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
