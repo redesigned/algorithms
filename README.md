@@ -103,12 +103,12 @@ chmod +x generateTypes.sh runTests.sh
 * **[Intro Sort Non Mutating: O(n log(n))](algorithms/sort/introSort.js)**
 * **[Javascript Built In Default Sort: O(n²)](algorithms/sort/javascriptSort.js)**
 * **[Javascript Built In Default Sort Non Mutating: O(n²)](algorithms/sort/javascriptSort.js)**
-* **[Max Sort: O(n log(n))](algorithms/sort/maxSort.js)**
-* **[Max Sort Non Mutating: O(n log(n))](algorithms/sort/maxSort.js)**
+* **[Max Sort: O(n²)](algorithms/sort/maxSort.js)**
+* **[Max Sort Non Mutating: O(n²)](algorithms/sort/maxSort.js)**
 * **[Merge Sort: O(n log(n))](algorithms/sort/mergeSort.js)**
 * **[Merge Sort Non Mutting: O(n log(n))](algorithms/sort/mergeSort.js)**
-* **[Min Sort: O(n log(n))](algorithms/sort/minSort.js)**
-* **[Min Sort Non Mutating: O(n log(n))](algorithms/sort/minSort.js)**
+* **[Min Sort: O(n²)](algorithms/sort/minSort.js)**
+* **[Min Sort Non Mutating: O(n²)](algorithms/sort/minSort.js)**
 * **[Quick Sort Iterative: O(n²)](algorithms/sort/quickSortIterative.js)**
 * **[Quick Sort Iterative Non Mutating: O(n²)](algorithms/sort/quickSortIterative.js)**
 * **[Quick Sort Merge: O(n²)](algorithms/sort/quickSortMerge.js)**
