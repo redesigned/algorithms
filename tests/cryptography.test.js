@@ -107,8 +107,18 @@ test('xOR: O(n)', () => {
 	expect(xOR(xOR('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~',1024),1024)).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_\\``abcdefghijklmnopqrstuvwxyz{|}~');
 });
 
+import { xOREncrypt, xORDecrypt } from '../algorithms/cryptography/xOR';
+test('xOR Encrypt/Decrypt: O(n)', () => {
+	expect(xOREncrypt('', 'Secret Key')).toBe('');
+	expect(xORDecrypt('', 'Secret Key')).toBe('');
+	expect(xOREncrypt('Hello World!', 'Secret Key')).toBe('GwAPHgpUdyQXFTdE');
+	expect(xORDecrypt('GwAPHgpUdyQXFTdE', 'Secret Key')).toBe('Hello World!');
+	expect(xOREncrypt('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~', 'Secret Key')).toBe('ckZHV0NcCWFOVX5LTEJXRxR+U05rXFlJWUkedCU4ESYnNyMzaAIvMh8oLT01JnMfMC4LPDksOhRAKgcaNwAFFQ0dSiAJFD0KEwMXB1Q+Ew4rHBkJGQle');
+	expect(xORDecrypt('ckZHV0NcCWFOVX5LTEJXRxR+U05rXFlJWUkedCU4ESYnNyMzaAIvMh8oLT01JnMfMC4LPDksOhRAKgcaNwAFFQ0dSiAJFD0KEwMXB1Q+Ew4rHBkJGQle', 'Secret Key')).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~');
+});
+
 import { generateAESCBCKey, encryptAESCBC, decryptAESCBC } from '../algorithms/cryptography/encryptionAES-CBC';
-test('AES-CBC Encryption: O???', async () => {
+test('AES-CBC Encrypt/Decrypt: O???', async () => {
 	let key = await generateAESCBCKey();
 	let encrypted = await encryptAESCBC(key, 'SecretPassword', 'Hello World!');
 	let decrypted = await decryptAESCBC(key, 'SecretPassword', encrypted);
@@ -116,7 +126,7 @@ test('AES-CBC Encryption: O???', async () => {
 });
 
 import { generateAESCTRKey, encryptAESCTR, decryptAESCTR } from '../algorithms/cryptography/encryptionAES-CTR';
-test('AES-CTR Encryption: O???', async () => {
+test('AES-CTR Encrypt/Decrypt: O???', async () => {
 	let key = await generateAESCTRKey();
 	let encrypted = await encryptAESCTR(key, 'SecretPassword', 'Hello World!');
 	let decrypted = await decryptAESCTR(key, 'SecretPassword', encrypted);
@@ -124,7 +134,7 @@ test('AES-CTR Encryption: O???', async () => {
 });
 
 import { generateAESGCMKey, encryptAESGCM, decryptAESGCM } from '../algorithms/cryptography/encryptionAES-GCM';
-test('AES-GCM Encryption: O???', async () => {
+test('AES-GCM Encrypt/Decrypt: O???', async () => {
 	let key = await generateAESGCMKey();
 	let encrypted = await encryptAESGCM(key, 'SecretPassword', 'Hello World!');
 	let decrypted = await decryptAESGCM(key, 'SecretPassword', encrypted);
@@ -132,7 +142,7 @@ test('AES-GCM Encryption: O???', async () => {
 });
 
 import { generateRSAOAEPKeyPrivate, extractRSAOAEPKeyPublic, encryptRSAOAEP, decryptRSAOAEP } from '../algorithms/cryptography/encryptionRSA-OAEP';
-test('RSA-OAEP Encryption: O???', async () => {
+test('RSA-OAEP Encrypt/Decrypt: O???', async () => {
 	let private_key = await generateRSAOAEPKeyPrivate(1024);
 	let public_key = await extractRSAOAEPKeyPublic(private_key);
 	let encrypted = await encryptRSAOAEP(public_key, 'Hello World!');

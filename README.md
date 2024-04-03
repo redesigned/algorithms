@@ -30,11 +30,15 @@ chmod +x generateTypes.sh runTests.sh
 * **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[MD5: O(n)](algorithms/cryptography/md5.js)**
+* **[Rail Fence Encrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
+* **[Rail Fence Decrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
 * **[ROT5: O(n)](algorithms/cryptography/rot5.js)**
 * **[ROT13: O(n)](algorithms/cryptography/rot13.js)**
 * **[ROT18: O(n)](algorithms/cryptography/rot18.js)**
 * **[ROT47: O(n)](algorithms/cryptography/rot47.js)**
 * **[xOR: O(n)](algorithms/cryptography/xOR.js)**
+* **[xOR Encrypt: O(n)](algorithms/cryptography/xOR.js)**
+* **[xOR Decrypt: O(n)](algorithms/cryptography/xOR.js)**
 * **[Generate Key AES-CBC: O(1)](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Encrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Decrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**

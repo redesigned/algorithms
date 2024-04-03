@@ -270,6 +270,24 @@ declare function md5(str: string): string;
 declare function add32(a: number, b: number): number;
 
 /**
+ * Rail Fence Cipher Encrypt Encrypts a string using the Rail Fence Cipher
+ * @param text - The input string to be ciphered.
+ * @param key - The number of rails to create.
+ * @returns - The encrypted message string.
+ * @author Joshua Jarman
+ */
+declare function railFenceEncrypt(text?: string, key?: number): string;
+
+/**
+ * Rail Fence Cipher Decrypt Decrypts a string using the Rail Fence Cipher
+ * @param cipher - The input string to be unciphered.
+ * @param key - The number of rails to create.
+ * @returns - The decrypted message string.
+ * @author Joshua Jarman
+ */
+declare function railFenceDecrypt(cipher?: string, key?: number): string;
+
+/**
  * ROT13 Encrypts or decrypts letters in a given string using the rot13 cipher.  Use again to decrypt.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Caesar cipher.
@@ -309,6 +327,24 @@ declare function rot5(str: string): string;
  * @author Joshua Jarman
  */
 declare function xOR(str?: string, key?: number): string;
+
+/**
+ * xOR Encrypt Encrypts a string using xOR operation with a given key.
+ * @param input - The input string to be encoded.
+ * @param key - The XOR key (default is 'TopSecret123!').
+ * @returns - The encoded string.
+ * @author Joshua Jarman
+ */
+declare function xOREncrypt(input?: string, key?: string): string;
+
+/**
+ * xOR Decrypt Decrypts a string using xOR operation with a given key.
+ * @param input - The input string to be decoded.
+ * @param key - The XOR key (default is 'TopSecret123!').
+ * @returns - The encoded string.
+ * @author Joshua Jarman
+ */
+declare function xORDecrypt(input?: string, key?: string): string;
 
 /**
  * Queue
