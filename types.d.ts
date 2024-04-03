@@ -678,6 +678,20 @@ declare function javascriptSortNonMutating(myArray: any[]): any[];
 declare function javascriptSort(arr: any[]): any[];
 
 /**
+ * Max Sort Non Mutating Performs a Min sort on a given array
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function maxSortNonMutating(arr: any[]): any[];
+
+/**
+ * Max Sort Mutates the original array with the results from the Non Mutating Max Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function maxSort(arr: any[]): any[];
+
+/**
  * Merge Sort Non Mutating Divides the array into halves until smallest units reached, and merges them back together in a sorted manner.
  * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
@@ -691,6 +705,20 @@ declare function mergeSortNonMutating(arr: number[]): number[];
  * @author Joshua Jarman
  */
 declare function mergeSort(arr: any[]): any[];
+
+/**
+ * Min Sort Non Mutating Performs a Min sort on a given array
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function minSortNonMutating(arr: any[]): any[];
+
+/**
+ * Min Sort Mutates the original array with the results from the Non Mutating Min Sort
+ * @param arr - The input array to be sorted.
+ * @author Joshua Jarman
+ */
+declare function minSort(arr: any[]): any[];
 
 /**
  * Pancake Sort Moves elements backward if they’re in the wrong order

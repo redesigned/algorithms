@@ -28,7 +28,7 @@ export function bucketSortNonMutating(arr, size = 5) {
  * Mutates the original array with the results from the Non Mutating Bucket Sort
  * @param {Array} arr - The input array to be sorted.
  * @return {Array} - The sorted array.
- * @complexity O(n²)
+ * @complexity O(n + k)
  * @author Joshua Jarman
  */
 export function bucketSort(arr) {

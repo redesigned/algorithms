@@ -125,6 +125,18 @@ test('Javascript Built In String-Based Lexicographic Sort: O(n²)', () => {
 	expect(javascriptSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual([1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]);
 });
 
+import { maxSort } from '../algorithms/sort/maxSort';
+test('Max Sort: O(n²)', () => {
+	expect(maxSort([])).to.be.empty;
+	expect(maxSort([9])).toStrictEqual([9]);
+	expect(maxSort([1, 3])).toStrictEqual([1, 3]);
+	expect(maxSort([3, 1])).toStrictEqual([1, 3]);
+	expect(maxSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(maxSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(maxSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(maxSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
+});
+
 import { mergeSort } from '../algorithms/sort/mergeSort';
 test('Merge Sort: O(n log(n))', () => {
 	expect(mergeSort([])).to.be.empty;
@@ -135,6 +147,18 @@ test('Merge Sort: O(n log(n))', () => {
 	expect(mergeSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
 	expect(mergeSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 	expect(mergeSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
+});
+
+import { minSort } from '../algorithms/sort/minSort';
+test('Min Sort: O(n²)', () => {
+	expect(minSort([])).to.be.empty;
+	expect(minSort([9])).toStrictEqual([9]);
+	expect(minSort([1, 3])).toStrictEqual([1, 3]);
+	expect(minSort([3, 1])).toStrictEqual([1, 3]);
+	expect(minSort([1, 3, 5, 7, 9])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(minSort([9, 3, 7, 5, 1])).toStrictEqual([1, 3, 5, 7, 9]);
+	expect(minSort([7, 2, 9, 1, 6, 8, 5, 3, 4])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	expect(minSort(arrayRandomShuffle(arrayOfNumbers(100)))).toStrictEqual(arrayOfNumbers(100));
 });
 
 import { pancakeSort } from '../algorithms/sort/pancakeSort';
