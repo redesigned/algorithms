@@ -84,22 +84,43 @@ chmod +x generateTypes.sh runTests.sh
 ### Sorts
 
 * **[Bubble Sort: O(n²)](algorithms/sort/bubbleSort.js)**
+* **[Bubble Sort Non Mutating: O(n²)](algorithms/sort/bubbleSort.js)**
 * **[Bucket Sort: O(n+k)](algorithms/sort/bucketSort.js)**
+* **[Bucket Sort Non Mutating: O(n+k)](algorithms/sort/bucketSort.js)**
 * **[Comb Sort: O(n²)](algorithms/sort/combSort.js)**
+* **[Comb Sort Non Mutating: O(n²)](algorithms/sort/combSort.js)**
 * **[Counting Sort: O(n+k)](algorithms/sort/countingSort.js)**
+* **[Counting Sort Non Mutating: O(n+k)](algorithms/sort/countingSort.js)**
 * **[Cycle Sort: O(n²)](algorithms/sort/cycleSort.js)**
+* **[Cycle Sort Non Mutating: O(n²)](algorithms/sort/cycleSort.js)**
 * **[Gnome Sort: O(n²)](algorithms/sort/gnomeSort.js)**
+* **[Gnome Sort Non Mutating: O(n²)](algorithms/sort/gnomeSort.js)**
 * **[Heap Sort: O(n log(n))](algorithms/sort/heapSort.js)**
+* **[Heap Sort Non Mutating: O(n log(n))](algorithms/sort/heapSort.js)**
 * **[Insertion Sort: O(n²)](algorithms/sort/insertionSort.js)**
+* **[Insertion Sort Non Mutating: O(n²)](algorithms/sort/insertionSort.js)**
 * **[Intro Sort: O(n log(n))](algorithms/sort/introSort.js)**
+* **[Intro Sort Non Mutating: O(n log(n))](algorithms/sort/introSort.js)**
 * **[Javascript Built In Default Sort: O(n²)](algorithms/sort/javascriptSort.js)**
+* **[Javascript Built In Default Sort Non Mutating: O(n²)](algorithms/sort/javascriptSort.js)**
+* **[Max Sort: O(n log(n))](algorithms/sort/maxSort.js)**
+* **[Max Sort Non Mutating: O(n log(n))](algorithms/sort/maxSort.js)**
 * **[Merge Sort: O(n log(n))](algorithms/sort/mergeSort.js)**
+* **[Merge Sort Non Mutting: O(n log(n))](algorithms/sort/mergeSort.js)**
+* **[Min Sort: O(n log(n))](algorithms/sort/minSort.js)**
+* **[Min Sort Non Mutating: O(n log(n))](algorithms/sort/minSort.js)**
 * **[Quick Sort Iterative: O(n²)](algorithms/sort/quickSortIterative.js)**
+* **[Quick Sort Iterative Non Mutating: O(n²)](algorithms/sort/quickSortIterative.js)**
 * **[Quick Sort Merge: O(n²)](algorithms/sort/quickSortMerge.js)**
+* **[Quick Sort Merge Non Mutating: O(n²)](algorithms/sort/quickSortMerge.js)**
 * **[Quick Sort Recursive: O(n²)](algorithms/sort/quickSortRecursive.js)**
+* **[Quick Sort Recursive Non Mutating: O(n²)](algorithms/sort/quickSortRecursive.js)**
 * **[Radix Sort: O(nk)](algorithms/sort/radixSort.js)**
+* **[Radix Sort Non Mutating: O(nk)](algorithms/sort/radixSort.js)**
 * **[Selection Sort: O(n²)](algorithms/sort/selectionSort.js)**
+* **[Selection Sort Non Mutating: O(n²)](algorithms/sort/selectionSort.js)**
 * **[Shell Sort: O(n²)](algorithms/sort/shellSort.js)**
+* **[Shell Sort Non Mutating: O(n²)](algorithms/sort/shellSort.js)**
 
 ### Utilities
 
