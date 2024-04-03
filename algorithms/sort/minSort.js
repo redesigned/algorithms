@@ -9,7 +9,7 @@
  * @complexity O(n²)
  * @author Joshua Jarman
  */
-function minSortNonMutating(arr) {
+export function minSortNonMutating(arr) {
 	let from = [...arr];
 	const length = from.length;
 	let to = Array(length);

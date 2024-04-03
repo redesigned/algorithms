@@ -571,7 +571,7 @@ declare function combSortNonMutating(arr: number[]): number[];
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function countingSortNonMutatin(arr: number[]): number[];
+declare function countingSortNonMutating(arr: number[]): number[];
 
 /**
  * Counting Sort Mutates the original array with the results from the Non Mutating Counting Sort
@@ -596,12 +596,12 @@ declare function cycleSort(arr: number[]): number[];
 declare function cycleSortNonMutating(arr: number[]): number[];
 
 /**
- * Gnome Sort Compare adjacent elements. If they are out of order, swap them. Move the gnome one step backward
- * @param myArray - The input array to be sorted.
+ * Gnome Sort Non Mutating. Compare adjacent elements. If they are out of order, swap them. Move the gnome one step backward
+ * @param arr - The input array to be sorted.
  * @returns - A new array containing the sorted elements.
  * @author Joshua Jarman
  */
-declare function gnomeSort(myArray: number[]): number[];
+declare function gnomeSort(arr: number[]): number[];
 
 /**
  * Gnome Sort Non Mutating Copies the array and calls Gnome Sort on the copy

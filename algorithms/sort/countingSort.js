@@ -9,7 +9,7 @@
  * @complexity O(n+k)
  * @author Joshua Jarman
  */
-export function countingSortNonMutatin(arr) {
+export function countingSortNonMutating(arr) {
 	const tmpArr = [];
 	for (let i = 0; i < arr.length; i++) {
 		if (!tmpArr[arr[i]]) {
@@ -37,7 +37,7 @@ export function countingSortNonMutatin(arr) {
  * @author Joshua Jarman
  */
 export function countingSort(arr) {
-	const newArr = [...countingSortNonMutatin(arr)];
+	const newArr = [...countingSortNonMutating(arr)];
 	arr.length = 0;
 	arr.push(...newArr);
 	return arr;

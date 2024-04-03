@@ -9,7 +9,7 @@
  * @complexity O(n²)
  * @author Joshua Jarman
  */
-function maxSortNonMutating(arr) {
+export function maxSortNonMutating(arr) {
 	let from = [...arr];
 	const length = from.length;
 	let to = Array(length);
