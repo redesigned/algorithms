@@ -2,14 +2,14 @@
 "use strict";
 
 /**
- * Quick Sort Merge
+ * Quick Sort Merge Non Mutating
  * Non Mutating. Chooses a pivot, partitions the array, and recursively sorts the subarrays through merging.
  * @param {Array} arr - The input array to be sorted.
  * @return {Array} - The sorted array.
  * @complexity O(n²)
  * @author Joshua Jarman
  */
-export function quickSortMerge(arr) {
+export function quickSortMergeNonMutating(arr) {
 	if (arr.length <= 1) {
 		return arr;
 	}
@@ -27,4 +27,19 @@ export function quickSortMerge(arr) {
 		}
 	}
 	return [...quickSortMerge(smallerArr), pivotValue, ...quickSortMerge(largerArr)];
+}
+
+/**
+ * Quick Sort Merge
+ * Mutates the original array with the results from the Non Mutating Quick Sort Merge
+ * @param {Array} arr - The input array to be sorted.
+ * @return {Array} - The sorted array.
+ * @complexity O(n²)
+ * @author Joshua Jarman
+ */
+export function quickSortMerge(arr) {
+	const newArr = [...quickSortMergeNonMutating(arr)];
+	arr.length = 0;
+	arr.push(...newArr);
+	return arr;
 }

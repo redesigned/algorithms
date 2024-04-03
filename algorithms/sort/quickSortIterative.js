@@ -13,7 +13,7 @@ export function quickSortIterative(arr) {
 	let itr = [[0, arr.length - 1]];
 	while (itr.length > 0) {
 		let [low, high] = itr.pop();
-		if (low <= high) {
+		if (low < high) {
 			let pivot = high;
 			for (let i = low; i <= high && i < pivot; ++i) {
 				while (i < pivot && arr[i] > arr[pivot]) {
@@ -33,7 +33,7 @@ export function quickSortIterative(arr) {
 
 /**
  * Quick Sort Iterative Non Mutating
- * Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * Copies the array and calls Quick Sort Iterative on the copy
  * @param {number[]} arr - The input array to be sorted.
  * @return {number[]} - The sorted array.
  * @complexity O(n²)

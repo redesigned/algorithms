@@ -12,7 +12,7 @@
  * @author Joshua Jarman
  */
 export function quickSortRecursive(arr, low = 0, high = arr.length - 1) {
-	if (low <= high) {
+	if (low < high) {
 		let pivot = high;
 		for (let i = low; i <= high && i < pivot; ++i) {
 			while (i < pivot && arr[i] > arr[pivot]) {
@@ -32,7 +32,7 @@ export function quickSortRecursive(arr, low = 0, high = arr.length - 1) {
 
 /**
  * Quick Sort Recursive Non Mutating
- * Chooses a pivot, partitions the array, and recursivly sorts the array.
+ * Copies the array and calls Quick Sort Recursive on the copy
  * @param {number[]} arr - The input array to be sorted.
  * @return {number[]} - The sorted array.
  * @complexity O(n²)

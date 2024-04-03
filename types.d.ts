@@ -631,7 +631,7 @@ declare function pancakeSort(myArray: number[]): number[];
 declare function quickSortIterative(arr: number[]): number[];
 
 /**
- * Quick Sort Iterative Non Mutating Chooses a pivot, partitions the array, and iterativly sorts the array.
+ * Quick Sort Iterative Non Mutating Copies the array and calls Quick Sort Iterative on the copy
  * @param arr - The input array to be sorted.
  * @author Joshua Jarman
  */
@@ -654,7 +654,7 @@ declare function quickSortMerge(arr: any[]): any[];
 declare function quickSortRecursive(arr: number[], low: number, high: number): number[];
 
 /**
- * Quick Sort Recursive Non Mutating Chooses a pivot, partitions the array, and recursivly sorts the array.
+ * Quick Sort Recursive Non Mutating Copies the array and calls Quick Sort Recursive on the copy
  * @param arr - The input array to be sorted.
  * @author Joshua Jarman
  */
