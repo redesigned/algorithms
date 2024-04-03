@@ -30,8 +30,8 @@ chmod +x generateTypes.sh runTests.sh
 * **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[MD5: O(n)](algorithms/cryptography/md5.js)**
-* **[Rail Fence Encrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
-* **[Rail Fence Decrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
+* **[Rail Fence Cipher Encrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
+* **[Rail Fence Cipher Decrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
 * **[ROT5: O(n)](algorithms/cryptography/rot5.js)**
 * **[ROT13: O(n)](algorithms/cryptography/rot13.js)**
 * **[ROT18: O(n)](algorithms/cryptography/rot18.js)**
@@ -39,6 +39,8 @@ chmod +x generateTypes.sh runTests.sh
 * **[xOR: O(n)](algorithms/cryptography/xOR.js)**
 * **[xOR Encrypt: O(n)](algorithms/cryptography/xOR.js)**
 * **[xOR Decrypt: O(n)](algorithms/cryptography/xOR.js)**
+* **[Vigenère Cipher Encrypt: O(n)](algorithms/cryptography/xOR.js)**
+* **[Vigenère Cipher Decrypt: O(n)](algorithms/cryptography/xOR.js)**
 * **[Generate Key AES-CBC: O(1)](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Encrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
 * **[Decrypt AES-CBC: O???](algorithms/cryptography/encryptionAES-CBC.js)**
@@ -105,12 +107,12 @@ chmod +x generateTypes.sh runTests.sh
 * **[Insertion Sort Non Mutating: O(n²)](algorithms/sort/insertionSort.js)**
 * **[Intro Sort: O(n log(n))](algorithms/sort/introSort.js)**
 * **[Intro Sort Non Mutating: O(n log(n))](algorithms/sort/introSort.js)**
-* **[Javascript Built In Default Sort: O(n²)](algorithms/sort/javascriptSort.js)**
-* **[Javascript Built In Default Sort Non Mutating: O(n²)](algorithms/sort/javascriptSort.js)**
+* **[Javascript Built In Default Sort (Lexicographic): O(n²)](algorithms/sort/javascriptSort.js)**
+* **[Javascript Built In Default Sort Non Mutating (Lexicographic): O(n²)](algorithms/sort/javascriptSort.js)**
 * **[Max Sort: O(n²)](algorithms/sort/maxSort.js)**
 * **[Max Sort Non Mutating: O(n²)](algorithms/sort/maxSort.js)**
 * **[Merge Sort: O(n log(n))](algorithms/sort/mergeSort.js)**
-* **[Merge Sort Non Mutting: O(n log(n))](algorithms/sort/mergeSort.js)**
+* **[Merge Sort Non Mutating: O(n log(n))](algorithms/sort/mergeSort.js)**
 * **[Min Sort: O(n²)](algorithms/sort/minSort.js)**
 * **[Min Sort Non Mutating: O(n²)](algorithms/sort/minSort.js)**
 * **[Quick Sort Iterative: O(n²)](algorithms/sort/quickSortIterative.js)**

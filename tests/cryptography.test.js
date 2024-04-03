@@ -117,6 +117,14 @@ test('xOR Encrypt/Decrypt: O(n)', () => {
 	expect(xORDecrypt('ckZHV0NcCWFOVX5LTEJXRxR+U05rXFlJWUkedCU4ESYnNyMzaAIvMh8oLT01JnMfMC4LPDksOhRAKgcaNwAFFQ0dSiAJFD0KEwMXB1Q+Ew4rHBkJGQle', 'Secret Key')).toBe('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~');
 });
 
+import { vigenereEncrypt, vigenereDecrypt } from '../algorithms/cryptography/vigenereCipher';
+test('Vigenère Cipher Encrypt/Decrypt: O(n)', () => {
+	expect(vigenereEncrypt('', 'SuperSecret')).toBe('');
+	expect(vigenereDecrypt('', 'SuperSecret')).toBe('');
+	expect(vigenereEncrypt('Hello World!', 'SuperSecret')).toBe('Zyapf Ostch!');
+	expect(vigenereDecrypt('Zyapf Ostch!', 'SuperSecret')).toBe('Hello World!');
+});
+
 import { generateAESCBCKey, encryptAESCBC, decryptAESCBC } from '../algorithms/cryptography/encryptionAES-CBC';
 test('AES-CBC Encrypt/Decrypt: O???', async () => {
 	let key = await generateAESCBCKey();

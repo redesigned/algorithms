@@ -320,6 +320,34 @@ declare function rot47(str: string): string;
 declare function rot5(str: string): string;
 
 /**
+ * Vigenère Cipher Encrypts or decrypts a message using the Vigenère cipher.
+ * @param message - The input message to be encrypted or decrypted.
+ * @param keyword - The keyword for the Vigenère cipher.
+ * @param shift - The shift value for encryption (positive) or decryption (negative).
+ * @returns The resulting encrypted or decrypted message.
+ * @author Joshua Jarman
+ */
+declare function vigenere(message: string, keyword?: string, shift?: number): string;
+
+/**
+ * Vigenere Encrypt Encrypts a message using the Vigenère cipher.
+ * @param message - The input message to be encrypted.
+ * @param keyword - The keyword for the Vigenère cipher.
+ * @returns The resulting encrypted message.
+ * @author Joshua Jarman
+ */
+declare function vigenereEncrypt(message: string, keyword?: string): string;
+
+/**
+ * Vigenere Decrypt Decrypts a message using the Vigenère cipher.
+ * @param message - The input message to be decrypted.
+ * @param keyword - The keyword for the Vigenère cipher.
+ * @returns The resulting decrypted message.
+ * @author Joshua Jarman
+ */
+declare function vigenereDecrypt(message: string, keyword?: string): string;
+
+/**
  * xOR Encodes a string using XOR operation with a given key.
  * @param str - The input string to be encoded.
  * @param key - The XOR key (default is 51).
