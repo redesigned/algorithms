@@ -2,13 +2,13 @@ import { expect, test } from 'vitest';
 
 /* ## CRYPTOGRAPHY ## */
 
-import { atabash } from '../algorithms/cryptography/atabashCipher';
-test('Atabash Cipher: O(n)', () => {
-	expect(atabash('')).toBe('');
-	expect(atabash('ABCDEFGHIFKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')).toBe('ZYXWVUTSRUPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba9876543210');
-	expect(atabash('ZYXWVUTSRUPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba9876543210')).toBe('ABCDEFGHIFKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789');
-	expect(atabash('Always-Look-on-the-Bright-Side-of-Life')).toBe('Zodzbh-Ollp-lm-gsv-Yirtsg-Hrwv-lu-Oruv');
-	expect(atabash(atabash('Nothing Has Changed'))).toBe('Nothing Has Changed');
+import { atbash } from '../algorithms/cryptography/atbashCipher';
+test('Atbash Cipher: O(n)', () => {
+	expect(atbash('')).toBe('');
+	expect(atbash('ABCDEFGHIFKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')).toBe('ZYXWVUTSRUPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba9876543210');
+	expect(atbash('ZYXWVUTSRUPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba9876543210')).toBe('ABCDEFGHIFKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789');
+	expect(atbash('Always-Look-on-the-Bright-Side-of-Life')).toBe('Zodzbh-Ollp-lm-gsv-Yirtsg-Hrwv-lu-Oruv');
+	expect(atbash(atbash('Nothing Has Changed'))).toBe('Nothing Has Changed');
 });
 
 import { ceasarsCipher } from '../algorithms/cryptography/ceasarsCipher';

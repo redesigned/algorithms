@@ -1,10 +1,10 @@
 /**
- * Atabash Cipher Encrypts or decrypts a given string using the Atabash cipher.  Use again to decrypt.  Letters and numbers are swapped with their opposites A=Z a=z 0=9 etc.
+ * Atbash Cipher Encrypts or decrypts a given string using the Atabash cipher.  Use again to decrypt.  Letters and numbers are swapped with their opposites A=Z a=z 0=9 etc.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Atabash Cipher.
  * @author Joshua Jarman
  */
-declare function atabash(str: string): string;
+declare function atbash(str: string): string;
 
 /**
  * Encode Base64 Encodes a string to Base64.
