@@ -23,6 +23,31 @@ declare function encodeBase64(str: string): string;
 declare function decodeBase64(str: string): string;
 
 /**
+ * Braille Converts a string to or from Braille. Strips all characters not letters, numbers, or common puncuation.
+ * @param str - The input string to be transformed.
+ * @param enc - Whether we should encode or decode.
+ * @returns - The transformed string
+ * @author Joshua Jarman
+ */
+declare function brailleConverter(str?: string, enc?: boolean): string;
+
+/**
+ * Braille Encode Converts a string to Braillee. Strips all characters not letters, numbers, or common punctuation.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string
+ * @author Joshua Jarman
+ */
+declare function brailleEncode(str?: string): string;
+
+/**
+ * Braille Decode Converts a string from Braillee.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string
+ * @author Joshua Jarman
+ */
+declare function brailleDecode(str?: string): string;
+
+/**
  * Cesars Cipher Encrypts or decrypts a given string using the Caesar cipher.  Use the negative of the value used to encrypt to decrypt.
  * @param str - The input string to be transformed.
  * @param offset - The offset value for the cipher (defaults to 0).
@@ -276,6 +301,31 @@ declare function md5(str: string): string;
  * @returns - Sum of the two integers.
  */
 declare function add32(a: number, b: number): number;
+
+/**
+ * Morse Code Converts a string to or from Morse Code. Strips all characters not letters, numbers, or .,?/@ and converts to uppercase.
+ * @param str - The input string to be transformed.
+ * @param enc - Whether we should encode or decode.
+ * @returns - The transformed string
+ * @author Joshua Jarman
+ */
+declare function morseCode(str?: string, enc?: boolean): string;
+
+/**
+ * Morse Code Encode Converts a string to Morse Code. Strips all characters not letters, numbers, or .,?/@ and converts to uppercase.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string
+ * @author Joshua Jarman
+ */
+declare function morseCodeEncode(str?: string): string;
+
+/**
+ * Morse Code Decode Converts a string from Morse Code.
+ * @param str - The input string to be transformed.
+ * @returns - The transformed string
+ * @author Joshua Jarman
+ */
+declare function morseCodeDecode(str?: string): string;
 
 /**
  * Rail Fence Cipher Encrypt Encrypts a string using the Rail Fence Cipher

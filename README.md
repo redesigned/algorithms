@@ -1,7 +1,7 @@
 # Algorithms in Javascript
 
 ## Requirements
-* Node, see `.tool-versions` and use `asdf` or other system such as `NVM` or `docker container` to install and manage.
+* Node, see `.tool-versions` and use `asdf` or other system such as `nvm` or `docker container` or `nix shell` to install and manage.
 * pnpm for package management
 * vitest for testing
 * jsdoc and jsdoc-tsd for typescript driven type checking using jsdoc in pure vanilla javascript without transpilation from typescript
@@ -27,10 +27,12 @@ chmod +x generateTypes.sh runTests.sh
 ### Cryptography
 
 * **[Atbash Cipher: O(n)](algorithms/cryptography/atbashCipher.js)**
+* **[Braille Encode/Decode: O(n)](algorithms/cryptography/braille.js)**
 * **[Ceasars Cipher: O(n)](algorithms/cryptography/ceasarsCipher.js)**
 * **[Encode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[Decode Base64: O(n)](algorithms/cryptography/base64.js)**
 * **[MD5: O(n)](algorithms/cryptography/md5.js)**
+* **[Morse Code Encode/Decode: O(n)](algorithms/cryptography/morseCode.js)**
 * **[Rail Fence Cipher Encrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
 * **[Rail Fence Cipher Decrypt: O(n)](algorithms/cryptography/railFenceCipher.js)**
 * **[ROT5: O(n)](algorithms/cryptography/rot5.js)**

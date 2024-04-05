@@ -11,6 +11,16 @@ test('Atbash Cipher: O(n)', () => {
 	expect(atbash(atbash('Nothing Has Changed'))).toBe('Nothing Has Changed');
 });
 
+import { brailleEncode, brailleDecode } from '../algorithms/cryptography/braille';
+test('Morse Code Encode/Decode: O(n)', () => {
+	expect(brailleEncode('')).toBe('');
+	expect(brailleDecode('')).toBe('');
+	expect(brailleEncode('Call me at 1-(800)-1212 for INFORMATION!')).toBe('⠠⠉⁣⠁⁣⠇⁣⠇⁣⠀⁣⠍⁣⠑⁣⠀⁣⠁⁣⠞⁣⠀⁣⠼⠁⁣⠼⠒⁣⠼⠣⁣⠼⠓⁣⠼⠚⁣⠼⠚⁣⠼⠜⁣⠼⠒⁣⠼⠁⁣⠼⠃⁣⠼⠁⁣⠼⠃⁣⠀⁣⠋⁣⠕⁣⠗⁣⠀⁣⠠⠊⁣⠠⠝⁣⠠⠋⁣⠠⠕⁣⠠⠗⁣⠠⠍⁣⠠⠁⁣⠠⠞⁣⠠⠊⁣⠠⠕⁣⠠⠝⁣⠖');
+	expect(brailleDecode('⠠⠉⁣⠁⁣⠇⁣⠇⁣⠀⁣⠍⁣⠑⁣⠀⁣⠁⁣⠞⁣⠀⁣⠼⠁⁣⠼⠒⁣⠼⠣⁣⠼⠓⁣⠼⠚⁣⠼⠚⁣⠼⠜⁣⠼⠒⁣⠼⠁⁣⠼⠃⁣⠼⠁⁣⠼⠃⁣⠀⁣⠋⁣⠕⁣⠗⁣⠀⁣⠠⠊⁣⠠⠝⁣⠠⠋⁣⠠⠕⁣⠠⠗⁣⠠⠍⁣⠠⠁⁣⠠⠞⁣⠠⠊⁣⠠⠕⁣⠠⠝⁣⠖')).toBe('Call me at 1-(800)-1212 for INFORMATION!');
+	expect(brailleEncode('Math: 12 + 45 = 57 ?')).toBe('⠠⠍⁣⠁⁣⠞⁣⠓⁣⠒⁣⠀⁣⠼⠁⁣⠼⠃⁣⠀⁣⠼⠖⁣⠀⁣⠼⠙⁣⠼⠑⁣⠀⁣⠼⠶⁣⠀⁣⠼⠑⁣⠼⠛⁣⠀⁣⠦');
+	expect(brailleDecode('⠠⠍⁣⠁⁣⠞⁣⠓⁣⠒⁣⠀⁣⠼⠁⁣⠼⠃⁣⠀⁣⠼⠖⁣⠀⁣⠼⠙⁣⠼⠑⁣⠀⁣⠼⠶⁣⠀⁣⠼⠑⁣⠼⠛⁣⠀⁣⠦')).toBe('Math: 12 + 45 = 57 ?');
+});
+
 import { ceasarsCipher } from '../algorithms/cryptography/ceasarsCipher';
 test('Cesars Cipher: O(n)', () => {
 	expect(ceasarsCipher('')).toBe('');
@@ -57,6 +67,20 @@ test('MD5: O(n)', () => {
 	expect(md5('')).toBe('d41d8cd98f00b204e9800998ecf8427e');
 	expect(md5('hello world')).toBe('5eb63bbbe01eeed093cb22bb8f5acdc3');
 	expect(md5('!#$%&()*+,-./023456789:;<=>?@ABCDEFGHIJKLMNOPRSTUWXYZ^_``abcdefghijklmnopqrstuvwxyz{|}~')).toBe('d17620fa6551e412146752c734db90e2');
+});
+
+import { morseCodeEncode, morseCodeDecode } from '../algorithms/cryptography/morseCode';
+test('Morse Code Encode/Decode: O(n)', () => {
+	expect(morseCodeEncode('')).toBe('');
+	expect(morseCodeDecode('')).toBe('');
+	expect(morseCodeEncode('HELLO WORLD')).toBe('•••• • •-•• •-•• --- | •-- --- •-• •-•• -••');
+	expect(morseCodeDecode('•••• • •-•• •-•• --- | •-- --- •-• •-•• -••')).toBe('HELLO WORLD');
+	expect(morseCodeEncode('.,?/@')).toBe('•-•-•- --••-- ••--•• -••-• •--•-•');
+	expect(morseCodeDecode('•-•-•- --••-- ••--•• -••-• •--•-•')).toBe('.,?/@');
+	expect(morseCodeEncode('IS YOUR EMAIL TEST@COMPANY.COM?')).toBe('•• ••• | -•-- --- ••- •-• | • -- •- •• •-•• | - • ••• - •--•-• -•-• --- -- •--• •- -• -•-- •-•-•- -•-• --- -- ••--••');
+	expect(morseCodeDecode('•• ••• | -•-- --- ••- •-• | • -- •- •• •-•• | - • ••• - •--•-• -•-• --- -- •--• •- -• -•-- •-•-•- -•-• --- -- ••--••')).toBe('IS YOUR EMAIL TEST@COMPANY.COM?');
+	expect(morseCodeEncode('all your base are belong to us!!!')).toBe('•- •-•• •-•• | -•-- --- ••- •-• | -••• •- ••• • | •- •-• • | -••• • •-•• --- -• --• | - --- | ••- •••');
+	expect(morseCodeDecode('•- •-•• •-•• | -•-- --- ••- •-• | -••• •- ••• • | •- •-• • | -••• • •-•• --- -• --• | - --- | ••- •••')).toBe('ALL YOUR BASE ARE BELONG TO US');
 });
 
 import { railFenceEncrypt, railFenceDecrypt } from '../algorithms/cryptography/railFenceCipher';
