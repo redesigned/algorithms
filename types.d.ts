@@ -566,6 +566,14 @@ declare function fakePi(n: number): string;
 declare function fibonacciNumbers(limit: number): number[];
 
 /**
+ * Is Prime Checks if a number is prime
+ * @param num - the number to check for prime
+ * @returns - Boolean if prime is true or false
+ * @author Joshua Jarman
+ */
+declare function isPrime(num: number): boolean;
+
+/**
  * Newtons Square Root Calculates the square root of the number with given tolerance (precision) by using Newton's method.
  * @param number - the number we want to find a square root of.
  * @param tolerance - how many precise numbers after the floating point we want to get.

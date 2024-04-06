@@ -40,6 +40,17 @@ test('Fibonacci Numbers: O(log n)', () => {
 	expect(fibonacciNumbers(100)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]);
 });
 
+import { isPrime } from '../algorithms/math/isPrime';
+test('Is Prime: O(√n)', () => {
+	expect(isPrime(0)).toBe(false);
+	expect(isPrime(1)).toBe(false);
+	expect(isPrime(2)).toBe(true);
+	expect(isPrime(11)).toBe(true);
+	expect(isPrime(887)).toBe(true);
+	expect(isPrime(888)).toBe(false);
+	expect(isPrime(889)).toBe(false);
+});
+
 import { newtonsSquareRoot } from '../algorithms/math/newtonsSquareRoot';
 test('Newtons Square Root: O(log(n))', () => {
 	expect(newtonsSquareRoot(4)).toBe(2);

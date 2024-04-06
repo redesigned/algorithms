@@ -71,6 +71,7 @@ chmod +x generateTypes.sh runTests.sh
 * **[Calculate Pi: O(√n)](algorithms/math/calculatePi.js)**
 * **[Fake Pi: O(√n)](algorithms/math/fakePi.js)**
 * **[Fibonacci Numbers: O(√n)](algorithms/math/fibonacciNumbers.js)**
+* **[Is Prime: O(√n)](algorithms/math/isPrime.js)**
 * **[Newtons Square Root: O(log(n))](algorithms/math/newtonsSquareRoot.js)**
 * **[Sieve of Eratosthenes: O(n log(log(n)))](algorithms/math/sieveOfEratosthenes.js)**
 
