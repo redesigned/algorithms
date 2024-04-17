@@ -47,7 +47,7 @@ import {
 	circleRadiusToArea,
 	circleRadiusToCircumference,
 	circleRadiusToDiameter
- } from '../algorithms/math/circle';
+} from '../algorithms/math/circle';
 test('Circle (Area to Circumference): O(1)', () => {
 	expect(circleAreaToCircumference(28.274333882308)).toBeCloseTo(18.849555921539);
 	expect(circleAreaToCircumference(380.13271108436)).toBeCloseTo(69.115038378975);
@@ -128,4 +128,37 @@ test('Sieve of Eratosthenes: O(n log(log(n)))', () => {
 	expect(sieveOfEratosthenes(10)).toStrictEqual([2, 3, 5, 7]);
 	expect(sieveOfEratosthenes(100)).toStrictEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]);
 	expect(sieveOfEratosthenes(1000)).toStrictEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]);
+});
+
+import {
+	sphereCircumferenceToVolume,
+	sphereDiameterToVolume,
+	sphereRadiusToVolume,
+	sphereVolumeToCircumference,
+	sphereVolumetoDiameter,
+	sphereVolumeToRadius
+} from '../algorithms/math/sphere';
+test('Sphere (Circumference to Volume): O(1)', () => {
+	expect(sphereCircumferenceToVolume(18.849555921539)).toBeCloseTo(113.09733552923254);
+	expect(sphereCircumferenceToVolume(69.115038378975)).toBeCloseTo(5575.279762570686);
+});
+test('Sphere (Diameter to Volume): O(1)', () => {
+	expect(sphereDiameterToVolume(6)).toBeCloseTo(113.09733552923254);
+	expect(sphereDiameterToVolume(22)).toBeCloseTo(5575.279762570686);
+});
+test('Sphere (Radius to Volume): O(1)', () => {
+	expect(sphereRadiusToVolume(3)).toBeCloseTo(113.09733552923254);
+	expect(sphereRadiusToVolume(11)).toBeCloseTo(5575.279762570686);
+});
+test('Sphere (Volume to Circumference): O(1)', () => {
+	expect(sphereVolumeToCircumference(113.09733552923254)).toBeCloseTo(18.849555921539);
+	expect(sphereVolumeToCircumference(5575.279762570686)).toBeCloseTo(69.115038378975);
+});
+test('Sphere (Volume to Diameter): O(1)', () => {
+	expect(sphereVolumetoDiameter(113.09733552923254)).toBeCloseTo(6);
+	expect(sphereVolumetoDiameter(5575.279762570686)).toBeCloseTo(22);
+});
+test('Sphere (Volume to Radius): O(1)', () => {
+	expect(sphereVolumeToRadius(113.09733552923254)).toBeCloseTo(3);
+	expect(sphereVolumeToRadius(5575.279762570686)).toBeCloseTo(11);
 });

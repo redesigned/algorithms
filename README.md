@@ -86,6 +86,12 @@ chmod +x generateTypes.sh runTests.sh
 * **[Is Prime: O(√n)](algorithms/math/isPrime.js)**
 * **[Newtons Square Root: O(log(n))](algorithms/math/newtonsSquareRoot.js)**
 * **[Sieve of Eratosthenes: O(n log(log(n)))](algorithms/math/sieveOfEratosthenes.js)**
+* **[Sphere (Circumference to Volume): O(1)](algorithms/math/sphere.js)**
+* **[Sphere (Diameter to Volume): O(1)](algorithms/math/sphere.js)**
+* **[Sphere (Radius to Volume): O(1)](algorithms/math/sphere.js)**
+* **[Sphere (Volume to Circumference): O(1)](algorithms/math/sphere.js)**
+* **[Sphere (Volume to Diameter): O(1)](algorithms/math/sphere.js)**
+* **[Sphere (Volume to Radius): O(1)](algorithms/math/sphere.js)**
 
 ### Path Finding
 

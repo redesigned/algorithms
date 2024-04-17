@@ -686,6 +686,54 @@ declare function newtonsSquareRoot(number: any, tolerance?: any): number;
 declare function sieveOfEratosthenes(maxNum: number): number[];
 
 /**
+ * Sphere: Circumference to Volume (V = (4/3)π(C/2π)³)
+ * @param circumference - The Circumference
+ * @returns - The Volume
+ * @author Joshua Jarman
+ */
+declare function sphereCircumferenceToVolume(circumference: number): number;
+
+/**
+ * Sphere: Diameter to Volume (V = (1/6)πd³)
+ * @param diameter - The Diameter
+ * @returns - The Volume
+ * @author Joshua Jarman
+ */
+declare function sphereDiameterToVolume(diameter: number): number;
+
+/**
+ * Sphere: Radius to Volume (V = (4/3)πr³)
+ * @param radius - The Radius
+ * @returns - The Volume
+ * @author Joshua Jarman
+ */
+declare function sphereRadiusToVolume(radius: number): number;
+
+/**
+ * Sphere: Volume to Circumference (C = 2π(³√(3V /4π)))
+ * @param volume - The Volume
+ * @returns - The Circumference
+ * @author Joshua Jarman
+ */
+declare function sphereVolumeToCircumference(volume: number): number;
+
+/**
+ * Sphere: Volume to Diameter (d = )
+ * @param volume - The Volume
+ * @returns - The Diameter
+ * @author Joshua Jarman
+ */
+declare function sphereVolumetoDiameter(volume: number): number;
+
+/**
+ * Sphere: Volume to Radius (r = )
+ * @param volume - The Volume
+ * @returns - The Radius
+ * @author Joshua Jarman
+ */
+declare function sphereVolumeToRadius(volume: number): number;
+
+/**
  * Dijkstra Maze Solver Solves a maze using Dijkstra's algorithm to find the shortest path through a maze, returns -1 if no path can be found.
  * @param maze - The maze to be solved, represented as a 2D array of strings.
  * @param wallChar - The character that represents a wall in the maze.
