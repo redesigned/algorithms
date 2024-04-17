@@ -35,7 +35,7 @@ export function sphereRadiusToVolume(radius) {
 }
 
 /**
- * Sphere: Volume to Circumference (C = 2π(³√(3V /4π)))
+ * Sphere: Volume to Circumference (C = 2π(³√(3V/4π)))
  * @param {number} volume - The Volume
  * @returns {number} - The Circumference
  * @complexity - O(1)
@@ -46,18 +46,18 @@ export function sphereVolumeToCircumference(volume) {
 }
 
 /**
- * Sphere: Volume to Diameter (d = )
+ * Sphere: Volume to Diameter (d = 2(³√(3V/4π)))
  * @param {number} volume - The Volume
  * @returns {number} - The Diameter
  * @complexity - O(1)
  * @author Joshua Jarman
  */
-export function sphereVolumetoDiameter(volume) {
+export function sphereVolumeToDiameter(volume) {
 	return 2 * (Math.cbrt((3 * volume) / (4 * Math.PI)));
 }
 
 /**
- * Sphere: Volume to Radius (r = )
+ * Sphere: Volume to Radius (r = ³√(3V/4π))
  * @param {number} volume - The Volume
  * @returns {number} - The Radius
  * @complexity - O(1)
