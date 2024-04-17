@@ -710,7 +710,7 @@ declare function sphereDiameterToVolume(diameter: number): number;
 declare function sphereRadiusToVolume(radius: number): number;
 
 /**
- * Sphere: Volume to Circumference (C = 2π(³√(3V /4π)))
+ * Sphere: Volume to Circumference (C = 2π(³√(3V/4π)))
  * @param volume - The Volume
  * @returns - The Circumference
  * @author Joshua Jarman
@@ -718,15 +718,15 @@ declare function sphereRadiusToVolume(radius: number): number;
 declare function sphereVolumeToCircumference(volume: number): number;
 
 /**
- * Sphere: Volume to Diameter (d = )
+ * Sphere: Volume to Diameter (d = 2(³√(3V/4π)))
  * @param volume - The Volume
  * @returns - The Diameter
  * @author Joshua Jarman
  */
-declare function sphereVolumetoDiameter(volume: number): number;
+declare function sphereVolumeToDiameter(volume: number): number;
 
 /**
- * Sphere: Volume to Radius (r = )
+ * Sphere: Volume to Radius (r = ³√(3V/4π))
  * @param volume - The Volume
  * @returns - The Radius
  * @author Joshua Jarman

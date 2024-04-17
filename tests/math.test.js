@@ -135,7 +135,7 @@ import {
 	sphereDiameterToVolume,
 	sphereRadiusToVolume,
 	sphereVolumeToCircumference,
-	sphereVolumetoDiameter,
+	sphereVolumeToDiameter,
 	sphereVolumeToRadius
 } from '../algorithms/math/sphere';
 test('Sphere (Circumference to Volume): O(1)', () => {
@@ -155,8 +155,8 @@ test('Sphere (Volume to Circumference): O(1)', () => {
 	expect(sphereVolumeToCircumference(5575.279762570686)).toBeCloseTo(69.115038378975);
 });
 test('Sphere (Volume to Diameter): O(1)', () => {
-	expect(sphereVolumetoDiameter(113.09733552923254)).toBeCloseTo(6);
-	expect(sphereVolumetoDiameter(5575.279762570686)).toBeCloseTo(22);
+	expect(sphereVolumeToDiameter(113.09733552923254)).toBeCloseTo(6);
+	expect(sphereVolumeToDiameter(5575.279762570686)).toBeCloseTo(22);
 });
 test('Sphere (Volume to Radius): O(1)', () => {
 	expect(sphereVolumeToRadius(113.09733552923254)).toBeCloseTo(3);
