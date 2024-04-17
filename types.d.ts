@@ -549,6 +549,102 @@ declare module 'Stack' {
 declare function babylonianSquareRoot(n: number): number;
 
 /**
+ * Circle: Area To Circumference (C = 2√(Aπ))
+ * @param area - The Area
+ * @returns - The Circumference
+ * @author Joshua Jarman
+ */
+declare function circleAreaToCircumference(area: number): number;
+
+/**
+ * Area To Diameter (d = 2√(A/π))
+ * @param area - The Area
+ * @returns - The Diameter
+ * @author Joshua Jarman
+ */
+declare function circleAreaToDiameter(area: number): number;
+
+/**
+ * Area To Radius (r = √(A/π))
+ * @param area - The Area
+ * @returns - The Radius
+ * @author Joshua Jarman
+ */
+declare function circleAreaToRadius(area: number): number;
+
+/**
+ * Circumference To Area (A = π * (C/2π)²) Circumference To Area (A = C²/4π)
+ * @param circumference - The Circumference
+ * @returns - The Area
+ * @author Joshua Jarman
+ */
+declare function circleCircumferenceToArea(circumference: number): number;
+
+/**
+ * Circle: Circumference To Diameter (d = C/π)
+ * @param circumference - The Circumference
+ * @returns - The Diameter
+ * @author Joshua Jarman
+ */
+declare function circleCircumferenceToDiameter(circumference: number): number;
+
+/**
+ * Circumference To Radius (r = C/2π)
+ * @param circumference - The Circumference
+ * @returns - The Radius
+ * @author Joshua Jarman
+ */
+declare function circleCircumferenceToRadius(circumference: number): number;
+
+/**
+ * Diameter To Area (A = πd²/4)
+ * @param diameter - The Diameter
+ * @returns - The Area
+ * @author Joshua Jarman
+ */
+declare function circleDiameterToArea(diameter: number): number;
+
+/**
+ * Diameter To Circumference (C = πd)
+ * @param diameter - The Diameter
+ * @returns - The Circumference
+ * @author Joshua Jarman
+ */
+declare function circleDiameterToCircumference(diameter: number): number;
+
+/**
+ * Circle: Diameter To Radius (r = d/2)
+ * @param diameter - The Diameter
+ * @returns - The Radius
+ * @author Joshua Jarman
+ */
+declare function circleDiameterToRadius(diameter: number): number;
+
+/**
+ * Circle: Radius To Area (A = πr²)
+ * @param radius - The Radius
+ * @returns - The Area
+ * @author Joshua Jarman
+ */
+declare function circleRadiusToArea(radius: number): number;
+
+/**
+ * Circle: Radius To Circimfernce (C = 2πr)
+ * @param radius - The Radius
+ * @returns - The Circimfernce
+ * @author Joshua Jarman
+ */
+declare function circleRadiusToCircumference(radius: number): number;
+
+/**
+ * Circle: Radius To Diameter (d = 2r)
+ * @param radius - The Radius
+ * @returns - The Diameter
+ * @author Joshua Jarman
+ */
+declare function circleRadiusToDiameter(radius: number): number;
+
+/**
  * Fake Pi Returns Pi up to 1000000 decimal places from proven pi calculation for testing Pi generation functions
  * @param n - The number of terms to use.
  * @returns - The value of pi as a string.

@@ -69,6 +69,18 @@ chmod +x generateTypes.sh runTests.sh
 
 * **[Babylonian Square Root: O(log(n))](algorithms/math/babylonianSquareRoot.js)**
 * **[Calculate Pi: O(√n)](algorithms/math/calculatePi.js)**
+* **[Circle (Area to Circumference): O(1)](algorithms/math/circle.js)**
+* **[Circle (Area to Diameter): O(1)](algorithms/math/circle.js)**
+* **[Circle (Area to Radius): O(1)](algorithms/math/circle.js)**
+* **[Circle (Circumference to Area): O(1)](algorithms/math/circle.js)**
+* **[Circle (Circumference to Diameter): O(1)](algorithms/math/circle.js)**
+* **[Circle (Circumference to Radius): O(1)](algorithms/math/circle.js)**
+* **[Circle (Diameter to Area): O(1)](algorithms/math/circle.js)**
+* **[Circle (Diameter to Circumference): O(1)](algorithms/math/circle.js)**
+* **[Circle (Diameter to Radius): O(1)](algorithms/math/circle.js)**
+* **[Circle (Radius to Area): O(1)](algorithms/math/circle.js)**
+* **[Circle (Radius to Circumference): O(1)](algorithms/math/circle.js)**
+* **[Circle (Radius to Diameter): O(1)](algorithms/math/circle.js)**
 * **[Fake Pi: O(√n)](algorithms/math/fakePi.js)**
 * **[Fibonacci Numbers: O(√n)](algorithms/math/fibonacciNumbers.js)**
 * **[Is Prime: O(√n)](algorithms/math/isPrime.js)**

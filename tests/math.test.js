@@ -34,6 +34,69 @@ test('Calculate Pi: O(log n)', () => {
 	// expect(calculatePi(1000000)).toBe(fakePi(1000000));
 });
 
+import {
+	circleAreaToCircumference,
+	circleAreaToDiameter,
+	circleAreaToRadius,
+	circleCircumferenceToArea,
+	circleCircumferenceToDiameter,
+	circleCircumferenceToRadius,
+	circleDiameterToArea,
+	circleDiameterToCircumference,
+	circleDiameterToRadius,
+	circleRadiusToArea,
+	circleRadiusToCircumference,
+	circleRadiusToDiameter
+ } from '../algorithms/math/circle';
+test('Circle (Area to Circumference): O(1)', () => {
+	expect(circleAreaToCircumference(28.274333882308)).toBeCloseTo(18.849555921539);
+	expect(circleAreaToCircumference(380.13271108436)).toBeCloseTo(69.115038378975);
+});
+test('Circle (Area to Diameter): O(1)', () => {
+	expect(circleAreaToDiameter(28.274333882308)).toBeCloseTo(6);
+	expect(circleAreaToDiameter(380.13271108436)).toBeCloseTo(22);
+});
+test('Circle (Area to Radius): O(1)', () => {
+	expect(circleAreaToRadius(28.274333882308)).toBeCloseTo(3);
+	expect(circleAreaToRadius(380.13271108436)).toBeCloseTo(11);
+});
+test('Circle (Circumference to Area): O(1)', () => {
+	expect(circleCircumferenceToArea(18.849555921539)).toBeCloseTo(28.274333882308);
+	expect(circleCircumferenceToArea(69.115038378975)).toBeCloseTo(380.13271108436);
+});
+test('Circle (Circumference to Diameter): O(1)', () => {
+	expect(circleCircumferenceToDiameter(18.849555921539)).toBeCloseTo(6);
+	expect(circleCircumferenceToDiameter(69.115038378975)).toBeCloseTo(22);
+});
+test('Circle (Circumference to Radius): O(1)', () => {
+	expect(circleCircumferenceToRadius(18.849555921539)).toBeCloseTo(3);
+	expect(circleCircumferenceToRadius(69.115038378975)).toBeCloseTo(11);
+});
+test('Circle (Diameter to Area): O(1)', () => {
+	expect(circleDiameterToArea(6)).toBeCloseTo(28.274333882308);
+	expect(circleDiameterToArea(22)).toBeCloseTo(380.13271108436);
+});
+test('Circle (Diameter to Circumference): O(1)', () => {
+	expect(circleDiameterToCircumference(6)).toBeCloseTo(18.849555921539);
+	expect(circleDiameterToCircumference(22)).toBeCloseTo(69.115038378975);
+});
+test('Circle (Diameter to Radius): O(1)', () => {
+	expect(circleDiameterToRadius(6)).toBe(3);
+	expect(circleDiameterToRadius(22)).toBe(11);
+});
+test('Circle (Radius to Area): O(1)', () => {
+	expect(circleRadiusToArea(3)).toBeCloseTo(28.274333882308);
+	expect(circleRadiusToArea(11)).toBeCloseTo(380.13271108436);
+});
+test('Circle (Radius to Circumference): O(1)', () => {
+	expect(circleRadiusToCircumference(3)).toBeCloseTo(18.849555921539);
+	expect(circleRadiusToCircumference(11)).toBeCloseTo(69.115038378975);
+});
+test('Circle (Radius to Diameter): O(1)', () => {
+	expect(circleRadiusToDiameter(3)).toBe(6);
+	expect(circleRadiusToDiameter(11)).toBe(22);
+});
+
 import { fibonacciNumbers } from '../algorithms/math/fibonacciNumbers';
 test('Fibonacci Numbers: O(log n)', () => {
 	expect(fibonacciNumbers(10)).toStrictEqual([0, 1, 1, 2, 3, 5, 8]);
