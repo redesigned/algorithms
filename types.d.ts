@@ -1,4 +1,11 @@
 /**
+ * Is Mobile
+ * @returns - True if Mobile otherwise False
+ * @author Joshua Jarman
+ */
+declare function isMobile(): boolean;
+
+/**
  * Atbash Cipher Encrypts or decrypts a given string using the Atabash cipher.  Use again to decrypt.  Letters and numbers are swapped with their opposites A=Z a=z 0=9 etc.
  * @param str - The input string to be transformed.
  * @returns - The transformed string after applying the Atabash Cipher.
