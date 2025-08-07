@@ -18,5 +18,25 @@
 	],
 	"terminal.integrated.cwd": "${workspaceFolder}",
 	"cwd": "${workspaceFolder}",
-	"code-runner.cwd": " ${workspaceFolder}"
+	"code-runner.cwd": " ${workspaceFolder}",
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#e4ff33",
+		"activityBar.background": "#e4ff33",
+		"activityBar.foreground": "#15202b",
+		"activityBar.inactiveForeground": "#15202b99",
+		"activityBarBadge.background": "#00a6bf",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#15202b99",
+		"sash.hoverBorder": "#e4ff33",
+		"statusBar.background": "#ddff00",
+		"statusBar.foreground": "#15202b",
+		"statusBarItem.hoverBackground": "#b1cc00",
+		"statusBarItem.remoteBackground": "#ddff00",
+		"statusBarItem.remoteForeground": "#15202b",
+		"titleBar.activeBackground": "#ddff00",
+		"titleBar.activeForeground": "#15202b",
+		"titleBar.inactiveBackground": "#ddff0099",
+		"titleBar.inactiveForeground": "#15202b99"
+	},
+	"peacock.color": "#ddff00"
 }
