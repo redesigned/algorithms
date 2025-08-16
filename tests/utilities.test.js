@@ -1,4 +1,12 @@
-import { expect, test } from 'vitest';
+import { expect, test, vi, beforeEach, afterEach } from 'vitest';
+
+beforeEach(() => {
+	vi.useFakeTimers(); // switch to fake timers before each test
+});
+
+afterEach(() => {
+	vi.useRealTimers(); // restore real timers after
+});
 
 /* ## UTILITIES ## */
 
@@ -159,3 +167,27 @@ test('String UUID v8: O(1)', () => {
 	expect(stringUUIDv8()).toMatch(uuidPattern);
 	expect(stringUUIDv8()).toMatch(uuidPattern);
 });
+
+import { debounce } from "../algorithms/util/debounce";
+test("Debounce Delays Function Execution: O(1)", () => {
+	const mockFn = vi.fn();
+	const debounced = debounce(mockFn, 100);
+	debounced(); // call once
+	expect(mockFn).not.toHaveBeenCalled();
+	// fast-forward 100ms
+	vi.advanceTimersByTime(100);
+	expect(mockFn).toHaveBeenCalledTimes(1);
+});
+test('Debounce Resets Timer: O(1)', () => {
+	const mockFn = vi.fn();
+	const debounced = debounce(mockFn, 100);
+	debounced();
+	vi.advanceTimersByTime(50); // halfway
+	debounced(); // reset
+	vi.advanceTimersByTime(99); // still not enough
+	expect(mockFn).not.toHaveBeenCalled();
+	vi.advanceTimersByTime(1); // now 100ms since last call
+	expect(mockFn).toHaveBeenCalledTimes(1);
+});
+
+

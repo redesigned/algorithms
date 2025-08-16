@@ -1188,6 +1188,15 @@ declare function arrayOfNumbers(num: number): number[];
 declare function arrayRandomShuffle(myArray: any[]): any[];
 
 /**
+ * Debounce Ensures a function is executed only after a certain delay has passed since the last time it was invoked. Useful for events that fire in bursts, such as typing or window resizing.
+ * @param func - The function to debounce.
+ * @param delay - The delay in milliseconds before invoking the function.
+ * @returns - A new debounced version of the provided function.
+ * @author Joshua Jarman
+ */
+declare function debounce(func: Function, delay: number): Function;
+
+/**
  * Number Digit At Given a number it returns the digit as a specific location
  * @param num - The number
  * @param place - The place to get the digit at 0-x starting at 0
@@ -1308,4 +1317,13 @@ declare function stringUUIDv4(): string;
  * @author Joshua Jarman
  */
 declare function stringUUIDv8(): string;
+
+/**
+ * Throttle Ensures a function is executed at most once every specified interval. Useful for rate-limiting continuous events such as scrolling or mouse movement.
+ * @param func - The function to throttle.
+ * @param limit - The minimum time interval (ms) between function calls.
+ * @returns - A new throttled version of the provided function.
+ * @author Joshua Jarman
+ */
+declare function throttle(func: Function, limit: number): Function;
 
