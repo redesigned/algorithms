@@ -1214,6 +1214,16 @@ declare function numberDigitAt(num: number, place: number): number;
 declare function numberDigitCount(num: number): number;
 
 /**
+ * Poll Repeatedly calls an asynchronous function until it returns a truthy value or the maximum timeout is reached. Useful for waiting on external resources, APIs, or DOM changes.
+ * @param fn - The async function to poll. Should resolve to a truthy value when successful.
+ * @param interval - How often to call the function, in milliseconds.
+ * @param timeout - Maximum total time in milliseconds before rejecting.
+ * @returns - Resolves with the truthy result, or rejects on timeout.
+ * @author Joshua Jarman
+ */
+declare function poll(fn: Function, interval: number, timeout: number): Promise<T>;
+
+/**
  * String Random Generates a random string of specified length.
  * @param length - The desired length of the random string.
  * @param possible - A string containing possible characters for the random string.

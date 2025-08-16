@@ -207,3 +207,28 @@ test("Throttle Blocks Calls Within Limit: O(1)", () => {
 	throttled();
 	expect(mockFn).toHaveBeenCalledTimes(2);
 });
+
+import { poll } from "../algorithms/util/poll";
+test("Poll Resolves When Function Returns Truthy: O(n)", async () => {
+	let attempts = 0;
+	const fn = vi.fn(async () => {
+		attempts++;
+		return attempts === 3 ? "done" : null;
+	});
+	const promise = poll(fn, 100, 1000);
+	// attempt 1
+	await vi.advanceTimersByTimeAsync(100);
+	// attempt 2
+	await vi.advanceTimersByTimeAsync(100);
+	// attempt 3 succeeds
+	await vi.advanceTimersByTimeAsync(100);
+	await expect(promise).resolves.toBe("done");
+	expect(fn).toHaveBeenCalledTimes(3);
+});
+test("Poll Rejects After Timeout: O(n)", async () => {
+	const fn = vi.fn(async () => null);
+	const promise = poll(fn, 100, 250);
+	vi.advanceTimersByTime(300);
+	await Promise.resolve(); // flush
+	await expect(promise).rejects.toThrow("Polling timed out");
+});

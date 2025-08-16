@@ -7,7 +7,7 @@
  * or the maximum timeout is reached. Useful for waiting on external resources,
  * APIs, or DOM changes.
  * @template T
- * @param {() => Promise<T>} fn - The async function to poll. Should resolve to a truthy value when successful.
+ * @param {function(): Promise<T>} fn - The async function to poll. Should resolve to a truthy value when successful.
  * @param {number} interval - How often to call the function, in milliseconds.
  * @param {number} timeout - Maximum total time in milliseconds before rejecting.
  * @returns {Promise<T>} - Resolves with the truthy result, or rejects on timeout.
