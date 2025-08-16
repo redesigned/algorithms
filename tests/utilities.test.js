@@ -190,4 +190,20 @@ test('Debounce Resets Timer: O(1)', () => {
 	expect(mockFn).toHaveBeenCalledTimes(1);
 });
 
-
+import { throttle } from "../algorithms/util/throttle";
+test("Throttle Executes Immediately: O(1)", () => {
+	const mockFn = vi.fn();
+	const throttled = throttle(mockFn, 100);
+	throttled();
+	expect(mockFn).toHaveBeenCalledTimes(1);
+});
+test("Throttle Blocks Calls Within Limit: O(1)", () => {
+	const mockFn = vi.fn();
+	const throttled = throttle(mockFn, 100);
+	throttled();
+	throttled(); // ignored
+	expect(mockFn).toHaveBeenCalledTimes(1);
+	vi.advanceTimersByTime(100);
+	throttled();
+	expect(mockFn).toHaveBeenCalledTimes(2);
+});
