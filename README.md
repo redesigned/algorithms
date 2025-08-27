@@ -162,8 +162,10 @@ chmod +x generateTypes.sh runTests.sh
 * **[Array Most Digits: O(n)](algorithms/util/arrayMostDigits.js)**
 * **[Array of Numbers: O(n)](algorithms/util/arrayOfNumbers.js)**
 * **[Array Random Shuffle: O(n)](algorithms/util/arrayRandomShuffle.js)**
+* **[Debounce: O(1)](algorithms/util/debounce.js)**
 * **[Number Digit At: O(1)](algorithms/util/numberDigitAt.js)**
 * **[Number Digit Count: O(1)](algorithms/util/numberDigitCount.js)**
+* **[Poll: O(n)](algorithms/util/poll.js)**
 * **[String Random: O(1)](algorithms/util/stringRandom.js)**
 * **[String Random Binary: O(1)](algorithms/util/stringRandom.js)**
 * **[String Random Hexidecimal: O(1)](algorithms/util/stringRandom.js)**
@@ -176,3 +178,4 @@ chmod +x generateTypes.sh runTests.sh
 * **[String UII Numeric: O(1)](algorithms/util/stringUIIvX.js)**
 * **[String UUID v4: O(1)](algorithms/util/stringUUIDv4.js)**
 * **[String UUID v8: O(1)](algorithms/util/stringUUIDv8.js)**
+* **[Throttle: O(1)](algorithms/util/throttle.js)**
