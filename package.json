@@ -11,11 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitest": "^1.6.1"
+    "vitest": "^4.0.9"
   },
   "dependencies": {
     "@otris/jsdoc-tsd": "^3.0.0",
-    "jsdoc": "^4.0.2",
+    "jsdoc": "^4.0.5",
     "md5-jkmyers": "^0.0.1"
   }
 }
