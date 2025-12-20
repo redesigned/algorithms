@@ -232,3 +232,36 @@ test("Poll Rejects After Timeout: O(n)", async () => {
 	await Promise.resolve(); // flush
 	await expect(promise).rejects.toThrow("Polling timed out");
 });
+
+import { anyToBoolean } from "../algorithms/util/anyToBoolean";
+test("anyToBoolean: O(1)", () => {
+	expect(anyToBoolean(true)).toBe(true);
+	expect(anyToBoolean(false)).toBe(false);
+	expect(anyToBoolean(1)).toBe(true);
+	expect(anyToBoolean(0)).toBe(false);
+	expect(anyToBoolean(null)).toBe(false);
+	expect(anyToBoolean("hello")).toBe(true);
+});
+
+import { booleanToString } from "../algorithms/util/booleanToString";
+test("booleanToString: O(1)", () => {
+	expect(booleanToString(true)).toBe("true");
+	expect(booleanToString(false)).toBe("false");
+	expect(booleanToString(1)).toBe("true");
+	expect(booleanToString(0)).toBe("false");
+});
+
+import { emptyIfTrueUndefinedIfFalse, booleanAttrtibute } from "../algorithms/util/booleanAttrtibute";
+test("emptyIfTrueUndefinedIfFalse: O(1)", () => {
+	expect(emptyIfTrueUndefinedIfFalse(true)).toBe("");
+	expect(emptyIfTrueUndefinedIfFalse(false)).toBeUndefined();
+	expect(emptyIfTrueUndefinedIfFalse(1)).toBe("");
+	expect(emptyIfTrueUndefinedIfFalse(0)).toBeUndefined();
+});
+test("booleanAttribute: O(1)", () => {
+	expect(booleanAttrtibute(true)).toBe("");
+	expect(booleanAttrtibute(false)).toBeUndefined();
+	expect(booleanAttrtibute(1)).toBe("");
+	expect(booleanAttrtibute(0)).toBeUndefined();
+});
+

@@ -5,8 +5,8 @@
  * Array Random Shuffle
  * Fisher-Yates (or Knuth) Shuffle
  * Returns an Array that has been randomly Shuffled
- * @param {Array} myArray - The length of the Array
- * @returns {Array} - A new array containing the numbers
+ * @param {Array<any>} myArray - The length of the Array
+ * @returns {Array<any>} - A new array containing the numbers
  * @complexity O(n)
  * @author Joshua Jarman
  */
